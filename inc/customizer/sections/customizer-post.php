@@ -84,7 +84,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         )
     );
 	$wp_customize->add_setting( 'momentous_theme_options[excerpt_text]', array(
-        'default'           => false,
+        'default'           => true,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'momentous_sanitize_checkbox'

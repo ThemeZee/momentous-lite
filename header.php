@@ -39,12 +39,7 @@
 			<div id="logo">
 			
 				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<?php // Display Logo Image or Site Title
-				if ( momentous_has_site_logo() ) : ?>
-					<img class="site-logo" src="<?php echo momentous_get_site_logo(); ?>" data-size="site-logo" alt="Logo" />
-				<?php else: ?>
 					<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-				<?php endif; ?>
 				</a>
 				
 			<?php // Display Tagline on header if activated

@@ -8,28 +8,6 @@
  */
 
 
-// Get Site Logo URL
-function momentous_get_site_logo() {
-	
-	// Get Site Logo from wp_options
-	$logo = get_option( 'site_logo' );
-
-	// Return false if no logo is set
-	if ( ! isset( $logo['id'] ) || 0 == $logo['id'] ) {
-		return false;
-	}
-
-	// Return the URL
-	return esc_url_raw( set_url_scheme( $logo['url'] ) );
-}
-
-// Check if Site Logo exists
-function momentous_has_site_logo() {
-	$logo = get_option( 'site_logo' );
-	return ( isset( $logo['id'] ) && 0 !== $logo['id'] ) ? true : false;
-}
-
-
 // Display Custom Header
 if ( ! function_exists( 'momentous_display_custom_header' ) ):
 	

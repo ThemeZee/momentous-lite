@@ -71,21 +71,6 @@ function momentous_customize_register_general_settings( $wp_customize ) {
 		'priority' => 3
 		)
 	);
-	$wp_customize->add_setting( 'momentous_theme_options[credit_link]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'momentous_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'momentous_control_credit_link', array(
-        'label'    => __( 'Display Credit Link to ThemeZee on footer line.', 'momentous-lite' ),
-        'section'  => 'momentous_section_general',
-        'settings' => 'momentous_theme_options[credit_link]',
-        'type'     => 'checkbox',
-		'priority' => 4
-		)
-	);
 }
 
 ?>

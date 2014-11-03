@@ -33,18 +33,12 @@ function momentous_default_options() {
 		'layout' 							=> 'right-sidebar',
 		'latest_posts_title'				=> __( 'Latest Posts', 'momentous-lite' ),
 		'footer_text'						=> '',
-		'credit_link' 						=> true,
 		'header_tagline' 					=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
-		'excerpt_text' 						=> false,
-		'text_font' 						=> 'Average Sans',
-		'title_font' 						=> 'Fjalla One',
-		'navi_font' 						=> 'Average Sans',
-		'widget_title_font' 				=> 'Average Sans',
-		'installed_fonts'					=> ''
+		'excerpt_text' 						=> true
 	);
 	
 	return $default_options;

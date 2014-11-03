@@ -17,6 +17,10 @@ function momentous_enqueue_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script('momentous-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
+	// Register and Enqueue Fonts
+	wp_enqueue_style('momentous-lite-default-font', '//fonts.googleapis.com/css?family=Average+Sans');
+	wp_enqueue_style('momentous-lite-default-title-font', '//fonts.googleapis.com/css?family=Fjalla+One');
+	
 }
 endif;
 
@@ -123,43 +127,6 @@ function momentous_register_sidebars() {
 		'after_title' => '</span></h3>',
 	));
 	
-	//Register Footer Widgets
-	register_sidebar( array(
-		'name' => __( 'Footer Left', 'momentous-lite'),
-		'id' => 'footer-left',
-		'description' => __( 'Appears on footer on the left hand side.', 'momentous-lite'),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle"><span>',
-		'after_title' => '</span></h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Left', 'momentous-lite'),
-		'id' => 'footer-center-left',
-		'description' => __( 'Appears on footer on center left position.', 'momentous-lite'),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle"><span>',
-		'after_title' => '</span></h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Right', 'momentous-lite'),
-		'id' => 'footer-center-right',
-		'description' => __( 'Appears on footer on center right position.', 'momentous-lite'),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle"><span>',
-		'after_title' => '</span></h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Right', 'momentous-lite'),
-		'id' => 'footer-right',
-		'description' => __( 'Appears on footer on the right hand side.', 'momentous-lite'),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle"><span>',
-		'after_title' => '</span></h3>',
-	));
 }
 endif;
 
@@ -212,17 +179,10 @@ function momentous_has_featured_content() {
 // Display Credit Link Function
 function momentous_credit_link() {
 	
-	// Get Theme Options from Database
-	$theme_options = momentous_theme_options();
-	
-	if ( isset($theme_options['credit_link']) and $theme_options['credit_link'] == true ) :
-	
-		printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
-				sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
-				sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
-			);
-		
-	endif;
+	printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
+		);
 }
 
 
@@ -320,8 +280,6 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 require( get_template_directory() . '/inc/customizer/default-options.php' );
 
 // include Customization Files
-require( get_template_directory() . '/inc/customizer/frontend/custom-colors.php' );
-require( get_template_directory() . '/inc/customizer/frontend/custom-fonts.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 
 // include Template Functions
