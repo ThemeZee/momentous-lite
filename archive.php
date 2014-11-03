@@ -11,9 +11,9 @@
 			<h2 id="date-title" class="archive-title">
 				<?php // Display Archive Title
 				if ( is_date() ) :
-					printf( __( 'Monthly Archives: %s', 'momentous'), '<span>' . get_the_date( _x( 'F Y', 'date format of monthly archives', 'momentous') ) . '</span>' );
+					printf( __( 'Monthly Archives: %s', 'momentous-lite'), '<span>' . get_the_date( _x( 'F Y', 'date format of monthly archives', 'momentous-lite') ) . '</span>' );
 				else :
-					_e( 'Archives', 'momentous');
+					_e( 'Archives', 'momentous-lite');
 				endif;
 				?>
 			</h2>

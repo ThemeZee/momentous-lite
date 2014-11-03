@@ -27,7 +27,7 @@ function momentous_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'momentous' ),
+		'title'          => __( 'Theme Options', 'momentous-lite' ),
 		'description'    => '',
 	) );
 
@@ -52,7 +52,7 @@ function momentous_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_header_tagline', array(
-        'label'    => __( 'Display Tagline below site title.', 'momentous' ),
+        'label'    => __( 'Display Tagline below site title.', 'momentous-lite' ),
         'section'  => 'title_tagline',
         'settings' => 'momentous_theme_options[header_tagline]',
         'type'     => 'checkbox',
@@ -67,7 +67,7 @@ function momentous_customize_register_options( $wp_customize ) {
 add_action( 'customize_preview_init', 'momentous_customize_preview_js' );
 
 function momentous_customize_preview_js() {
-	wp_enqueue_script( 'momentous-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140312', true );
+	wp_enqueue_script( 'momentous-lite-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140312', true );
 }
 
 
@@ -75,7 +75,7 @@ function momentous_customize_preview_js() {
 add_action( 'customize_controls_print_styles', 'momentous_customize_preview_css' );
 
 function momentous_customize_preview_css() {
-	wp_enqueue_style( 'momentous-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20140312' );
+	wp_enqueue_style( 'momentous-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20140312' );
 
 }
 

@@ -118,12 +118,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			// declare these first so they can be overridden
 			$this->l10n = array(
-				'upload' =>      __( 'Add logo', 'momentous' ),
-				'set' =>         __( 'Set as logo', 'momentous' ),
-				'choose' =>      __( 'Choose logo', 'momentous' ),
-				'change' =>      __( 'Change logo', 'momentous' ),
-				'remove' =>      __( 'Remove logo', 'momentous' ),
-				'placeholder' => __( 'No logo set', 'momentous' ),
+				'upload' =>      __( 'Add logo', 'momentous-lite' ),
+				'set' =>         __( 'Set as logo', 'momentous-lite' ),
+				'choose' =>      __( 'Choose logo', 'momentous-lite' ),
+				'change' =>      __( 'Change logo', 'momentous-lite' ),
+				'remove' =>      __( 'Remove logo', 'momentous-lite' ),
+				'placeholder' => __( 'No logo set', 'momentous-lite' ),
 			);
 
 			parent::__construct( $wp_customize, $control_id, $args );
@@ -157,7 +157,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				add_action( 'customize_controls_print_footer_scripts', 'wp_print_media_templates' );
 
 			// Finally, ensure our control script and style are enqueued
-			wp_enqueue_script( 'momentous-site-logo-control', get_template_directory_uri() . '/js/site-logo-control.js', array( 'media-views', 'customize-controls', 'underscore' ), '', true );
+			wp_enqueue_script( 'momentous-lite-site-logo-control', get_template_directory_uri() . '/js/site-logo-control.js', array( 'media-views', 'customize-controls', 'underscore' ), '', true );
 		}
 
 		public function render_content() {
@@ -172,7 +172,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				esc_html( $this->label )
 			);
 			?>
-			<span class="description"><?php _e('Site Logo Image replaces Site Title.', 'momentous'); ?></span>
+			<span class="description"><?php _e('Site Logo Image replaces Site Title.', 'momentous-lite'); ?></span>
 			<div class="current"></div>
 			<div class="actions"></div>
 		<?php }

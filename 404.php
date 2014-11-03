@@ -6,15 +6,15 @@
 
 			<div class="type-page">
 			
-				<h2 class="page-title"><?php _e('404 Error: Not found', 'momentous'); ?></h2>
+				<h2 class="page-title"><?php _e('404 Error: Not found', 'momentous-lite'); ?></h2>
 				
 				<div class="entry">
-					<p><?php _e('The page you trying to reach does not exist, or has been moved. Please use the menus or the search box to find what you are looking for', 'momentous'); ?></p>
+					<p><?php _e('The page you trying to reach does not exist, or has been moved. Please use the menus or the search box to find what you are looking for', 'momentous-lite'); ?></p>
 					
-					<h2><?php _e('Search', 'momentous'); ?></h2>
+					<h2><?php _e('Search', 'momentous-lite'); ?></h2>
 					<?php get_search_form(); ?>
 
-					<h2><?php _e('Recent Posts', 'momentous'); ?></h2>
+					<h2><?php _e('Recent Posts', 'momentous-lite'); ?></h2>
 					<ul>
 						<?php
 							$recent_posts = wp_get_recent_posts(array('numberposts' => '8', 'post_status' => 'publish'));
@@ -24,7 +24,7 @@
 						?>
 					</ul>
 					
-					<h2><?php _e('Pages', 'momentous'); ?></h2>
+					<h2><?php _e('Pages', 'momentous-lite'); ?></h2>
 					<ul>
 						<?php wp_list_pages('title_li='); ?>
 					</ul>

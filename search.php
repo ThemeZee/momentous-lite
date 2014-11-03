@@ -10,7 +10,7 @@
 		
 		<?php if (have_posts()) : ?>
 			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'momentous'), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( __( 'Search Results for: %s', 'momentous-lite'), '<span>' . get_search_query() . '</span>' ); ?>
 			</h2>
 		
 			<div id="post-wrapper" class="clearfix">
@@ -29,13 +29,13 @@
 		else : ?>
 
 			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'momentous'), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( __( 'Search Results for: %s', 'momentous-lite'), '<span>' . get_search_query() . '</span>' ); ?>
 			</h2>
 			
 			<div class="post">
 				
 				<div class="entry">
-					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'momentous'); ?></p>
+					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'momentous-lite'); ?></p>
 				</div>
 				
 			</div>

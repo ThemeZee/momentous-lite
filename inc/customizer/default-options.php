@@ -31,7 +31,7 @@ function momentous_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
-		'latest_posts_title'				=> __( 'Latest Posts', 'momentous' ),
+		'latest_posts_title'				=> __( 'Latest Posts', 'momentous-lite' ),
 		'footer_text'						=> '',
 		'credit_link' 						=> true,
 		'header_tagline' 					=> false,

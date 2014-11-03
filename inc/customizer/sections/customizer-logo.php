@@ -11,7 +11,7 @@ function momentous_customize_register_logo_settings( $wp_customize ) {
 
 	// Add Section for General Settings
 	$wp_customize->add_section( 'momentous_section_logo', array(
-        'title'    => __( 'Site Logo', 'momentous' ),
+        'title'    => __( 'Site Logo', 'momentous-lite' ),
         'priority' => 20,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -25,7 +25,7 @@ function momentous_customize_register_logo_settings( $wp_customize ) {
 		'transport'  => 'refresh'
 	) );
 	$wp_customize->add_control( new Momentous_Site_Logo_Control( $wp_customize, 'site_logo', array(
-	    'label'    => __( 'Site Logo', 'momentous' ),
+	    'label'    => __( 'Site Logo', 'momentous-lite' ),
 	    'section'  => 'momentous_section_logo',
 	    'settings' => 'site_logo',
 		'priority' => 1

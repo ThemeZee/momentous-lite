@@ -11,7 +11,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'momentous_section_post', array(
-        'title'    => __( 'Post Settings', 'momentous' ),
+        'title'    => __( 'Post Settings', 'momentous-lite' ),
         'priority' => 30,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -27,7 +27,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_post_images', array(
-            'label' => __( 'Post Images', 'momentous' ),
+            'label' => __( 'Post Images', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_images]',
             'priority' => 	2
@@ -42,7 +42,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_posts_thumbnails_index', array(
-        'label'    => __( 'Display featured images on archive pages', 'momentous' ),
+        'label'    => __( 'Display featured images on archive pages', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
@@ -58,7 +58,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_posts_thumbnails_single', array(
-        'label'    => __( 'Display featured images on single posts', 'momentous' ),
+        'label'    => __( 'Display featured images on single posts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
@@ -76,7 +76,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_excerpt_text_headline', array(
-            'label' => __( 'Excerpt More Text', 'momentous' ),
+            'label' => __( 'Excerpt More Text', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[excerpt_text_headline]',
             'priority' => 5
@@ -91,7 +91,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after text excerpts.', 'momentous' ),
+        'label'    => __( 'Display [...] after text excerpts.', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[excerpt_text]',
         'type'     => 'checkbox',

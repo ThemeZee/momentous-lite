@@ -21,9 +21,9 @@
 			else : ?>
 
 			<aside class="widget">
-				<h3 class="widgettitle"><?php _e('Widget Area', 'momentous'); ?></h3>
+				<h3 class="widgettitle"><?php _e('Widget Area', 'momentous-lite'); ?></h3>
 				<div class="textwidget">
-					<p><?php _e('There are no active widgets to be displayed. Please go to Appearance -> Widgets to setup your sidebar.', 'momentous'); ?></p>
+					<p><?php _e('There are no active widgets to be displayed. Please go to Appearance -> Widgets to setup your sidebar.', 'momentous-lite'); ?></p>
 				</div>
 			</aside>
 		

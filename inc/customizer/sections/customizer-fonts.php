@@ -11,7 +11,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
 
 	// Add Section for Theme Fonts
 	$wp_customize->add_section( 'momentous_section_fonts', array(
-        'title'    => __( 'Theme Fonts', 'momentous' ),
+        'title'    => __( 'Theme Fonts', 'momentous-lite' ),
         'priority' => 70,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -27,7 +27,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
 	);
 	$wp_customize->add_control( new Momentous_Customize_Font_Control( 
 		$wp_customize, 'text_font', array(
-			'label'      => __( 'Default Text Font', 'momentous' ),
+			'label'      => __( 'Default Text Font', 'momentous-lite' ),
 			'section'    => 'momentous_section_fonts',
 			'settings'   => 'momentous_theme_options[text_font]',
 			'priority' => 1
@@ -43,7 +43,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
 	);
 	$wp_customize->add_control( new Momentous_Customize_Font_Control( 
 		$wp_customize, 'title_font', array(
-			'label'      => __( 'Title Font', 'momentous' ),
+			'label'      => __( 'Title Font', 'momentous-lite' ),
 			'section'    => 'momentous_section_fonts',
 			'settings'   => 'momentous_theme_options[title_font]',
 			'priority' => 2
@@ -59,7 +59,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
 	);
 	$wp_customize->add_control( new Momentous_Customize_Font_Control( 
 		$wp_customize, 'navi_font', array(
-			'label'      => __( 'Navigation Font', 'momentous' ),
+			'label'      => __( 'Navigation Font', 'momentous-lite' ),
 			'section'    => 'momentous_section_fonts',
 			'settings'   => 'momentous_theme_options[navi_font]',
 			'priority' => 3
@@ -75,7 +75,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
 	);
 	$wp_customize->add_control( new Momentous_Customize_Font_Control( 
 		$wp_customize, 'widget_title_font', array(
-			'label'      => __( 'Widget Title Font', 'momentous' ),
+			'label'      => __( 'Widget Title Font', 'momentous-lite' ),
 			'section'    => 'momentous_section_fonts',
 			'settings'   => 'momentous_theme_options[widget_title_font]',
 			'priority' => 4
@@ -91,7 +91,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_installed_fonts', array(
-        'label'    => __( 'Install additional Fonts', 'momentous' ),
+        'label'    => __( 'Install additional Fonts', 'momentous-lite' ),
         'section'  => 'momentous_section_fonts',
         'settings' => 'momentous_theme_options[installed_fonts]',
         'type'     => 'textarea',
@@ -108,7 +108,7 @@ function momentous_customize_register_font_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Description_Control(
         $wp_customize, 'momentous_control_installed_fonts_description', array(
-            'label' => __('You can install additional fonts from the <a target="_blank" href="http://www.google.com/webfonts/">Google Font API</a> by inserting a list of fonts separated by Semicolon here (e.g. Cantora One; Galindo; Open Sans; ...). Please save your changes and RELOAD(F5) the Customizer then.', 'momentous'),			
+            'label' => __('You can install additional fonts from the <a target="_blank" href="http://www.google.com/webfonts/">Google Font API</a> by inserting a list of fonts separated by Semicolon here (e.g. Cantora One; Galindo; Open Sans; ...). Please save your changes and RELOAD(F5) the Customizer then.', 'momentous-lite'),			
             'section' => 'momentous_section_fonts',
             'settings' => 'momentous_theme_options[installed_fonts_description]',
             'priority' => 6

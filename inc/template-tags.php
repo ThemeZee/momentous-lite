@@ -62,7 +62,7 @@ if ( ! function_exists( 'momentous_display_postmeta' ) ) :
 	function momentous_display_postmeta() { ?>
 		
 		<span class="meta-date">
-		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'momentous'), 
+		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'momentous-lite'), 
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -72,9 +72,9 @@ if ( ! function_exists( 'momentous_display_postmeta' ) ) :
 		</span>
 		
 		<span class="meta-author">
-		<?php printf(__('by <a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'momentous'), 
+		<?php printf(__('by <a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'momentous-lite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'momentous' ), get_the_author() ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'momentous-lite' ), get_the_author() ) ),
 				get_the_author()
 			);
 		?>
@@ -237,7 +237,7 @@ function momentous_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'momentous'); ?>
+			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'momentous-lite'); ?>
 		</p>
 <?php
 	endif;

@@ -59,7 +59,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/momentous-documentation/
+http://themezee.com/docs/momentous-lite-documentation/
 
 ===================================
 E) Page Templates

@@ -10,7 +10,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['
 	die ('Please do not load this page directly. Thanks!');
 
 if ( post_password_required()) : ?>
-	<p><?php _e('Enter password to view comments.', 'momentous'); ?></p>
+	<p><?php _e('Enter password to view comments.', 'momentous-lite'); ?></p>
 <?php return; endif; ?>
 
 
@@ -20,7 +20,7 @@ if ( post_password_required()) : ?>
 	
 		<?php if ( have_comments() ) : ?>
 
-			<h3 class="comments-title"><span><?php comments_number( '', __('One comment','momentous'), __('% comments','momentous') );?></span></h3>
+			<h3 class="comments-title"><span><?php comments_number( '', __('One comment','momentous-lite'), __('% comments','momentous-lite') );?></span></h3>
 			
 			<ul class="commentlist">
 				<?php wp_list_comments( array('callback' => 'momentous_list_comments')); ?>
@@ -38,8 +38,8 @@ if ( post_password_required()) : ?>
 		<?php if ( comments_open() ) : ?>
 			<?php comment_form(array(
 				'comment_notes_after' => '',
-				'title_reply'       => '<span>' . __( 'Leave a Reply', 'momentous') . '</span>',
-				'title_reply_to'    => '<span>' . __( 'Leave a Reply to %s', 'momentous') . '</span>' )); ?>
+				'title_reply'       => '<span>' . __( 'Leave a Reply', 'momentous-lite') . '</span>',
+				'title_reply_to'    => '<span>' . __( 'Leave a Reply to %s', 'momentous-lite') . '</span>' )); ?>
 		<?php endif; ?>
 
 	</div>

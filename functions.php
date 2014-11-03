@@ -9,13 +9,13 @@ if ( ! function_exists( 'momentous_enqueue_scripts' ) ):
 function momentous_enqueue_scripts() { 
 	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style('momentous-stylesheet', get_stylesheet_uri());
+	wp_enqueue_style('momentous-lite-stylesheet', get_stylesheet_uri());
 	
 	// Register Genericons
-	wp_enqueue_style('momentous-genericons', get_template_directory_uri() . '/css/genericons.css');
+	wp_enqueue_style('momentous-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('momentous-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	wp_enqueue_script('momentous-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
 }
 endif;
@@ -54,7 +54,7 @@ function momentous_setup() {
 		$content_width = 860;
 		
 	// init Localization
-	load_theme_textdomain('momentous', get_template_directory() . '/languages' );
+	load_theme_textdomain('momentous-lite', get_template_directory() . '/languages' );
 	
 	// Add Theme Support
 	add_theme_support('post-thumbnails');
@@ -80,9 +80,9 @@ function momentous_setup() {
 		
 	// Register Navigation Menus
 	register_nav_menus( array(
-		'primary'   => __('Main Navigation', 'momentous'),
-		'secondary' => __('Top Navigation', 'momentous'),
-		'social' => __('Social Icons', 'momentous'),
+		'primary'   => __('Main Navigation', 'momentous-lite'),
+		'secondary' => __('Top Navigation', 'momentous-lite'),
+		'social' => __('Social Icons', 'momentous-lite'),
 		) 
 	);
 	
@@ -114,9 +114,9 @@ function momentous_register_sidebars() {
 	
 	// Register Sidebars
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'momentous'),
+		'name' => __( 'Sidebar', 'momentous-lite'),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'momentous'),
+		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'momentous-lite'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
@@ -125,36 +125,36 @@ function momentous_register_sidebars() {
 	
 	//Register Footer Widgets
 	register_sidebar( array(
-		'name' => __( 'Footer Left', 'momentous'),
+		'name' => __( 'Footer Left', 'momentous-lite'),
 		'id' => 'footer-left',
-		'description' => __( 'Appears on footer on the left hand side.', 'momentous'),
+		'description' => __( 'Appears on footer on the left hand side.', 'momentous-lite'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
 	register_sidebar( array(
-		'name' => __( 'Footer Center Left', 'momentous'),
+		'name' => __( 'Footer Center Left', 'momentous-lite'),
 		'id' => 'footer-center-left',
-		'description' => __( 'Appears on footer on center left position.', 'momentous'),
+		'description' => __( 'Appears on footer on center left position.', 'momentous-lite'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
 	register_sidebar( array(
-		'name' => __( 'Footer Center Right', 'momentous'),
+		'name' => __( 'Footer Center Right', 'momentous-lite'),
 		'id' => 'footer-center-right',
-		'description' => __( 'Appears on footer on center right position.', 'momentous'),
+		'description' => __( 'Appears on footer on center right position.', 'momentous-lite'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
 	register_sidebar( array(
-		'name' => __( 'Footer Right', 'momentous'),
+		'name' => __( 'Footer Right', 'momentous-lite'),
 		'id' => 'footer-right',
-		'description' => __( 'Appears on footer on the right hand side.', 'momentous'),
+		'description' => __( 'Appears on footer on the right hand side.', 'momentous-lite'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
@@ -185,7 +185,7 @@ function momentous_wp_title( $title, $sep = '' ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'momentous'), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'momentous-lite'), max( $paged, $page ) );
 
 	return $title;
 }
@@ -217,9 +217,9 @@ function momentous_credit_link() {
 	
 	if ( isset($theme_options['credit_link']) and $theme_options['credit_link'] == true ) :
 	
-		printf(__( 'Powered by %1$s and %2$s.', 'momentous' ), 
-				sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous' ) ),
-				sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous' ) )
+		printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
+				sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
+				sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
 			);
 		
 	endif;
@@ -263,8 +263,8 @@ function momentous_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 	
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'momentous'); ?> <?php comment_author_link(); ?> 
-			<?php edit_comment_link( __( '(Edit)', 'momentous'), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php _e( 'Pingback:', 'momentous-lite'); ?> <?php comment_author_link(); ?> 
+			<?php edit_comment_link( __( '(Edit)', 'momentous-lite'), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 	
 	<?php else : ?>
@@ -277,12 +277,12 @@ function momentous_list_comments($comment, $args, $depth) {
 				
 					<div class="comment-author vcard">
 						<?php echo get_avatar( $comment, 56 ); ?>
-						<?php printf(__('<span class="fn">%s</span>', 'momentous'), get_comment_author_link()) ?>
+						<?php printf(__('<span class="fn">%s</span>', 'momentous-lite'), get_comment_author_link()) ?>
 					</div>
 
 					<div class="commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'momentous'), get_comment_date(),  get_comment_time()) ?></a>
-						<?php edit_comment_link(__('(Edit)', 'momentous'),'  ','') ?>
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'momentous-lite'), get_comment_date(),  get_comment_time()) ?></a>
+						<?php edit_comment_link(__('(Edit)', 'momentous-lite'),'  ','') ?>
 					</div>
 					
 				</div>
@@ -292,7 +292,7 @@ function momentous_list_comments($comment, $args, $depth) {
 					<?php comment_text(); ?>
 					
 					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'momentous'); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'momentous-lite'); ?></p>
 					<?php endif; ?>
 					
 					<div class="reply">
