@@ -1,0 +1,522 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Momentous\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 11:02+0100\n"
+"PO-Revision-Date: 2014-11-03 11:02+0100\n"
+"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
+"Language-Team: ThemeZee <contact@themezee.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: 404.php:9
+msgid "404 Error: Not found"
+msgstr ""
+
+#: 404.php:12
+msgid ""
+"The page you trying to reach does not exist, or has been moved. Please use "
+"the menus or the search box to find what you are looking for"
+msgstr ""
+
+#: 404.php:14
+msgid "Search"
+msgstr ""
+
+#: 404.php:17
+msgid "Recent Posts"
+msgstr ""
+
+#: 404.php:27
+msgid "Pages"
+msgstr ""
+
+#: archive.php:14
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:14
+msgid "F Y"
+msgstr ""
+
+#: archive.php:16
+msgid "Archives"
+msgstr ""
+
+#: author.php:16
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: category.php:12
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:13
+msgid "Enter password to view comments."
+msgstr ""
+
+#: comments.php:23
+msgid "One comment"
+msgstr ""
+
+#: comments.php:23
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: comments.php:41
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:42
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: content.php:14 featured-content.php:44
+msgid "Continue reading &raquo;"
+msgstr ""
+
+#: functions.php:71
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:72
+msgid "Top Navigation"
+msgstr ""
+
+#: functions.php:73
+msgid "Social Icons"
+msgstr ""
+
+#: functions.php:105
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:107
+msgid "Appears on posts and pages except front page and fullwidth template."
+msgstr ""
+
+#: functions.php:116
+msgid "Footer Left"
+msgstr ""
+
+#: functions.php:118
+msgid "Appears on footer on the left hand side."
+msgstr ""
+
+#: functions.php:125
+msgid "Footer Center Left"
+msgstr ""
+
+#: functions.php:127
+msgid "Appears on footer on center left position."
+msgstr ""
+
+#: functions.php:134
+msgid "Footer Center Right"
+msgstr ""
+
+#: functions.php:136
+msgid "Appears on footer on center right position."
+msgstr ""
+
+#: functions.php:143
+msgid "Footer Right"
+msgstr ""
+
+#: functions.php:145
+msgid "Appears on footer on the right hand side."
+msgstr ""
+
+#: functions.php:176
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:208
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: functions.php:209
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:210
+msgid "Momentous"
+msgstr ""
+
+#: functions.php:254
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:255 functions.php:273
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:268
+#, php-format
+msgid "<span class=\"fn\">%s</span>"
+msgstr ""
+
+#: functions.php:272
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:283
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: image.php:19
+msgid "Previous"
+msgstr ""
+
+#: image.php:20
+msgid "Next"
+msgstr ""
+
+#: image.php:26
+msgid "Return to Gallery"
+msgstr ""
+
+#: image.php:27
+msgid "Return to"
+msgstr ""
+
+#: search.php:13 search.php:32
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:38
+msgid ""
+"No matches. Please try again, or use the navigation menus to find what you "
+"search for."
+msgstr ""
+
+#: searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#: sidebar.php:24
+msgid "Widget Area"
+msgstr ""
+
+#: sidebar.php:26
+msgid ""
+"There are no active widgets to be displayed. Please go to Appearance -> "
+"Widgets to setup your sidebar."
+msgstr ""
+
+#: tag.php:12
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: inc/featured-content.php:419
+msgid "Featured Content"
+msgstr ""
+
+#: inc/featured-content.php:420
+#, php-format
+msgid ""
+"Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
+"tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+msgstr ""
+
+#: inc/featured-content.php:421 inc/featured-content.php:430
+#: inc/featured-content.php:490
+msgid "featured"
+msgstr ""
+
+#: inc/featured-content.php:442
+msgid "Tag Name"
+msgstr ""
+
+#: inc/featured-content.php:447
+msgid "Don&rsquo;t display tag on front end."
+msgstr ""
+
+#: inc/template-tags.php:65
+#, php-format
+msgid ""
+"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime="
+"\"%3$s\">%4$s</time></a>"
+msgstr ""
+
+#: inc/template-tags.php:75
+#, php-format
+msgid "by <a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
+msgstr ""
+
+#: inc/template-tags.php:77
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/template-tags.php:240
+msgid ""
+"Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
+"custom links to all your social networks. Then click on \"Manage Locations\" "
+"tab and assign your created menu to the \"Social Icons\" theme location."
+msgstr ""
+
+#: inc/theme-info.php:15
+msgid "Welcome to Momentous"
+msgstr ""
+
+#: inc/theme-info.php:16
+msgid "Theme Info"
+msgstr ""
+
+#: inc/theme-info.php:35
+#, php-format
+msgid "Welcome to %1s %2s"
+msgstr ""
+
+#: inc/theme-info.php:41
+msgid "Important Links:"
+msgstr ""
+
+#: inc/theme-info.php:42
+msgid "Theme Info Page"
+msgstr ""
+
+#: inc/theme-info.php:43
+msgid "Changelog"
+msgstr ""
+
+#: inc/theme-info.php:44
+msgid "Theme Demo"
+msgstr ""
+
+#: inc/theme-info.php:45 inc/theme-info.php:65
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/theme-info.php:62
+#, php-format
+msgid "Getting Started with %s"
+msgstr ""
+
+#: inc/theme-info.php:67
+msgid ""
+"Need any help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+
+#: inc/theme-info.php:69
+msgid "Visit Momentous Documentation"
+msgstr ""
+
+#: inc/theme-info.php:74 inc/customizer/customizer.php:30
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-info.php:76
+msgid ""
+"Momentous supports the awesome Theme Customizer for all theme settings. "
+"Click \"Customize Theme\" to open the Customizer now."
+msgstr ""
+
+#: inc/theme-info.php:98
+#, php-format
+msgid "Momentous is proudly brought to you by %1s."
+msgstr ""
+
+#: inc/customizer/customizer.php:55
+msgid "Display Tagline below site title."
+msgstr ""
+
+#: inc/customizer/default-options.php:34
+#: inc/customizer/sections/customizer-general.php:43
+msgid "Latest Posts"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:121
+msgid "Add logo"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:122
+msgid "Set as logo"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:123
+msgid "Choose logo"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:124
+msgid "Change logo"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:125
+msgid "Remove logo"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:126
+msgid "No logo set"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:175
+msgid "Site Logo Image replaces Site Title."
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:14
+msgid "Theme Colors"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:30
+msgid "Header Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:46
+msgid "Navigation Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:62
+msgid "Post Title Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:78
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:94
+msgid "Widget Title Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:110
+msgid "Widget Link Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-colors.php:126
+msgid "Footer Color"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:14
+msgid "Theme Fonts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:30
+msgid "Default Text Font"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:46
+msgid "Title Font"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:62
+msgid "Navigation Font"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:78
+msgid "Widget Title Font"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:94
+msgid "Install additional Fonts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-fonts.php:110
+msgid ""
+"You can install additional fonts from the <a target=\"_blank\" href=\"http://"
+"www.google.com/webfonts/\">Google Font API</a> by inserting a list of fonts "
+"separated by Semicolon here (e.g. Cantora One; Galindo; Open Sans; ...). "
+"Please save your changes and RELOAD(F5) the Customizer then."
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:14
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:29
+msgid "Theme Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:35
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:36
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:50
+msgid "Title above Latest Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:67
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:82
+msgid "Display Credit Link to ThemeZee on footer line."
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:14
+#: inc/customizer/sections/customizer-header.php:29
+msgid "Header Content"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:46
+msgid "Activate dropdown search field on header area"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:62
+msgid "Display Social Icons on main navigation"
+msgstr ""
+
+#: inc/customizer/sections/customizer-logo.php:14
+#: inc/customizer/sections/customizer-logo.php:28
+msgid "Site Logo"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:14
+msgid "Post Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:29
+msgid "Post Layout on Archives"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:35
+msgid "One Column (Full posts)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:36
+msgid "One Column Excerpt (Post summaries)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:37
+msgid "Two Column Excerpt (Post summaries)"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:51
+msgid "Post Images"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:66
+msgid "Display featured images on archive pages"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:82
+msgid "Display featured images on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:99
+msgid "Excerpt More Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:114
+msgid "Display [...] after text excerpts."
+msgstr ""
