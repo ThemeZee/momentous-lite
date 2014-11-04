@@ -1,8 +1,8 @@
-Momentous WordPress Theme, Copyright 2014 ThemeZee.com
-Momentous is distributed under the terms of the GNU GPL
+Momentous Lite WordPress Theme, Copyright 2014 ThemeZee.com
+Momentous Lite is distributed under the terms of the GNU GPL
 
 ===================================
-Thanks for Downloading Momentous
+Thanks for Downloading Momentous Lite
 ===================================
 
 Thank you for downloading my theme. 
@@ -51,7 +51,7 @@ To find out more about installing WordPress themes please also see http://themez
 C) Theme Options
 ===================================
 
-Momentous supports the awesome Theme Customizer for all theme settings. 
+Momentous Lite supports the awesome Theme Customizer for all theme settings. 
 Go to WP-Admin > Appearance > Customize to open the Customizer.
 
 ===================================
@@ -59,7 +59,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/momentous-lite-documentation/
+http://themezee.com/docs/momentous-documentation/
 
 ===================================
 E) Page Templates
@@ -77,7 +77,7 @@ We have included a few, nice page templates for advanced content presentation.
 F) Theme License
 ===================================
 
-Momentous is released under the GNU general public license. 
+Momentous Lite is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================
@@ -89,16 +89,12 @@ G) Licenses of bundled resources
 	Source URL: http://genericons.com
 	License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
 
-	2. Bundled Images, Copyright 2014 ThemeZee.com
-	Images such as the default slider image and ad block image included in this theme package are created by myself and licensed under GNU GPL.
-	License URL of Logo / Background images: http://www.gnu.org/licenses/gpl.html
-
-	3. Default Fonts (Share, Carme)
+	2. Default Fonts (Average Sans, Fjalla One)
 	Default Fonts used in the theme are from the Google Font API and are GPL-compatible licensed (SIL Open Font License (OFL))
-	https://www.google.com/fonts/specimen/Carme
-	http://www.google.com/fonts/specimen/Share
+	https://www.google.com/fonts/specimen/Average+Sans
+	http://www.google.com/fonts/specimen/Fjalla+One
 	
-	4. Screenshot Photography (used on screenshot.png)
+	3. Screenshot Photography (used on screenshot.png)
 	We only use verified images from Pixabay for the screenshot.png, which are licensed under CC0 (GPL compatible).
 	Source URL: http://pixabay.com
 	Image 1: http://pixabay.com/en/jet-engine-turbine-jet-airplane-371412/

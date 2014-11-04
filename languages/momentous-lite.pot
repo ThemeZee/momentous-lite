@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Momentous\n"
+"Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 11:02+0100\n"
-"PO-Revision-Date: 2014-11-03 11:02+0100\n"
+"POT-Creation-Date: 2014-11-04 17:01+0100\n"
+"PO-Revision-Date: 2014-11-04 17:01+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -85,95 +85,63 @@ msgstr ""
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:87
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:88
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:89
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:121
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:123
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
 
-#: functions.php:116
-msgid "Footer Left"
-msgstr ""
-
-#: functions.php:118
-msgid "Appears on footer on the left hand side."
-msgstr ""
-
-#: functions.php:125
-msgid "Footer Center Left"
-msgstr ""
-
-#: functions.php:127
-msgid "Appears on footer on center left position."
-msgstr ""
-
-#: functions.php:134
-msgid "Footer Center Right"
-msgstr ""
-
-#: functions.php:136
-msgid "Appears on footer on center right position."
-msgstr ""
-
-#: functions.php:143
-msgid "Footer Right"
-msgstr ""
-
-#: functions.php:145
-msgid "Appears on footer on the right hand side."
-msgstr ""
-
-#: functions.php:176
+#: functions.php:155
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:208
+#: functions.php:182
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: functions.php:209
+#: functions.php:183
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:184
 msgid "Momentous"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:226
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:255 functions.php:273
+#: functions.php:227 functions.php:245
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:268
+#: functions.php:240
 #, php-format
 msgid "<span class=\"fn\">%s</span>"
 msgstr ""
 
-#: functions.php:272
+#: functions.php:244
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:283
+#: functions.php:255
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -247,24 +215,24 @@ msgstr ""
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:43
 #, php-format
 msgid ""
 "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime="
 "\"%3$s\">%4$s</time></a>"
 msgstr ""
 
-#: inc/template-tags.php:75
+#: inc/template-tags.php:53
 #, php-format
 msgid "by <a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 msgstr ""
 
-#: inc/template-tags.php:77
+#: inc/template-tags.php:55
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:240
+#: inc/template-tags.php:218
 msgid ""
 "Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
@@ -300,139 +268,70 @@ msgstr ""
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/theme-info.php:65
+#: inc/theme-info.php:45 inc/theme-info.php:66
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:62
+#: inc/theme-info.php:46
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/theme-info.php:59
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:67
+#: inc/theme-info.php:68
 msgid ""
 "Need any help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:69
+#: inc/theme-info.php:70
 msgid "Visit Momentous Documentation"
 msgstr ""
 
-#: inc/theme-info.php:74 inc/customizer/customizer.php:30
+#: inc/theme-info.php:75 inc/customizer/customizer.php:27
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-info.php:76
+#: inc/theme-info.php:77
 msgid ""
 "Momentous supports the awesome Theme Customizer for all theme settings. "
 "Click \"Customize Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:98
-#, php-format
-msgid "Momentous is proudly brought to you by %1s."
+#: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
+msgid "PRO Version"
 msgstr ""
 
-#: inc/customizer/customizer.php:55
+#: inc/theme-info.php:86
+msgid ""
+"Need more features? Check out the PRO version which comes with additional "
+"features and advanced customization options."
+msgstr ""
+
+#: inc/theme-info.php:88
+msgid "Learn more about the PRO Version of Momentous"
+msgstr ""
+
+#: inc/theme-info.php:108
+#, php-format
+msgid ""
+"Momentous is proudly brought to you by %1s. If you like this theme, %2s :) "
+msgstr ""
+
+#: inc/theme-info.php:110
+msgid "rate it"
+msgstr ""
+
+#: inc/customizer/customizer.php:52
 msgid "Display Tagline below site title."
 msgstr ""
 
 #: inc/customizer/default-options.php:34
 #: inc/customizer/sections/customizer-general.php:43
 msgid "Latest Posts"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:121
-msgid "Add logo"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:122
-msgid "Set as logo"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:123
-msgid "Choose logo"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:124
-msgid "Change logo"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:125
-msgid "Remove logo"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:126
-msgid "No logo set"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:175
-msgid "Site Logo Image replaces Site Title."
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:14
-msgid "Theme Colors"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:30
-msgid "Header Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:46
-msgid "Navigation Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:62
-msgid "Post Title Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:78
-msgid "Link Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:94
-msgid "Widget Title Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:110
-msgid "Widget Link Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-colors.php:126
-msgid "Footer Color"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:14
-msgid "Theme Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:30
-msgid "Default Text Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:46
-msgid "Title Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:62
-msgid "Navigation Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:78
-msgid "Widget Title Font"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:94
-msgid "Install additional Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-fonts.php:110
-msgid ""
-"You can install additional fonts from the <a target=\"_blank\" href=\"http://"
-"www.google.com/webfonts/\">Google Font API</a> by inserting a list of fonts "
-"separated by Semicolon here (e.g. Cantora One; Galindo; Open Sans; ...). "
-"Please save your changes and RELOAD(F5) the Customizer then."
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -459,64 +358,53 @@ msgstr ""
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:82
-msgid "Display Credit Link to ThemeZee on footer line."
-msgstr ""
-
 #: inc/customizer/sections/customizer-header.php:14
-#: inc/customizer/sections/customizer-header.php:29
+#: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:46
+#: inc/customizer/sections/customizer-header.php:47
 msgid "Activate dropdown search field on header area"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:62
+#: inc/customizer/sections/customizer-header.php:63
 msgid "Display Social Icons on main navigation"
-msgstr ""
-
-#: inc/customizer/sections/customizer-logo.php:14
-#: inc/customizer/sections/customizer-logo.php:28
-msgid "Site Logo"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:14
 msgid "Post Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:29
-msgid "Post Layout on Archives"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:35
-msgid "One Column (Full posts)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:36
-msgid "One Column Excerpt (Post summaries)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:37
-msgid "Two Column Excerpt (Post summaries)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:51
+#: inc/customizer/sections/customizer-post.php:30
 msgid "Post Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:66
+#: inc/customizer/sections/customizer-post.php:45
 msgid "Display featured images on archive pages"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:82
+#: inc/customizer/sections/customizer-post.php:61
 msgid "Display featured images on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:99
+#: inc/customizer/sections/customizer-post.php:79
 msgid "Excerpt More Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:114
+#: inc/customizer/sections/customizer-post.php:94
 msgid "Display [...] after text excerpts."
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:30
+msgid "Need more features?"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:46
+msgid ""
+"Check out the PRO version which comes with additional features and advanced "
+"customization options."
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:62
+msgid "Learn more about the PRO Version"
 msgstr ""

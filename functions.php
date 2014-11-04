@@ -194,7 +194,7 @@ function momentous_excerpt_length($length) {
 
 // Slideshow Excerpt Length
 function  momentous_featured_content_excerpt_length($length) {
-    return 35;
+    return 40;
 }
 
 
