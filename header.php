@@ -49,7 +49,7 @@
 			
 			</div>
 			
-			<nav id="topnav" class="clearfix" role="navigation">
+			<div id="header-content" class="clearfix">
 
 				<?php // Display Header Search Icon
 				if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
@@ -58,13 +58,24 @@
 					</div>
 				<?php endif; ?>
 				
-				<p id="topnav-icon"></p>
-				
 				<?php // Display Top Navigation
-					wp_nav_menu(array('theme_location' => 'secondary', 'container' => false, 'menu_id' => 'topnav-menu', 'echo' => true, 'fallback_cb' => '', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 1));
-				?>
-				
-			</nav>
+				if ( has_nav_menu( 'secondary' ) ) : ?>
+			
+					<nav id="topnav" class="clearfix" role="navigation">
+						<p id="topnav-icon"></p>
+						<?php wp_nav_menu(	array(
+							'theme_location' => 'secondary', 
+							'container' => false, 
+							'menu_id' => 'topnav-menu', 
+							'fallback_cb' => '', 
+							'depth' => 1)
+						);
+						?>
+					</nav>
+			
+				<?php endif; ?>
+			
+			</div>
 
 		</header>
 		
@@ -80,13 +91,18 @@
 							<?php momentous_display_social_icons(); ?>
 						</div>
 
-					<?php endif; ?>
+				<?php endif; ?>
 				
 				
 				<nav id="mainnav" class="clearfix" role="navigation">
-					<?php 
-						// Get Navigation out of Theme Options
-						wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'momentous_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));
+					<?php // Display Main Navigation
+						wp_nav_menu( array(
+							'theme_location' => 'primary', 
+							'container' => false, 
+							'menu_id' => 'mainnav-menu', 
+							'echo' => true, 
+							'fallback_cb' => 'momentous_default_menu')
+						);
 					?>
 				</nav>
 				

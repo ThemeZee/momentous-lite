@@ -97,11 +97,11 @@ G) Licenses of bundled resources
 	3. Screenshot Photography (used on screenshot.png)
 	We only use verified images from Pixabay for the screenshot.png, which are licensed under CC0 (GPL compatible).
 	Source URL: http://pixabay.com
-	Image 1: http://pixabay.com/en/jet-engine-turbine-jet-airplane-371412/
-	Image 2: http://pixabay.com/en/by-wlodek-old-close-hack-closed-428549/
-	Image 3: http://pixabay.com/en/typewriter-letters-keyboard-keys-472850/
-	Image 4: http://pixabay.com/en/toothed-belt-drive-details-209677/
-	Image 5: http://pixabay.com/en/rusty-metal-old-machine-185531/
+	Image 1: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338502/
+	Image 2: http://pixabay.com/en/headphones-keyboard-apple-input-338492/
+	Image 3: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338507/
+	Image 4: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338505/
+	Image 5: http://pixabay.com/en/iphone-smartphone-desk-mobile-518101/
 	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
 
 ===================================

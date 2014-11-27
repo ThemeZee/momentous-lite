@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: http://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 0.95
+Version: 1.0
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -190,20 +190,23 @@ input, textarea, select {
 	height: auto;
 }
 
-/* Top Navigation Menu
+/* Header Content
 -------------------------------------------------------------- */
-#topnav .header-search-icon {
+#header-content {
+	float: right;
+}
+#header-content .header-search-icon {
 	display: inline-block;
 	float: right;
 	margin: 0.4em 0 0 0.8em;
 	color: #ccc;
 	color: rgba(255,255,255,0.7);
 }
-#topnav .header-search-icon:hover {
+#header-content .header-search-icon:hover {
 	cursor: pointer;
 	color: #fff;
 }
-#topnav .header-search-icon .genericon-search {
+#header-content .header-search-icon .genericon-search {
 	display: inline-block;
 	margin-right: 0.2em;
 	-webkit-font-smoothing: antialiased;
@@ -218,15 +221,17 @@ input, textarea, select {
 	color: rgba(255,255,255,0.7);
 	content: '\f410';
 }
-#topnav .header-search-icon:hover .genericon-search {
+#header-content .header-search-icon:hover .genericon-search {
 	color: #fff;
 }
 
-#topnav-icon {
-	display: none;
-}
+/* Top Navigation Menu
+-------------------------------------------------------------- */
 #topnav {
 	float: right;
+}
+#topnav-icon {
+	display: none;
 }
 #topnav-menu {
 	float: left;
@@ -474,8 +479,7 @@ input, textarea, select {
 	text-decoration: underline;
 }
 .sticky {
-	border-left: 5px solid #ddd;
-	margin-left: 2em;
+	border-left: 5px solid #22a8d8;
 }
 
 /* Page Links | wp_link_pages() */
@@ -702,7 +706,7 @@ code, pre {
 	font-size: 0.9em;
 	font-family: Monospace, "Courier New", Courier;
 	overflow: auto;
-	line-height: 1.0em;
+	line-height: 1.4em;
 }
 del, strike, s{
 	text-decoration: line-through;
@@ -1372,15 +1376,18 @@ embed, iframe, object, video {
 		left: 0;
 	}
 	
-	#topnav {
+	#header-content {
 		float: none;
+	}
+	#header-content .header-search-icon {
+		margin: 0.15em 0 0 0.8em;
 	}
 	#topnav-icon {
 		float: right;
 		display: inline-block;
 		text-decoration: none;
 		color: #ccc;
-		margin: 0.3em 0.4em 0 0;
+		margin: 0.35em 0.4em 0 0;
 	}
 	#topnav-icon:hover {
 		cursor: pointer;
@@ -1394,9 +1401,6 @@ embed, iframe, object, video {
 		font: normal 24px Genericons;
 		text-decoration: inherit;
 		vertical-align: text-bottom;
-	}
-	#topnav .header-search-icon {
-		margin: 0.15em 0 0 0.8em;
 	}
 
 	#topnav-menu {
