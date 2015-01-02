@@ -2,6 +2,11 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.0.1
+-----------------------------------
+[added] setting to choose between one and two column post layout
+[updated] to the latest Genericon Font 3.3 and added new social icons
+
 Version 1.0
 -----------------------------------
 Final Version

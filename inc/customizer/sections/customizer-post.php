@@ -17,6 +17,27 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Settings and Controls for Post Layout
+	$wp_customize->add_setting( 'momentous_theme_options[post_layout]', array(
+        'default'           => 'index',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'momentous_sanitize_post_layout'
+		)
+	);
+    $wp_customize->add_control( 'momentous_control_post_layout', array(
+        'label'    => __( 'Post Layout', 'momentous-lite' ),
+        'section'  => 'momentous_section_post',
+        'settings' => 'momentous_theme_options[post_layout]',
+        'type'     => 'radio',
+		'priority' => 1,
+        'choices'  => array(
+            'one-column' => __( 'One Column', 'momentous-lite' ),
+			'index' => __( 'Two Columns', 'momentous-lite' )
+			)
+		)
+	);
+	
 	// Add Post Images Headline
 	$wp_customize->add_setting( 'momentous_theme_options[post_images]', array(
         'default'           => '',
@@ -30,7 +51,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
             'label' => __( 'Post Images', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_images]',
-            'priority' => 	2
+            'priority' => 2
             )
         )
     );

@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: http://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.0
+Version: 1.0.1
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -457,6 +457,9 @@ input, textarea, select {
 	margin: 0 0 1.5em 0;
 	padding: 1.2em;
 	background: #fff;
+}
+#post-wrapper .one-column-post {
+	margin-right: 1.5em;
 }
 .page-title, .post-title {
 	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
@@ -992,7 +995,7 @@ embed, iframe, object, video {
 }
 
 /* Add Genericons */
-#social-icons-menu li a:before { content: '\f408';} /* Default Icon */
+#social-icons-menu li a:before { content: '\f408'; } /* Default Icon */
 #social-icons-menu li a[href*="codepen.io"]:before  { content: '\f216'; }
 #social-icons-menu li a[href*="digg.com"]:before { content: '\f221'; }
 #social-icons-menu li a[href*="dribbble.com"]:before { content: '\f201'; }
@@ -1000,17 +1003,19 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="flickr.com"]:before { content: '\f211'; }
 #social-icons-menu li a[href*="plus.google.com"]:before { content: '\f206'; }
 #social-icons-menu li a[href*="github.com"]:before { content: '\f200'; }
-#social-icons-menu li a[href*="instagram.com"]:before { content: '\f215'; ; }
+#social-icons-menu li a[href*="instagram.com"]:before { content: '\f215'; }
 #social-icons-menu li a[href*="linkedin.com"]:before { content: '\f207'; }
 #social-icons-menu li a[href*="pinterest.com"]:before { content: '\f209'; }
 #social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; }
 #social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; }
 #social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; }
+#social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; }
 #social-icons-menu li a[href*="skype.com"]:before,
 #social-icons-menu li a[href*="skype:"]:before { content: '\f220'; }
 #social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; }
 #social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; }
 #social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; }
+#social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; }
 #social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; }
 #social-icons-menu li a[href*="wordpress.org"]:before,
 #social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
@@ -1019,7 +1024,7 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="/feed/"]:before,
 #social-icons-menu li a[href*="?feed=rss2"]:before,
 #social-icons-menu li a[href*="feedburner.google.com"]:before,
-#social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413';}
+#social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; }
 
 #social-icons-menu li a:hover:before { color: #333; } /* Hover */
 
@@ -1610,6 +1615,9 @@ embed, iframe, object, video {
 		float: none;
 		width: 100%;
 		padding-right: 0;
+	}
+	#post-wrapper .one-column-post {
+		margin-right: 0;
 	}
 }
 /* Phablets (portrait) | <640px */

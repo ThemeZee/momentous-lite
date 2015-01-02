@@ -12,7 +12,7 @@ function momentous_enqueue_scripts() {
 	wp_enqueue_style('momentous-lite-stylesheet', get_stylesheet_uri());
 	
 	// Register Genericons
-	wp_enqueue_style('momentous-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
+	wp_enqueue_style('momentous-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
 
 	// Register and enqueue navigation.js
 	wp_enqueue_script('momentous-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));

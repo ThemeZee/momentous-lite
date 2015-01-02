@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-04 17:01+0100\n"
-"PO-Revision-Date: 2014-11-04 17:01+0100\n"
+"POT-Creation-Date: 2015-01-02 11:43+0100\n"
+"PO-Revision-Date: 2015-01-02 11:44+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Leave a Reply to %s"
 msgstr ""
 
-#: content.php:14 featured-content.php:44
+#: content-one-column.php:12 content.php:14 featured-content.php:44
 msgid "Continue reading &raquo;"
 msgstr ""
 
@@ -301,6 +301,10 @@ msgid ""
 "Click \"Customize Theme\" to open the Customizer now."
 msgstr ""
 
+#: inc/theme-info.php:79
+msgid "Customize Theme"
+msgstr ""
+
 #: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
 msgstr ""
@@ -375,23 +379,35 @@ msgstr ""
 msgid "Post Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:30
+#: inc/customizer/sections/customizer-post.php:29
+msgid "Post Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:35
+msgid "One Column"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:36
+msgid "Two Columns"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:51
 msgid "Post Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:45
+#: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:61
+#: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:79
+#: inc/customizer/sections/customizer-post.php:100
 msgid "Excerpt More Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:94
+#: inc/customizer/sections/customizer-post.php:115
 msgid "Display [...] after text excerpts."
 msgstr ""
 
