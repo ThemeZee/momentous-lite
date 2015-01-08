@@ -2,6 +2,11 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+[improved] styling of blockquotes
+[fixed] wrong translation textdomain in some files
+
 Version 1.0.1
 -----------------------------------
 [added] setting to choose between one and two column post layout
