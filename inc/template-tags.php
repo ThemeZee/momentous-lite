@@ -173,7 +173,8 @@ if ( ! function_exists( 'momentous_display_pagination' ) ):
 				'current' => max( 1, get_query_var( 'paged' ) ),
 				'total' => $wp_query->max_num_pages,
 				'next_text' => '&raquo;',
-				'prev_text' => '&laquo'
+				'prev_text' => '&laquo',
+				'add_args' => false
 			) );
 
 		// Display the pagination if more than one page is found

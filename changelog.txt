@@ -6,6 +6,7 @@ Version 1.0.2
 -----------------------------------
 [improved] styling of blockquotes
 [fixed] wrong translation textdomain in some files
+[fixed] ampersand escape bug in pagination links (https://core.trac.wordpress.org/ticket/30831)
 
 Version 1.0.1
 -----------------------------------
