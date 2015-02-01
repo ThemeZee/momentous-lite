@@ -2,6 +2,10 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[added] Masonry JS layout for two column post layout
+
 Version 1.0.2
 -----------------------------------
 [improved] styling of blockquotes

@@ -17,6 +17,18 @@ function momentous_enqueue_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script('momentous-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
+	// Get Theme Options from Database
+	$theme_options = momentous_theme_options();
+	
+	// Register and Enqueue Masonry JS for two column post layout
+	if ( isset($theme_options['post_layout']) and $theme_options['post_layout'] == 'index' ) :
+	
+		// Register and enqueue masonry script
+		wp_enqueue_script('masonry');
+		wp_enqueue_script('momentous-lite-masonry', get_template_directory_uri() .'/js/masonry-init.js', array('jquery', 'masonry'));
+		
+	endif;
+	
 	// Register and Enqueue Fonts
 	wp_enqueue_style('momentous-lite-default-font', '//fonts.googleapis.com/css?family=Average+Sans');
 	wp_enqueue_style('momentous-lite-default-title-font', '//fonts.googleapis.com/css?family=Fjalla+One');
