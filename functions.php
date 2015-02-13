@@ -52,7 +52,7 @@ add_action('wp_head', 'momentous_enqueue_html5shiv');
 
 function momentous_enqueue_html5shiv(){  ?>
 	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js" type="text/javascript"></script>
 	<![endif]-->
 <?php
 }
