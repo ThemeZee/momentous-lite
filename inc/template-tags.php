@@ -8,6 +8,19 @@
  */
 
 
+// Display Site Title
+add_action( 'momentous_site_title', 'momentous_display_site_title' );
+
+function momentous_display_site_title() { ?>
+
+	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+	</a>
+
+<?php
+}
+
+
 // Display Custom Header
 if ( ! function_exists( 'momentous_display_custom_header' ) ):
 	
@@ -187,6 +200,38 @@ if ( ! function_exists( 'momentous_display_pagination' ) ):
 		<?php
 		endif;
 		
+	}
+	
+endif;
+
+
+// Display Footer Text
+if ( ! function_exists( 'momentous_display_footer_text' ) ):
+
+	function momentous_display_footer_text() { 
+
+		// Get Theme Options from Database
+		$theme_options = momentous_theme_options();
+
+		if ( isset( $theme_options['footer_text'] ) and $theme_options['footer_text'] <> '' ) :
+			
+			echo do_shortcode(wp_kses_post($theme_options['footer_text']));
+				
+		endif; 
+	}
+	
+endif;
+
+
+// Display Credit Link
+if ( ! function_exists( 'momentous_display_credit_link' ) ):
+
+	function momentous_display_credit_link() { 
+		
+		printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
+		); 
 	}
 	
 endif;

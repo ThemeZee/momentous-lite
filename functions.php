@@ -188,16 +188,6 @@ function momentous_has_featured_content() {
 }
 
 
-// Display Credit Link Function
-function momentous_credit_link() {
-	
-	printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
-		);
-}
-
-
 // Change Excerpt Length
 add_filter('excerpt_length', 'momentous_excerpt_length');
 function momentous_excerpt_length($length) {
