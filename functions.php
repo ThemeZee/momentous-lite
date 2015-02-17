@@ -29,13 +29,11 @@ function momentous_enqueue_scripts() {
 		
 	endif;
 	
-	// Register and Enqueue Fonts
-	wp_enqueue_style('momentous-lite-default-font', '//fonts.googleapis.com/css?family=Average+Sans');
-	wp_enqueue_style('momentous-lite-default-title-font', '//fonts.googleapis.com/css?family=Fjalla+One');
+	// Register and Enqueue Font
+	wp_enqueue_style('momentous-lite-default-fonts', momentous_fonts_url(), array(), null );
 	
 }
 endif;
-
 
 // Load comment-reply.js if comment form is loaded and threaded comments activated
 add_action( 'comment_form_before', 'momentous_enqueue_comment_reply' );
@@ -46,7 +44,6 @@ function momentous_enqueue_comment_reply() {
 	}
 }
 
-
 // Embed HTML5shiv to support HTML5 elements in older IE versions plus CSS Backgrounds
 add_action('wp_head', 'momentous_enqueue_html5shiv');
 
@@ -55,6 +52,37 @@ function momentous_enqueue_html5shiv(){  ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js" type="text/javascript"></script>
 	<![endif]-->
 <?php
+}
+
+/*
+* Retrieve Font URL to register default Google Fonts
+* Source: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+*/
+function momentous_fonts_url() {
+    $fonts_url = '';
+
+	// Get Theme Options from Database
+	$theme_options = momentous_theme_options();
+	
+	// Only embed Google Fonts if not deactivated
+	if ( ! ( isset($theme_options['deactivate_google_fonts']) and $theme_options['deactivate_google_fonts'] == true ) ) :
+		
+		// Set Default Fonts
+		$font_families = array('Average Sans:400,700', 'Fjalla One');
+		 
+		// Set Google Font Query Args
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		
+		// Create Fonts URL
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		
+	endif;
+	
+	return apply_filters( 'momentous_google_fonts_url', $fonts_url );
+	
 }
 
 
@@ -93,6 +121,9 @@ function momentous_setup() {
 		'max_posts'  => 3
 		)
 	);
+	
+	// Add Theme Support for Momentous Pro Plugin
+	add_theme_support( 'momentous-pro' );
 		
 	// Register Navigation Menus
 	register_nav_menus( array(

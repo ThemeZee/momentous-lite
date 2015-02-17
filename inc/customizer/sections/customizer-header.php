@@ -30,7 +30,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
             'label' => __( 'Header Content', 'momentous-lite' ),
             'section' => 'momentous_section_header',
             'settings' => 'momentous_theme_options[header_content]',
-            'priority' => 1
+            'priority' => 2
             )
         )
     );
@@ -48,7 +48,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
         'section'  => 'momentous_section_header',
         'settings' => 'momentous_theme_options[header_search]',
         'type'     => 'checkbox',
-		'priority' => 2
+		'priority' => 3
 		)
 	);
 
@@ -64,7 +64,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
         'section'  => 'momentous_section_header',
         'settings' => 'momentous_theme_options[header_icons]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 4
 		)
 	);
 	

@@ -157,12 +157,6 @@ input, textarea, select {
 #logo {
 	float: left;
 }
-#logo .logo-image {
-	border: 0;
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
-}
 #logo .site-title {
 	font-size: 2.5em;
 	color: #fff;
@@ -1210,46 +1204,12 @@ embed, iframe, object, video {
 	margin: 0 0 1.05em 0;
 }
 
-/* Footer Widget Area
+/* Footer
 -------------------------------------------------------------- */
 #footer-bg {
 	background: #282828;
 }
-#footer-widgets {
-	padding-top: 1.5em;
-	margin-right: -1.5em;
-}
-.footer-widget-column {
-	float: left;
-	width: 25%;
-	padding-right: 1.5em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-/* Footer Widget Styling */
-#footer-widgets .widget{
-	background: transparent;
-	color: #fff;
-}
-#footer-widgets .widget ul, #footer-widgets .widget ol {
-	color: #fff;
-}
-#footer-widgets .widget .widgettitle {
-	color: #eee;
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-	padding: 0 0.5em 0.8em;
-}
-#footer-widgets .widget a:link, #footer-widgets .widget a:visited {
-	color: #ccc;
-	color: rgba(255,255,255,0.7);
-}
-
-/* Footer
--------------------------------------------------------------- */
 #footer-wrap {
-	background: #282828;
 	border-top: 1px solid rgba(255,255,255,0.1);
 }
 #footer {
@@ -1284,19 +1244,6 @@ embed, iframe, object, video {
 	.container {
 		width: 96%;
 	}
-	.footer-widgets-left, .footer-widgets-right {
-		float: left;
-		width: 50%;
-		padding-right: 1.5em;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.footer-widget-column {
-		float: none;
-		width: 100%;
-		padding-right: 0;
-	}
 }
 /* Tablets (landscape) | <960px */
 @media only screen and (max-width: 60em) {
@@ -1329,10 +1276,6 @@ embed, iframe, object, video {
 	}
 	#featured-content .featured-content-left .post-title, .single .post-title, .page-title {
 		font-size: 1.8em;
-	}
-	#footer-widgets {
-		margin-right: 0;
-		padding: 1.5em 0 0 1.5em;
 	}
 	#footer {
 		padding: 1.2em;
@@ -1588,14 +1531,6 @@ embed, iframe, object, video {
 	.entry tr td {
 		padding: 0.2em 0.4em;
 	}
-	.footer-widgets-left, .footer-widgets-right {
-		float: none;
-		width: 100%;
-		padding-right: 0;
-	}
-	.footer-widget-column {
-		padding-right: 1.5em;
-	}
 	#footer {
 		text-align: center;
 	}
@@ -1663,15 +1598,8 @@ embed, iframe, object, video {
 	.widget  {
 		margin: 0 0 1em 0;
 	}
-	#footer-widgets {
-		margin-right: 0;
-		padding: 1.2em 0 0 1em;
-	}
 	#footer {
 		padding: 0.8em;
-	}
-	.footer-widget-column {
-		padding-right: 1em;
 	}
 	.alignright, .alignleft {
 		float: none;

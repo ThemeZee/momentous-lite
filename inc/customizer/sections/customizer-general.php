@@ -71,6 +71,41 @@ function momentous_customize_register_general_settings( $wp_customize ) {
 		'priority' => 3
 		)
 	);
+	
+	// Add Default Fonts Header
+	$wp_customize->add_setting( 'momentous_theme_options[default_fonts]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Momentous_Customize_Header_Control(
+        $wp_customize, 'momentous_control_default_fonts', array(
+            'label' => __( 'Default Fonts', 'momentous-lite' ),
+            'section' => 'momentous_section_general',
+            'settings' => 'momentous_theme_options[default_fonts]',
+            'priority' => 5
+            )
+        )
+    );
+	
+	// Add Settings and Controls for Deactivate Google Font setting
+	$wp_customize->add_setting( 'momentous_theme_options[deactivate_google_fonts]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'momentous_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'momentous_control_deactivate_google_fonts', array(
+        'label'    => __( 'Deactivate Google Fonts in case your language is not compatible.', 'momentous-lite' ),
+        'section'  => 'momentous_section_general',
+        'settings' => 'momentous_theme_options[deactivate_google_fonts]',
+        'type'     => 'checkbox',
+		'priority' => 6
+		)
+	);
 }
 
 ?>

@@ -33,6 +33,7 @@ function momentous_default_options() {
 		'layout' 							=> 'right-sidebar',
 		'latest_posts_title'				=> __( 'Latest Posts', 'momentous-lite' ),
 		'footer_text'						=> '',
+		'deactivate_google_fonts'			=> false,
 		'header_tagline' 					=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
