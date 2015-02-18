@@ -9,7 +9,7 @@
 				
 				<span id="footer-text"><?php momentous_display_footer_text(); ?></span>
 				
-				<div id="credit-link"><?php momentous_display_credit_link(); ?></div>
+				<div id="credit-link"><?php do_action('momentous_credit_link'); ?></div>
 			
 			</footer>
 		

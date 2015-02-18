@@ -224,17 +224,15 @@ endif;
 
 
 // Display Credit Link
-if ( ! function_exists( 'momentous_display_credit_link' ) ):
+add_action( 'momentous_credit_link', 'momentous_display_credit_link' );
 
-	function momentous_display_credit_link() { 
+function momentous_display_credit_link() { 
 		
-		printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
-		); 
-	}
-	
-endif;
+	printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
+		sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
+		sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
+	); 
+}
 
 
 // Display Social Icons
