@@ -2,6 +2,12 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[added] setting for deactivating google fonts in case they are not compatible with user language
+[changed] implementation of credit link
+[removed] unnecessary CSS markup
+
 Version 1.0.3
 -----------------------------------
 [added] Masonry JS layout for two column post layout
