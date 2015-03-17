@@ -38,6 +38,7 @@ function momentous_sanitize_post_layout( $value ) {
     return $value;
 }
 
+
 // Sanitize footer content textarea
 function momentous_sanitize_footer_text( $value ) {
 
