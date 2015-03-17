@@ -1,83 +1,79 @@
+# Translation of Momentous in Spanish (Spain)
+# This file is distributed under the same license as the Momentous package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Momentous Lite\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-17 10:58+0100\n"
-"PO-Revision-Date: 2015-03-17 10:58+0100\n"
-"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
-"Language-Team: ThemeZee <contact@themezee.com>\n"
+"PO-Revision-Date: 2015-03-17 11:07+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.7\n"
+"Project-Id-Version: Momentous\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: 404.php:9
 msgid "404 Error: Not found"
-msgstr ""
+msgstr "Error 404: No se ha encontrado la página"
 
 #: 404.php:12
 msgid ""
 "The page you trying to reach does not exist, or has been moved. Please use "
 "the menus or the search box to find what you are looking for"
 msgstr ""
+"La página que está tratando de acceder no existe, o ha sido movida. Por "
+"favor, utilice los menús o el Buscador para encontrar lo que está buscando."
 
 #: 404.php:14
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: 404.php:17
 msgid "Recent Posts"
-msgstr ""
+msgstr "Entradas Recientes"
 
 #: 404.php:27
 msgid "Pages"
-msgstr ""
+msgstr "Páginas"
 
 #: archive.php:14
-#, php-format
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "Archivos del mes: %s"
 
 #: archive.php:14
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: archive.php:16
 msgid "Archives"
-msgstr ""
+msgstr "Archivos"
 
 #: author.php:16
-#, php-format
 msgid "Author Archives: %s"
-msgstr ""
+msgstr "Archivos del Autor: %s"
 
 #: category.php:12
-#, php-format
 msgid "Category Archives: %s"
-msgstr ""
+msgstr "Archivos de la Categoría: %s"
 
 #: comments.php:13
 msgid "Enter password to view comments."
-msgstr ""
+msgstr "Ingrese la contraseña para ver los comentarios."
 
 #: comments.php:23
 msgid "One comment"
-msgstr ""
+msgstr "Un comentario"
 
 #: comments.php:23
-#, php-format
 msgid "% comments"
-msgstr ""
+msgstr "% comentarios"
 
 #: comments.php:41
 msgid "Leave a Reply"
 msgstr ""
 
 #: comments.php:42
-#, php-format
 msgid "Leave a Reply to %s"
 msgstr ""
 
@@ -85,154 +81,162 @@ msgstr ""
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:87
 msgid "Main Navigation"
-msgstr ""
+msgstr "Navegación Principal"
 
-#: functions.php:132
+#: functions.php:88
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:89
 msgid "Social Icons"
-msgstr ""
+msgstr "Iconos Sociales"
 
-#: functions.php:165
+#: functions.php:121
 msgid "Sidebar"
-msgstr ""
+msgstr "Barra lateral"
 
-#: functions.php:167
+#: functions.php:123
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
+"Aparecer en entradas y páginas excepto la página principal y el tema de "
+"ancho completo."
 
-#: functions.php:247
+#: functions.php:155
+msgid "Page %s"
+msgstr "Página %s"
+
+#: functions.php:182
+msgid "Powered by %1$s and %2$s."
+msgstr "Desarrollado por %1$s y %2$s."
+
+#: functions.php:183
+msgid "WordPress"
+msgstr "Wordpress"
+
+#: functions.php:184
+msgid "Momentous"
+msgstr ""
+
+#: functions.php:226
 msgid "Pingback:"
-msgstr ""
+msgstr "Pingback:"
 
-#: functions.php:248 functions.php:266
+#: functions.php:227 functions.php:245
 msgid "(Edit)"
-msgstr ""
+msgstr "(Editar)"
 
-#: functions.php:261
-#, php-format
+#: functions.php:240
 msgid "<span class=\"fn\">%s</span>"
 msgstr ""
 
-#: functions.php:265
-#, php-format
+#: functions.php:244
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:276
+#: functions.php:255
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Su comentario está pendiente de moderación"
 
 #: image.php:19
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: image.php:20
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: image.php:26
 msgid "Return to Gallery"
-msgstr ""
+msgstr "Volver a Gallería"
 
 #: image.php:27
 msgid "Return to"
-msgstr ""
+msgstr "Volver a"
 
 #: search.php:13 search.php:32
-#, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados de búsqueda para: %s"
 
 #: search.php:38
 msgid ""
 "No matches. Please try again, or use the navigation menus to find what you "
 "search for."
 msgstr ""
+"Sin resultados. Por favor intente nuevamente, o utilice el menú de "
+"navegación para encontrar lo que busca."
 
 #: searchform.php:4
 msgid "Search for:"
-msgstr ""
+msgstr "Buscar por:"
 
 #: sidebar.php:24
 msgid "Widget Area"
-msgstr ""
+msgstr "Area de Widgets"
 
 #: sidebar.php:26
 msgid ""
 "There are no active widgets to be displayed. Please go to Appearance -> "
 "Widgets to setup your sidebar."
 msgstr ""
+"No hay widgets activos para mostrar. Por favor, vaya a Apariencias -> "
+"Widgets para configurar la barra lateral."
 
 #: tag.php:12
-#, php-format
 msgid "Tag Archives: %s"
-msgstr ""
+msgstr "Archivos de Etiquetas: %s"
 
 #: inc/featured-content.php:419
 msgid "Featured Content"
-msgstr ""
+msgstr "Contenido Destacado"
 
 #: inc/featured-content.php:420
-#, php-format
 msgid ""
 "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match the "
 "tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr ""
+"Use la <a href=\"%1$s\">etiqueta</a> para destacar sus entradas. Si ninguna "
+"entrada concuerda con la etiqueta, <a href=\"%2$s\">mensajes pegados</a> se "
+"mostrarán en su lugar."
 
 #: inc/featured-content.php:421 inc/featured-content.php:430
 #: inc/featured-content.php:490
 msgid "featured"
-msgstr ""
+msgstr "destacado"
 
 #: inc/featured-content.php:442
 msgid "Tag Name"
-msgstr ""
+msgstr "Nombre de Etiqueta"
 
 #: inc/featured-content.php:447
 msgid "Don&rsquo;t display tag on front end."
-msgstr ""
+msgstr "No mostrar la etiqueta en el sitio web."
 
-#: inc/template-tags.php:56
-#, php-format
+#: inc/template-tags.php:43
 msgid ""
 "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime="
 "\"%3$s\">%4$s</time></a>"
 msgstr ""
 
-#: inc/template-tags.php:66
-#, php-format
+#: inc/template-tags.php:53
 msgid "by <a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 msgstr ""
 
-#: inc/template-tags.php:68
-#, php-format
+#: inc/template-tags.php:55
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Ver todas las entradas por %s"
 
-#: inc/template-tags.php:231
-#, php-format
-msgid "Powered by %1$s and %2$s."
-msgstr ""
-
-#: inc/template-tags.php:232
-msgid "WordPress"
-msgstr ""
-
-#: inc/template-tags.php:233
-msgid "Momentous"
-msgstr ""
-
-#: inc/template-tags.php:262
+#: inc/template-tags.php:218
 msgid ""
 "Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" theme location."
 msgstr ""
+"Por favor, vaya a WP-Admin-> Apariencia -> Menus y cree un nuevo menu "
+"personalizado con links personalizados a sus redes sociales. Luego, haga "
+"click en \"Administrar Posiciones\" y asigne su menu creado a la posición "
+"\"Iconos Sociales\""
 
 #: inc/theme-info.php:15
 msgid "Welcome to Momentous"
@@ -240,47 +244,47 @@ msgstr ""
 
 #: inc/theme-info.php:16
 msgid "Theme Info"
-msgstr ""
+msgstr "Información del Tema"
 
 #: inc/theme-info.php:35
-#, php-format
 msgid "Welcome to %1s %2s"
-msgstr ""
+msgstr "Bienvenido a %1s %2s"
 
 #: inc/theme-info.php:41
 msgid "Important Links:"
-msgstr ""
+msgstr "Enlaces Importantes:"
 
 #: inc/theme-info.php:42
 msgid "Theme Info Page"
-msgstr ""
+msgstr "Página de Información del Tema"
 
 #: inc/theme-info.php:43
 msgid "Changelog"
-msgstr ""
+msgstr "Changelog"
 
 #: inc/theme-info.php:44
 msgid "Theme Demo"
-msgstr ""
+msgstr "Demo del Tema"
 
 #: inc/theme-info.php:45 inc/theme-info.php:66
 msgid "Theme Documentation"
-msgstr ""
+msgstr "Documentación del Tema"
 
 #: inc/theme-info.php:46
 msgid "Rate this theme"
 msgstr ""
 
 #: inc/theme-info.php:59
-#, php-format
 msgid "Getting Started with %s"
-msgstr ""
+msgstr "Comenzando con %s"
 
 #: inc/theme-info.php:68
 msgid ""
 "Need any help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
+"Necesita ayuda para configurar este tema? Tenemos una extensa documentación "
+"del tema en nuestro sitio web."
 
 #: inc/theme-info.php:70
 msgid "Visit Momentous Documentation"
@@ -288,7 +292,7 @@ msgstr ""
 
 #: inc/theme-info.php:75 inc/customizer/customizer.php:27
 msgid "Theme Options"
-msgstr ""
+msgstr "Opciones del Tema"
 
 #: inc/theme-info.php:77
 msgid ""
@@ -315,7 +319,6 @@ msgid "Learn more about the PRO Version of Momentous"
 msgstr ""
 
 #: inc/theme-info.php:108
-#, php-format
 msgid ""
 "Momentous is proudly brought to you by %1s. If you like this theme, %2s :) "
 msgstr ""
@@ -326,7 +329,7 @@ msgstr ""
 
 #: inc/customizer/customizer.php:52
 msgid "Display Tagline below site title."
-msgstr ""
+msgstr "Mostrar Lema debajo del título del sitio."
 
 #: inc/customizer/default-options.php:34
 #: inc/customizer/sections/customizer-general.php:43
@@ -335,7 +338,7 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
 msgid "General Settings"
-msgstr ""
+msgstr "Opciones Generales"
 
 #: inc/customizer/sections/customizer-general.php:29
 msgid "Theme Layout"
@@ -343,11 +346,11 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:35
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Barra lateral izquierda"
 
 #: inc/customizer/sections/customizer-general.php:36
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Barra lateral derecha"
 
 #: inc/customizer/sections/customizer-general.php:50
 msgid "Title above Latest Posts"
@@ -357,18 +360,10 @@ msgstr ""
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:85
-msgid "Default Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:102
-msgid "Deactivate Google Fonts in case your language is not compatible."
-msgstr ""
-
 #: inc/customizer/sections/customizer-header.php:14
 #: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
-msgstr ""
+msgstr "Contenido del Encabezamiento"
 
 #: inc/customizer/sections/customizer-header.php:47
 msgid "Activate dropdown search field on header area"
@@ -380,7 +375,7 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:14
 msgid "Post Settings"
-msgstr ""
+msgstr "Opciones de Entradas"
 
 #: inc/customizer/sections/customizer-post.php:29
 msgid "Post Layout"
@@ -396,23 +391,23 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:51
 msgid "Post Images"
-msgstr ""
+msgstr "Imágenes de Entradas"
 
 #: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
-msgstr ""
+msgstr "Mostrar imágenes destacadas en páginas de archivo"
 
 #: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
-msgstr ""
+msgstr "Mostrar imágenes destacadas en entradas individuales"
 
 #: inc/customizer/sections/customizer-post.php:100
 msgid "Excerpt More Text"
-msgstr ""
+msgstr "Extracto Texto de Más"
 
 #: inc/customizer/sections/customizer-post.php:115
 msgid "Display [...] after text excerpts."
-msgstr ""
+msgstr "Mostrar [...] después del extracto"
 
 #: inc/customizer/sections/customizer-upgrade.php:30
 msgid "Need more features?"
