@@ -115,13 +115,6 @@ function momentous_setup() {
 		'width'	=> 1310,
 		'height' => 240,
 		'flex-height' => true));
-		
-	// Add theme support for Jetpack Featured Content
-	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'momentous_get_featured_content',
-		'max_posts'  => 3
-		)
-	);
 	
 	// Add Theme Support for Momentous Pro Plugin
 	add_theme_support( 'momentous-pro' );
@@ -306,9 +299,8 @@ require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php'
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
 
-// Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
-if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
-	require get_template_directory() . '/inc/featured-content.php';
-}
+// Include Featured Content class
+require get_template_directory() . '/inc/featured-content.php';
+
 
 ?>

@@ -2,6 +2,11 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.0.6
+-----------------------------------
+[updated] Featured Content class to new version with many code improvements
+[added] new setting to display featured posts in latest blog post listing
+
 Version 1.0.5
 -----------------------------------
 [added] language files for German, Dutch, Italian and Spanish translation
