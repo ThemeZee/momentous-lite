@@ -53,7 +53,7 @@ if ( ! function_exists( 'momentous_display_postmeta' ) ) :
 	function momentous_display_postmeta() { ?>
 		
 		<span class="meta-date">
-		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'momentous-lite'), 
+		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'momentous-lite'), 
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -63,7 +63,7 @@ if ( ! function_exists( 'momentous_display_postmeta' ) ) :
 		</span>
 		
 		<span class="meta-author">
-		<?php printf(__('by <a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'momentous-lite'), 
+		<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'momentous-lite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_attr( sprintf( __( 'View all posts by %s', 'momentous-lite' ), get_the_author() ) ),
 				get_the_author()
