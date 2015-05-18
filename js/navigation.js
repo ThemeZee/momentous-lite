@@ -179,6 +179,12 @@
 			toggleID: "mainnav-toggle-phone",
 			toggleClass: "mainnav-toggle"
 		});
+		
+		/* Add toggle effect for header search icon */
+		$('.header-search-icon').on('click', function(){
+			$('#header-search-wrap').slideToggle();
+			$(this).toggleClass('active');
+		});
 
 	} );
 
