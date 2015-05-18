@@ -1,6 +1,12 @@
 ===================================
-Momentous Lite Changelog
+Momentous Changelog
 ===================================
+
+Version 1.0.8
+-----------------------------------
+[changed] navigation.js to use our new developed responsiveMenu function
+[improved] styling of navigation menu
+[added] dropdown icons and animations for nested submenus on mobile navigation
 
 Version 1.0.7
 -----------------------------------

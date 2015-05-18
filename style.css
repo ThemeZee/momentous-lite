@@ -1,8 +1,8 @@
 /*======================================
-Theme Name: Momentous Lite
+Theme Name: Momentous
 Theme URI: http://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.0.7
+Version: 1.0.8
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -224,7 +224,7 @@ input, textarea, select {
 #topnav {
 	float: right;
 }
-#topnav-icon {
+#topnav-icon, #topnav-toggle {
 	display: none;
 }
 #topnav-menu {
@@ -264,18 +264,18 @@ input, textarea, select {
 #navigation-wrap #navi-social-icons {
 	float: right;
 }
-#mainnav-icon-tablet, #mainnav-icon, #social-menu-icon {
+.mainnav-toggle, #social-menu-toggle, #mainnav-icon {
 	display: none;
 }
-#navigation-wrap #mainnav-menu {
+#mainnav-menu {
 	display: inline;
 	list-style-type: none;
 	list-style-position: outside;
 	position: relative;
 }
 #mainnav-menu li {
-	float:left;
-	position:relative;
+	float: left;
+	position: relative;
 }
 #mainnav-menu a {
 	display: block;
@@ -1328,18 +1328,21 @@ embed, iframe, object, video {
 	#header-content .header-search-icon {
 		margin: 0.15em 0 0 0.8em;
 	}
-	#topnav-icon {
+	#topnav-toggle {
 		float: right;
 		display: inline-block;
+		margin: 0.35em 0.4em 0 0;
+		padding: 0;
 		text-decoration: none;
 		color: #ccc;
-		margin: 0.35em 0.4em 0 0;
+		background: none;
+		border: none;
 	}
-	#topnav-icon:hover {
+	#topnav-toggle:hover {
 		cursor: pointer;
 		color: #fff;
 	}
-	#topnav-icon:after {
+	#topnav-toggle:after {
 		margin: 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -1402,20 +1405,23 @@ embed, iframe, object, video {
 	#mainnav {
 		float: none;
 	}
-	#mainnav-icon-tablet {
+	#mainnav-toggle-tablet {
 		display: inline-block;
 	}
-	#mainnav-icon-phone {
+	#mainnav-toggle-phone {
 		display: none;
 	}
-	.mainnav-icon {
+	.mainnav-toggle {
+		margin: 0;
 		padding: 1.1em;
 		text-decoration: none;
+		background: none;
+		border: none;
 	}
-	.mainnav-icon:hover {
+	.mainnav-toggle:hover {
 		cursor: pointer;
 	}
-	.mainnav-icon:after {
+	.mainnav-toggle:after {
 		float: left;
 		margin: 0;
 		-webkit-font-smoothing: antialiased;
@@ -1426,18 +1432,15 @@ embed, iframe, object, video {
 		vertical-align: text-bottom;
 		color: #333;
 	}
-	.mainnav-icon:hover:after {
+	.mainnav-toggle:hover:after {
 		color: #22a8d8;
 	}
-	#mainnav {
-		float: none;
-		display: none;
-	}
+
 	#mainnav-menu {
 		float: left;
+		display: none;
 		width: 100%;
 		border-top: 1px solid #ddd;
-		background: #fff;
 	}
 	#mainnav-menu a {
 		display: block;
@@ -1457,10 +1460,8 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu ul {
 		float: left;
-		padding: 1em;
 		background: #fbfbfb;
 		width: 100%;
-		border-bottom: 1px solid #eee;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -1468,13 +1469,20 @@ embed, iframe, object, video {
 	#mainnav-menu ul a {
 		display: block;
 		width: 100%;
-		padding: 0.7em;
+		padding: 1em 1em 1em 2em;
 		font-size: 0.9em;
 		font-weight: normal;
 		color: #22a8d8;
+		border-bottom: 1px solid #eee;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+	}
+	#mainnav-menu ul ul a {
+		padding-left: 3em;
+	}
+	#mainnav-menu ul ul ul a {
+		padding-left: 4em;
 	}
 	#mainnav-menu ul a:link, #mainnav-menu ul a:visited {
 		color: #22a8d8;
@@ -1508,6 +1516,37 @@ embed, iframe, object, video {
 	#mainnav-menu ul li.current_page_item ul li a, #mainnav-menu ul li.current-menu-item ul li a{
 		text-decoration: none;
 	}
+	
+	#mainnav-menu .submenu-dropdown-toggle {
+		float: right;
+		display: block;
+		margin: 0;
+		padding: 0.85em 1.5em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover {
+		cursor: pointer;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:before {
+		font-size: 28px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f431';
+		color: #222;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active:before {
+		content: '\f432';
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover:before {
+		color: #22a8d8;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle {
+		padding: 0.5em 1em;
+	}
+	
 }
 
 /* Tablets (portrait) | <800px */
@@ -1620,26 +1659,28 @@ embed, iframe, object, video {
 	}
 	
 	/* Mobile Main Navigation */
-	#mainnav-icon-tablet {
+	#mainnav-toggle-tablet {
 		display: none;
 	}
-	#mainnav-icon-phone {
+	#mainnav-toggle-phone {
 		display: inline-block;
 	}
 	
 	/* Social Menu Dropdown */
-	#social-menu-icon {
+	#social-menu-toggle {
 		float: right;
 		display: inline-block;
+		padding: 0.6em;
 		text-decoration: none;
 		color: #22a8d8;
-		padding: 0.8em;
+		background: none;
+		border: none;
 	}
-	#social-menu-icon:hover {
+	#social-menu-toggle:hover {
 		cursor: pointer;
 		color: #333;
 	}
-	#social-menu-icon:after {
+	#social-menu-toggle:after {
 		margin: 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -1678,7 +1719,7 @@ embed, iframe, object, video {
 /* Big Screens Navi Fix | >720px */
 @media only screen and (min-width: 60em) {
 	/* ensure #nav is visible on desktop version */
-	#mainnav, #topnav-menu {
+	#mainnav-menu, #topnav-menu {
 		display: block !important;
 	}
 }

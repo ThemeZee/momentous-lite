@@ -59,7 +59,6 @@
 				if ( has_nav_menu( 'secondary' ) ) : ?>
 			
 					<nav id="topnav" class="clearfix" role="navigation">
-						<p id="topnav-icon"></p>
 						<?php wp_nav_menu(	array(
 							'theme_location' => 'secondary', 
 							'container' => false, 
@@ -79,7 +78,6 @@
 		<div id="navigation-wrap">
 			
 			<div id="navigation" class="container clearfix">
-				<p id="mainnav-icon-tablet" class="mainnav-icon"></p><p id="mainnav-icon-phone" class="mainnav-icon"></p><p id="social-menu-icon"></p>
 				
 				<?php // Display Social Icons in Navigation
 					if ( isset($theme_options['header_icons']) and $theme_options['header_icons'] == true ) : ?>
