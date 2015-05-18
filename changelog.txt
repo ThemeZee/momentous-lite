@@ -1,5 +1,5 @@
 ===================================
-Momentous Changelog
+Momentous Lite Changelog
 ===================================
 
 Version 1.0.8
