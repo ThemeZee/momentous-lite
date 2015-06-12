@@ -2,6 +2,13 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.0.9
+-----------------------------------
+[added] setting to display or hide post date
+[added] setting to display or hide post author
+[added] setting to display or hide post categories
+[added] setting to display or hide post tags
+
 Version 1.0.8
 -----------------------------------
 [changed] navigation.js to use our new developed responsiveMenu function

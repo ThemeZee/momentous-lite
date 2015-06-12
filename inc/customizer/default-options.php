@@ -40,7 +40,11 @@ function momentous_default_options() {
 		'post_layout'						=> 'index',
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
-		'excerpt_text' 						=> true
+		'excerpt_text' 						=> true,
+		'meta_date'							=> true,
+		'meta_author'						=> true,
+		'meta_category'						=> true,
+		'meta_tags'							=> true
 	);
 	
 	return $default_options;
