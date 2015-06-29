@@ -8,15 +8,9 @@
 		
 		<section id="content" class="primary" role="main">
 
-			<h2 id="date-title" class="archive-title">
-				<?php // Display Archive Title
-				if ( is_date() ) :
-					printf( __( 'Monthly Archives: %s', 'momentous-lite'), '<span>' . get_the_date( _x( 'F Y', 'date format of monthly archives', 'momentous-lite') ) . '</span>' );
-				else :
-					_e( 'Archives', 'momentous-lite');
-				endif;
-				?>
-			</h2>
+			<header class="page-header">
+				<?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
+			</header>
 		
 			<div id="post-wrapper" class="clearfix">
 		 
