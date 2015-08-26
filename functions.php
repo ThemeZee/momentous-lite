@@ -251,7 +251,7 @@ function momentous_list_comments($comment, $args, $depth) {
 				
 					<div class="comment-author vcard">
 						<?php echo get_avatar( $comment, 56 ); ?>
-						<?php printf(__('<span class="fn">%s</span>', 'momentous-lite'), get_comment_author_link()) ?>
+						<?php printf( '<span class="fn">%s</span>', get_comment_author_link() ); ?>
 					</div>
 
 					<div class="commentmetadata">

@@ -11,7 +11,7 @@ function momentous_customize_register_upgrade_settings( $wp_customize ) {
 
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'momentous_section_upgrade', array(
-        'title'    => __( 'PRO Version', 'momentouslite' ),
+        'title'    => __( 'Pro Version', 'momentous-lite' ),
         'priority' => 60,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -27,10 +27,10 @@ function momentous_customize_register_upgrade_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_pro_version_label', array(
-            'label' => __( 'Need more features?', 'momentouslite' ),
+            'label' => __( 'You need more features?', 'momentous-lite' ),
             'section' => 'momentous_section_upgrade',
             'settings' => 'momentous_theme_options[pro_version_label]',
-            'priority' => 	1
+            'priority' => 1
             )
         )
     );
@@ -43,10 +43,10 @@ function momentous_customize_register_upgrade_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Text_Control(
         $wp_customize, 'momentous_control_pro_version', array(
-            'label' =>  __( 'Check out the PRO version which comes with additional features and advanced customization options.', 'momentouslite' ),
+            'label' =>  __( 'Purchase the Pro Version to get additional features and advanced customization options.', 'momentous-lite' ),
             'section' => 'momentous_section_upgrade',
             'settings' => 'momentous_theme_options[pro_version]',
-            'priority' => 	2
+            'priority' => 2
             )
         )
     );
@@ -59,10 +59,10 @@ function momentous_customize_register_upgrade_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Button_Control(
         $wp_customize, 'momentous_control_pro_version_button', array(
-            'label' => __('Learn more about the PRO Version', 'momentouslite'),
+            'label' => sprintf( __( 'Learn more about %s Pro', 'momentous-lite' ), 'Momentous'),
 			'section' => 'momentous_section_upgrade',
             'settings' => 'momentous_theme_options[pro_version_button]',
-            'priority' => 	3
+            'priority' => 3
             )
         )
     );
