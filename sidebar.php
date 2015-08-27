@@ -1,14 +1,4 @@
 
-<?php 
-
-	// Get Theme Options from Database
-	$theme_options = momentous_theme_options();
-	
-	// Only show sidebar if fullwidth layout is not selected 
-	if ( isset($theme_options['layout']) and $theme_options['layout'] <> 'fullwidth' ) : 
-	
-?>
-
 	<section id="sidebar" class="secondary clearfix" role="complementary">
 
 		<?php
@@ -21,14 +11,12 @@
 			else : ?>
 
 			<aside class="widget">
-				<h3 class="widgettitle"><?php _e('Widget Area', 'momentous-lite'); ?></h3>
+				<h3 class="widgettitle"><?php _e('Sidebar', 'momentous-lite'); ?></h3>
 				<div class="textwidget">
-					<p><?php _e('There are no active widgets to be displayed. Please go to Appearance -> Widgets to setup your sidebar.', 'momentous-lite'); ?></p>
+					<p><?php _e('Please go to Appearance &#8594; Widgets to set up your widgets in the sidebar.', 'momentous-lite'); ?></p>
 				</div>
 			</aside>
 		
 		<?php endif; ?>
 
 	</section>
-	
-<?php endif; ?>
