@@ -2,6 +2,12 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.1
+-----------------------------------
+[improved] code of 404.php and search.php templates
+[improved] phrasing of all translatable text strings
+[updated] translation files
+
 Version 1.1
 -----------------------------------
 [changed] archive titles to use the new the_archive_title() function

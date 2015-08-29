@@ -36,10 +36,11 @@ if ( post_password_required()) : ?>
 		<?php endif; ?>
 
 		<?php if ( comments_open() ) : ?>
-			<?php comment_form(array(
-				'comment_notes_after' => '',
-				'title_reply'       => '<span>' . __( 'Leave a Reply', 'momentous-lite') . '</span>',
-				'title_reply_to'    => '<span>' . __( 'Leave a Reply to %s', 'momentous-lite') . '</span>' )); ?>
+			<?php comment_form( array( 
+				'title_reply' => '<span>' . __( 'Leave a Reply', 'momentous-lite' ) . '</span>',
+				'comment_notes_after' => ''
+				)
+			); ?>
 		<?php endif; ?>
 
 	</div>

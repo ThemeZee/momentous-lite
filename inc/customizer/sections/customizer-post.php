@@ -97,7 +97,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_excerpt_text_headline', array(
-            'label' => __( 'Excerpt More Text', 'momentous-lite' ),
+            'label' => __( 'Text after Excerpts', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[excerpt_text_headline]',
             'priority' => 5
@@ -112,7 +112,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after text excerpts.', 'momentous-lite' ),
+        'label'    => __( 'Display [...] after excerpts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[excerpt_text]',
         'type'     => 'checkbox',
@@ -120,7 +120,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Postmeta Settings
+	// Add Post Meta Settings
 	$wp_customize->add_setting( 'momentous_theme_options[postmeta_headline]', array(
         'default'           => '',
 		'type'           	=> 'option',
@@ -130,7 +130,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_postmeta_headline', array(
-            'label' => __( 'Postmeta', 'momentous-lite' ),
+            'label' => __( 'Post Meta', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[postmeta_headline]',
             'priority' => 7
@@ -145,7 +145,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_date', array(
-        'label'    => __( 'Display date on posts.', 'momentous-lite' ),
+        'label'    => __( 'Display post date', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_date]',
         'type'     => 'checkbox',
@@ -160,7 +160,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_author', array(
-        'label'    => __( 'Display author on posts.', 'momentous-lite' ),
+        'label'    => __( 'Display post author', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_author]',
         'type'     => 'checkbox',
@@ -175,7 +175,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_category', array(
-        'label'    => __( 'Display categories on posts.', 'momentous-lite' ),
+        'label'    => __( 'Display post categories', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_category]',
         'type'     => 'checkbox',
@@ -190,7 +190,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_tags', array(
-        'label'    => __( 'Display tags on posts.', 'momentous-lite' ),
+        'label'    => __( 'Display post tags', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_tags]',
         'type'     => 'checkbox',
