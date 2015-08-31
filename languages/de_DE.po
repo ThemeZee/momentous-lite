@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Everything\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-29 14:30+0100\n"
-"PO-Revision-Date: 2015-08-29 14:31+0100\n"
+"POT-Creation-Date: 2015-08-31 20:02+0100\n"
+"PO-Revision-Date: 2015-08-31 20:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,7 @@ msgid "One comment"
 msgstr "Ein Kommentar"
 
 #: comments.php:23
+#, php-format
 msgid "% comments"
 msgstr "% Kommentare"
 
@@ -278,6 +279,10 @@ msgstr ""
 #: inc/theme-info.php:118
 msgid "rate it"
 msgstr "bewerte es"
+
+#: inc/customizer/customizer.php:37
+msgid "Background"
+msgstr "Hintergrund"
 
 #: inc/customizer/customizer.php:48
 msgid "Display Tagline below site title."
@@ -1017,9 +1022,6 @@ msgstr ""
 
 #~ msgid "Post Slider Color"
 #~ msgstr "Farbe des Beitrags-Sliders"
-
-#~ msgid "Header Background Color"
-#~ msgstr "Header Hintergrundfarbe"
 
 #~ msgid "Footer Background Color"
 #~ msgstr "Footer Hintergrundfarbe"
