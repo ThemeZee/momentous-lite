@@ -118,6 +118,9 @@ function momentous_setup() {
 	
 	// Add Theme Support for Momentous Pro Plugin
 	add_theme_support( 'momentous-pro' );
+	
+	// Add Theme Support for wooCommerce
+	add_theme_support( 'woocommerce' );
 		
 	// Register Navigation Menus
 	register_nav_menus( array(

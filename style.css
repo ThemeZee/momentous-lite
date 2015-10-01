@@ -456,7 +456,7 @@ input, textarea, select {
 #post-wrapper .one-column-post {
 	margin-right: 1.5em;
 }
-.page-title, .post-title {
+.page-title, .post-title, .entry-title {
 	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
 	color: #282828;
 	line-height: 1.4em;
@@ -466,14 +466,16 @@ input, textarea, select {
 .post-title {
     font-size: 1.5em;
 }
-.single .post-title, .page-title {
+.single .post-title, .page-title, .entry-title  {
     font-size: 2.0em;
 }
-.post-title a:link, .post-title a:visited {
+.post-title a:link, .post-title a:visited,
+.entry-title a:link, .entry-title a:visited  {
 	color: #282828;
 	text-decoration: none;
 }
-.post-title a:hover, .post-title a:active{
+.post-title a:hover, .post-title a:active,
+.entry-title a:hover, .entry-title a:active {
 	text-decoration: underline;
 }
 .sticky {
