@@ -5,7 +5,6 @@
 // Load default style.css and Javascripts
 add_action('wp_enqueue_scripts', 'momentous_enqueue_scripts');
 
-if ( ! function_exists( 'momentous_enqueue_scripts' ) ):
 function momentous_enqueue_scripts() { 
 	
 	// Register and Enqueue Stylesheet
@@ -29,20 +28,16 @@ function momentous_enqueue_scripts() {
 		
 	endif;
 	
+	// Register Comment Reply Script for Threaded Comments
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 	// Register and Enqueue Font
 	wp_enqueue_style('momentous-lite-default-fonts', momentous_fonts_url(), array(), null );
 	
 }
-endif;
 
-// Load comment-reply.js if comment form is loaded and threaded comments activated
-add_action( 'comment_form_before', 'momentous_enqueue_comment_reply' );
-	
-function momentous_enqueue_comment_reply() {
-	if( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
 
 // Embed HTML5shiv to support HTML5 elements in older IE versions plus CSS Backgrounds
 add_action('wp_head', 'momentous_enqueue_html5shiv');
@@ -89,7 +84,6 @@ function momentous_fonts_url() {
 // Setup Function: Registers support for various WordPress features
 add_action( 'after_setup_theme', 'momentous_setup' );
 
-if ( ! function_exists( 'momentous_setup' ) ):
 function momentous_setup() { 
 	
 	// Set Content Width
@@ -131,13 +125,11 @@ function momentous_setup() {
 	);
 	
 }
-endif;
 
 
 // Add custom Image Sizes
 add_action( 'after_setup_theme', 'momentous_add_image_sizes' );
 
-if ( ! function_exists( 'momentous_add_image_sizes' ) ):
 function momentous_add_image_sizes() { 
 	
 	// Add Custom Header Image Size
@@ -147,13 +139,11 @@ function momentous_add_image_sizes() {
 	add_image_size( 'post-thumbnail', 900, 300, true);
 
 }
-endif;
 
 
 // Register Sidebars
 add_action( 'widgets_init', 'momentous_register_sidebars' );
 
-if ( ! function_exists( 'momentous_register_sidebars' ) ):
 function momentous_register_sidebars() {
 	
 	// Register Sidebars
@@ -168,123 +158,6 @@ function momentous_register_sidebars() {
 	));
 	
 }
-endif;
-
-
-// Add title tag for older WordPress versions
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-
-	add_action( 'wp_head', 'momentous_wp_title' );
-	function momentous_wp_title() { ?>
-		
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-
-<?php
-    }
-    
-endif;
-
-
-// Add Default Menu Fallback Function
-function momentous_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
-}
-
-
-// Get Featured Posts
-function momentous_get_featured_content() {
-	return apply_filters( 'momentous_get_featured_content', false );
-}
-
-
-// Check if featured posts exists
-function momentous_has_featured_content() {
-	return ! is_paged() && (bool) momentous_get_featured_content();
-}
-
-
-// Change Excerpt Length
-add_filter('excerpt_length', 'momentous_excerpt_length');
-function momentous_excerpt_length($length) {
-    return 25;
-}
-
-// Slideshow Excerpt Length
-function  momentous_featured_content_excerpt_length($length) {
-    return 40;
-}
-
-
-// Change Excerpt More
-add_filter('excerpt_more', 'momentous_excerpt_more');
-function momentous_excerpt_more($more) {
-    
-	// Get Theme Options from Database
-	$theme_options = momentous_theme_options();
-
-	// Return Excerpt Text
-	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
-		return ' [...]';
-	else :
-		return '';
-	endif;
-}
-
-
-// Custom Template for comments and pingbacks.
-if ( ! function_exists( 'momentous_list_comments' ) ):
-function momentous_list_comments($comment, $args, $depth) {
-	
-	$GLOBALS['comment'] = $comment;
-	
-	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
-	
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'momentous-lite'); ?> <?php comment_author_link(); ?> 
-			<?php edit_comment_link( __( '(Edit)', 'momentous-lite'), '<span class="edit-link">', '</span>' ); ?>
-			</p>
-	
-	<?php else : ?>
-	
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-
-			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-			
-				<div class="comment-meta">
-				
-					<div class="comment-author vcard">
-						<?php echo get_avatar( $comment, 56 ); ?>
-						<?php printf( '<span class="fn">%s</span>', get_comment_author_link() ); ?>
-					</div>
-
-					<div class="commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'momentous-lite'), get_comment_date(),  get_comment_time()) ?></a>
-						<?php edit_comment_link(__('(Edit)', 'momentous-lite'),'  ','') ?>
-					</div>
-					
-				</div>
-				
-				<div class="comment-content">
-					
-					<?php comment_text(); ?>
-					
-					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'momentous-lite'); ?></p>
-					<?php endif; ?>
-					
-					<div class="reply">
-						<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-					</div>
-
-				</div>
-				
-				
-			</div>
-<?php
-	endif;
-	
-}
-endif;
 
 
 /*==================================== INCLUDE FILES ====================================*/
@@ -299,11 +172,11 @@ require( get_template_directory() . '/inc/customizer/default-options.php' );
 // include Customization Files
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 
+// Include Extra Functions
+require get_template_directory() . '/inc/extras.php';
+
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
 
 // Include Featured Content class
 require get_template_directory() . '/inc/featured-content.php';
-
-
-?>
