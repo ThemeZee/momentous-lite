@@ -110,9 +110,6 @@ function momentous_setup() {
 		'height' => 240,
 		'flex-height' => true));
 	
-	// Add Theme Support for Momentous Pro Plugin
-	add_theme_support( 'momentous-pro' );
-	
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
 		
@@ -177,6 +174,9 @@ require get_template_directory() . '/inc/extras.php';
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
+
+// Include support functions for Theme Addons
+require get_template_directory() . '/inc/addons.php';
 
 // Include Featured Content class
 require get_template_directory() . '/inc/featured-content.php';

@@ -2,6 +2,15 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.2
+-----------------------------------
+[added] basic support for wooCommerce
+[moved] additional functions from functions.php to extras.php and template-tags.php
+[added] theme support for Widget Bundle Addon Plugin
+[removed] fallback solution for new title tag feature of WordPress
+[removed] function_exists wrappers for action hook functions
+[changed] implementation of threaded comments javascript
+
 Version 1.1.1
 -----------------------------------
 [improved] code of 404.php and search.php templates
