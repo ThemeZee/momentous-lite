@@ -2,6 +2,10 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.3
+-----------------------------------
+[improved] structure of post meta functions for better re-usability
+
 Version 1.1.2
 -----------------------------------
 [added] basic support for wooCommerce
