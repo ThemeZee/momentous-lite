@@ -11,7 +11,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'momentous_section_post', array(
-        'title'    => __( 'Post Settings', 'momentous-lite' ),
+        'title'    => esc_html__( 'Post Settings', 'momentous-lite' ),
         'priority' => 30,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -26,14 +26,14 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_post_layout', array(
-        'label'    => __( 'Post Layout', 'momentous-lite' ),
+        'label'    => esc_html__( 'Post Layout', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'one-column' => __( 'One Column', 'momentous-lite' ),
-			'index' => __( 'Two Columns', 'momentous-lite' )
+            'one-column' => esc_html__( 'One Column', 'momentous-lite' ),
+			'index' => esc_html__( 'Two Columns', 'momentous-lite' )
 			)
 		)
 	);
@@ -48,7 +48,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_post_images', array(
-            'label' => __( 'Post Images', 'momentous-lite' ),
+            'label' => esc_html__( 'Post Images', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_images]',
             'priority' => 2
@@ -63,7 +63,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_posts_thumbnails_index', array(
-        'label'    => __( 'Display featured images on archive pages', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display featured images on archive pages', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
@@ -79,7 +79,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_posts_thumbnails_single', array(
-        'label'    => __( 'Display featured images on single posts', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display featured images on single posts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
@@ -97,7 +97,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_excerpt_text_headline', array(
-            'label' => __( 'Text after Excerpts', 'momentous-lite' ),
+            'label' => esc_html__( 'Text after Excerpts', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[excerpt_text_headline]',
             'priority' => 5
@@ -112,7 +112,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after excerpts', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display [...] after excerpts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[excerpt_text]',
         'type'     => 'checkbox',
@@ -130,7 +130,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_postmeta_headline', array(
-            'label' => __( 'Post Meta', 'momentous-lite' ),
+            'label' => esc_html__( 'Post Meta', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[postmeta_headline]',
             'priority' => 7
@@ -145,7 +145,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_date', array(
-        'label'    => __( 'Display post date', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display post date', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_date]',
         'type'     => 'checkbox',
@@ -160,7 +160,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_author', array(
-        'label'    => __( 'Display post author', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display post author', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_author]',
         'type'     => 'checkbox',
@@ -175,7 +175,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_category', array(
-        'label'    => __( 'Display post categories', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display post categories', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_category]',
         'type'     => 'checkbox',
@@ -190,7 +190,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_meta_tags', array(
-        'label'    => __( 'Display post tags', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display post tags', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_tags]',
         'type'     => 'checkbox',

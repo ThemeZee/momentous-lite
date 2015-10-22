@@ -75,35 +75,35 @@ endif;
 
 
 // Display Post Date
-function momentous_meta_date() { ?>		
-		
-	<span class="meta-date">
-	<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'momentous-lite'), 
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() )
-		);
-	?>
-	</span>
+function momentous_meta_date() {	
+			
+	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+
+	$posted_on = sprintf( esc_html_x( 'Posted on %s', 'post date', 'momentous-lite' ), $time_string );
 	
-<?php
+	echo '<span class="meta-date">' . $posted_on . '</span>';
+	
 }
 
 
 // Display Post Author
-function momentous_meta_author() { ?>		
-		
-	<span class="meta-author">
-	<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'momentous-lite'), 
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'momentous-lite' ), get_the_author() ) ),
-			get_the_author()
-		);
-	?>
-	</span>
-			
-<?php
+function momentous_meta_author() {  
+	
+	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'momentous-lite' ), get_the_author() ) ),
+		esc_html( get_the_author() )
+	);
+	
+	$byline = sprintf( esc_html_x( 'by %s', 'post author', 'momentous-lite' ), $author_string );
+	
+	echo '<span class="meta-author"> ' . $byline . '</span>';
+
 }
 
 
@@ -273,7 +273,7 @@ add_action( 'momentous_credit_link', 'momentous_display_credit_link' );
 
 function momentous_display_credit_link() { 
 		
-	printf( __( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
+	printf( esc_html__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
 		'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
 		'<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>'
 	); 
@@ -304,7 +304,7 @@ function momentous_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'momentous-lite'); ?>
+			<?php esc_html_e( 'Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'momentous-lite' ); ?>
 		</p>
 <?php
 	endif;
@@ -321,8 +321,8 @@ function momentous_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 	
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'momentous-lite'); ?> <?php comment_author_link(); ?> 
-			<?php edit_comment_link( __( '(Edit)', 'momentous-lite'), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php esc_html_e( 'Pingback:', 'momentous-lite' ); ?> <?php comment_author_link(); ?> 
+			<?php edit_comment_link( esc_html__( '(Edit)', 'momentous-lite' ), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 	
 	<?php else : ?>
@@ -339,8 +339,8 @@ function momentous_list_comments($comment, $args, $depth) {
 					</div>
 
 					<div class="commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'momentous-lite'), get_comment_date(),  get_comment_time()) ?></a>
-						<?php edit_comment_link(__('(Edit)', 'momentous-lite'),'  ','') ?>
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( esc_html__( '%1$s at %2$s', 'momentous-lite' ), get_comment_date(),  get_comment_time()) ?></a>
+						<?php edit_comment_link( esc_html__( '(Edit)', 'momentous-lite' ),'  ','') ?>
 					</div>
 					
 				</div>
@@ -350,7 +350,7 @@ function momentous_list_comments($comment, $args, $depth) {
 					<?php comment_text(); ?>
 					
 					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'momentous-lite'); ?></p>
+						<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'momentous-lite' ); ?></p>
 					<?php endif; ?>
 					
 					<div class="reply">

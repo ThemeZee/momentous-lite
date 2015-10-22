@@ -31,7 +31,7 @@ function momentous_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
-		'latest_posts_title'				=> __( 'Latest Posts', 'momentous-lite' ),
+		'latest_posts_title'				=> esc_html__( 'Latest Posts', 'momentous-lite' ),
 		'footer_text'						=> '',
 		'deactivate_google_fonts'			=> false,
 		'header_tagline' 					=> false,

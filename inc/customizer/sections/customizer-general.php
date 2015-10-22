@@ -11,7 +11,7 @@ function momentous_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for General Settings
 	$wp_customize->add_section( 'momentous_section_general', array(
-        'title'    => __( 'General Settings', 'momentous-lite' ),
+        'title'    => esc_html__( 'General Settings', 'momentous-lite' ),
         'priority' => 10,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -26,28 +26,28 @@ function momentous_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_layout', array(
-        'label'    => __( 'Theme Layout', 'momentous-lite'),
+        'label'    => esc_html__( 'Theme Layout', 'momentous-lite' ),
         'section'  => 'momentous_section_general',
         'settings' => 'momentous_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'left-sidebar' => __( 'Left Sidebar', 'momentous-lite'),
-            'right-sidebar' => __( 'Right Sidebar', 'momentous-lite')
+            'left-sidebar' => esc_html__( 'Left Sidebar', 'momentous-lite' ),
+            'right-sidebar' => esc_html__( 'Right Sidebar', 'momentous-lite' )
 			)
 		)
 	);
 	
 	// Add Title for latest posts setting
 	$wp_customize->add_setting( 'momentous_theme_options[latest_posts_title]', array(
-        'default'           => __( 'Latest Posts', 'momentous-lite' ),
+        'default'           => esc_html__( 'Latest Posts', 'momentous-lite' ),
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'esc_html'
 		)
 	);
     $wp_customize->add_control( 'momentous_control_latest_posts_title', array(
-        'label'    => __( 'Title above Latest Posts', 'momentous-lite' ),
+        'label'    => esc_html__( 'Title above Latest Posts', 'momentous-lite' ),
         'section'  => 'momentous_section_general',
         'settings' => 'momentous_theme_options[latest_posts_title]',
         'type'     => 'text',
@@ -64,7 +64,7 @@ function momentous_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_footer_text', array(
-        'label'    => __( 'Footer Text', 'momentous-lite' ),
+        'label'    => esc_html__( 'Footer Text', 'momentous-lite' ),
         'section'  => 'momentous_section_general',
         'settings' => 'momentous_theme_options[footer_text]',
         'type'     => 'textarea',
@@ -82,7 +82,7 @@ function momentous_customize_register_general_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_default_fonts', array(
-            'label' => __( 'Default Fonts', 'momentous-lite' ),
+            'label' => esc_html__( 'Default Fonts', 'momentous-lite' ),
             'section' => 'momentous_section_general',
             'settings' => 'momentous_theme_options[default_fonts]',
             'priority' => 5
@@ -99,7 +99,7 @@ function momentous_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_deactivate_google_fonts', array(
-        'label'    => __( 'Deactivate Google Fonts in case your language is not compatible.', 'momentous-lite' ),
+        'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'momentous-lite' ),
         'section'  => 'momentous_section_general',
         'settings' => 'momentous_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',

@@ -2,6 +2,10 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.4
+-----------------------------------
+[added] escaping for translation strings for improved security
+
 Version 1.1.3
 -----------------------------------
 [improved] structure of post meta functions for better re-usability

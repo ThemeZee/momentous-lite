@@ -115,9 +115,9 @@ function momentous_setup() {
 		
 	// Register Navigation Menus
 	register_nav_menus( array(
-		'primary'   => __('Main Navigation', 'momentous-lite'),
-		'secondary' => __('Top Navigation', 'momentous-lite'),
-		'social' => __('Social Icons', 'momentous-lite'),
+		'primary'   => esc_html__( 'Main Navigation', 'momentous-lite' ),
+		'secondary' => esc_html__( 'Top Navigation', 'momentous-lite' ),
+		'social' => esc_html__( 'Social Icons', 'momentous-lite' ),
 		) 
 	);
 	
@@ -145,9 +145,9 @@ function momentous_register_sidebars() {
 	
 	// Register Sidebars
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'momentous-lite'),
+		'name' => esc_html__( 'Sidebar', 'momentous-lite' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'momentous-lite'),
+		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'momentous-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',

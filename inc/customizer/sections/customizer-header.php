@@ -11,7 +11,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
 
 	// Add Sections for Header Content
 	$wp_customize->add_section( 'momentous_section_header', array(
-        'title'    => __( 'Header Content', 'momentous-lite' ),
+        'title'    => esc_html__( 'Header Content', 'momentous-lite' ),
         'priority' => 20,
 		'panel' => 'momentous_options_panel' 
 		)
@@ -27,7 +27,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
         $wp_customize, 'momentous_control_header_content', array(
-            'label' => __( 'Header Content', 'momentous-lite' ),
+            'label' => esc_html__( 'Header Content', 'momentous-lite' ),
             'section' => 'momentous_section_header',
             'settings' => 'momentous_theme_options[header_content]',
             'priority' => 2
@@ -44,7 +44,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_header_search', array(
-        'label'    => __( 'Activate dropdown search field on header area', 'momentous-lite' ),
+        'label'    => esc_html__( 'Activate dropdown search field on header area', 'momentous-lite' ),
         'section'  => 'momentous_section_header',
         'settings' => 'momentous_theme_options[header_search]',
         'type'     => 'checkbox',
@@ -60,7 +60,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'momentous_control_header_icons', array(
-        'label'    => __( 'Display Social Icons on main navigation', 'momentous-lite' ),
+        'label'    => esc_html__( 'Display Social Icons on main navigation', 'momentous-lite' ),
         'section'  => 'momentous_section_header',
         'settings' => 'momentous_theme_options[header_icons]',
         'type'     => 'checkbox',
