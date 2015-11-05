@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: http://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.1.4
+Version: 1.1.5
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -456,25 +456,20 @@ input, textarea, select {
 #post-wrapper .one-column-post {
 	margin-right: 1.5em;
 }
-.page-title, .post-title, .entry-title {
+.page-title, .entry-title {
 	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
+	font-size: 2.0em;
 	color: #282828;
 	line-height: 1.4em;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
-.post-title {
-    font-size: 1.5em;
-}
-.single .post-title, .page-title, .entry-title  {
-    font-size: 2.0em;
-}
-.post-title a:link, .post-title a:visited,
+.entry-title a:link, .entry-title a:visited,
 .entry-title a:link, .entry-title a:visited  {
 	color: #282828;
 	text-decoration: none;
 }
-.post-title a:hover, .post-title a:active,
+.entry-title a:hover, .entry-title a:active,
 .entry-title a:hover, .entry-title a:active {
 	text-decoration: underline;
 }
@@ -1193,10 +1188,10 @@ embed, iframe, object, video {
 	box-sizing: border-box;
 }
 
-#featured-content .featured-content-left .post-title {
+#featured-content .featured-content-left .entry-title {
 	font-size: 2.0em;
 }
-#featured-content .featured-content-right .post-title {
+#featured-content .featured-content-right .entry-title {
 	font-size: 1.3em;
 }
 #featured-content .featured-content-right .wp-post-image {
@@ -1234,7 +1229,7 @@ embed, iframe, object, video {
 		float: none;
 		width: 100%;
 	}
-	#featured-content .featured-content-left .post-title, .single .post-title, .page-title {
+	#featured-content .featured-content-left .entry-title, .single .entry-title, .page-title {
 		font-size: 1.9em;
 	}
 }
@@ -1273,7 +1268,7 @@ embed, iframe, object, video {
 		float: left;
 		width: 50%;
 	}
-	#featured-content .featured-content-left .post-title, .single .post-title, .page-title {
+	#featured-content .featured-content-left .entry-title, .single .entry-title, .page-title {
 		font-size: 1.8em;
 	}
 	#footer {
@@ -1550,7 +1545,7 @@ embed, iframe, object, video {
 
 /* Tablets (portrait) | <800px */
 @media only screen and (max-width: 50em) {
-	#featured-content .featured-content-left .post-title, .single .post-title, .page-title {
+	#featured-content .featured-content-left .entry-title, .single .entry-title, .page-title {
 		font-size: 1.7em;
 	}
 	.entry h1, .commentlist h1 {
@@ -1593,7 +1588,7 @@ embed, iframe, object, video {
 }
 /* Phablets (portrait) | <640px */
 @media only screen and (max-width: 40em) {
-	#featured-content .featured-content-left .post-title, .single .post-title, .page-title {
+	#featured-content .featured-content-left .entry-title, .single .entry-title, .page-title {
 		font-size: 1.6em;
 	}
 	#featured-content {
@@ -1643,7 +1638,7 @@ embed, iframe, object, video {
 		float: none;
 		margin: 1em 0;
 	}
-	#featured-content .featured-content-left .post-title, .post-title, .single .post-title, .page-title {
+	#featured-content .featured-content-left .entry-title, .single .entry-title, .page-title {
 		font-size: 1.4em;
 	}
 	.postinfo {
@@ -1710,7 +1705,7 @@ embed, iframe, object, video {
 		padding: 1em 0.8em;
 		font-size: 0.95em;
 	}
-	#featured-content .featured-content-left .post-title, .post-title, .single .post-title, .page-title {
+	#featured-content .featured-content-left .entry-title, .single .entry-title, .page-title {
 		font-size: 1.3em;
 	}
 }

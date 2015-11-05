@@ -3,7 +3,7 @@
 	
 		<?php momentous_display_thumbnail_single(); ?>
 		
-		<h2 class="post-title entry-title"><?php the_title(); ?></h2>
+		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 		
 		<div class="postmeta"><?php momentous_display_postmeta(); ?></div>
 

@@ -35,7 +35,7 @@ $loop_count = 1;
 						
 						<div class="post-content">
 
-							<h2 class="post-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							
 							<div class="postmeta clearfix"><?php momentous_display_postmeta(); ?></div>
 							
@@ -69,7 +69,7 @@ $loop_count = 1;
 						
 						<div class="post-content">
 
-							<h2 class="post-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							
 							<div class="postmeta clearfix"><?php momentous_display_postmeta(); ?></div>
 					
