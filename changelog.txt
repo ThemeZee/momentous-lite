@@ -2,6 +2,11 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.6
+-----------------------------------
+[removed] empty spaces at the end of template files
+[fixed] styling of 404 template
+
 Version 1.1.5
 -----------------------------------
 [changed] all h2 post and page titles to h1 for better SEO

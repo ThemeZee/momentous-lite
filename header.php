@@ -108,5 +108,4 @@
 	</div>
 
 	<?php // Display Custom Header Image
-		momentous_display_custom_header(); ?>
-		
+		momentous_display_custom_header(); ?>	

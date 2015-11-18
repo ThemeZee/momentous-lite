@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-31 20:02+0100\n"
-"PO-Revision-Date: 2015-08-31 20:02+0100\n"
+"POT-Creation-Date: 2015-11-12 09:46+0100\n"
+"PO-Revision-Date: 2015-11-12 09:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -51,42 +51,25 @@ msgstr ""
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:118
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:119
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:120
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:158 sidebar.php:14
+#: functions.php:148 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:150
 msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
-msgstr ""
-
-#: functions.php:240
-msgid "Pingback:"
-msgstr ""
-
-#: functions.php:241 functions.php:259
-msgid "(Edit)"
-msgstr ""
-
-#: functions.php:258
-#, php-format
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: functions.php:269
-msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: search.php:12
@@ -142,35 +125,50 @@ msgstr ""
 msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:87
 #, php-format
-msgid ""
-"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
-"\"entry-date published updated\" datetime=\"%3$s\">%4$s</time></a>"
+msgctxt "post date"
+msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:77
-#, php-format
-msgid ""
-"by <span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s\" "
-"rel=\"author\">%3$s</a></span>"
-msgstr ""
-
-#: inc/template-tags.php:79
+#: inc/template-tags.php:99
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:258
+#: inc/template-tags.php:103
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:276
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:307
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
+msgstr ""
+
+#: inc/template-tags.php:324
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:325 inc/template-tags.php:343
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:342
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:353
+msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: inc/theme-info.php:18 inc/theme-info.php:38
