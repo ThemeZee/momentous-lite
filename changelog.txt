@@ -2,6 +2,10 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.7
+-----------------------------------
+[added] custom header image settings
+
 Version 1.1.6
 -----------------------------------
 [added] support for ThemeZee Breadcrumbs plugin
