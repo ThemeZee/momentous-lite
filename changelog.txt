@@ -4,6 +4,8 @@ Momentous Lite Changelog
 
 Version 1.1.6
 -----------------------------------
+[added] support for ThemeZee Breadcrumbs plugin
+[added] email icon to social menu
 [removed] empty spaces at the end of template files
 [fixed] styling of 404 template
 

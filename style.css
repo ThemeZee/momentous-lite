@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: http://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.1.5
+Version: 1.1.6
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -600,6 +600,41 @@ input, textarea, select {
 	text-decoration :underline;
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+	font-size: 0.9em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1.3em 1em;
+	background: #fff;
+	margin-bottom: 1em;
+}
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline;
+}
+.breadcrumbs .trail-browse {
+	margin-right: 0.5em;
+}
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+.breadcrumbs .trail-items li::after {
+	content: "\00bb"; /* Raquo */
+	padding: 0 0.5em;
+}
+.trail-separator-slash .trail-items li::after { content: "\002F"; }
+.trail-separator-dash .trail-items li::after { content: "\2013"; }
+.trail-separator-bull .trail-items li::after { content: "\2022"; }
+.trail-separator-arrow-bracket .trail-items li::after { content: "\003e"; }
+.trail-separator-raquo .trail-items li::after { content: "\00bb"; }
+.trail-separator-single-arrow .trail-items li::after { content: "\2192"; }
+.trail-separator-double-arrow .trail-items li::after { content: "\21D2"; }
+.breadcrumbs .trail-items li:last-of-type::after {
+	display: none;
+}
+
 /* Text Elements
 -------------------------------------------------------------- */
 .entry {
@@ -1006,6 +1041,8 @@ embed, iframe, object, video {
 #social-icons-menu li a[href*="wordpress.org"]:before,
 #social-icons-menu li a[href*="wordpress.com"]:before { content: '\f205'; }
 #social-icons-menu li a[href*="youtube.com"]:before { content: '\f213'; }
+#social-icons-menu li a[href*="newsletter"]:before,
+#social-icons-menu li a[href*="mailto"]:before { content: '\f410'; }
 #social-icons-menu li a[href*="/feed"]:before,
 #social-icons-menu li a[href*="/feed/"]:before,
 #social-icons-menu li a[href*="?feed=rss2"]:before,

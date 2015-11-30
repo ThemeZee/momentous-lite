@@ -346,7 +346,7 @@ class Momentous_Featured_Content {
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'momentous_featured_content', array(
 			'title'          => esc_html__( 'Featured Content', 'momentous-lite' ),
-			'description'    => sprintf( esc_html__( 'Easily feature all posts with the <a href="%1$s">"featured" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area.', 'momentous-lite' ), admin_url( '/edit.php?tag=featured' ), absint( self::$max_posts ) ),
+			'description'    => sprintf( __( 'Easily feature all posts with the <a href="%1$s">"featured" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area.', 'momentous-lite' ), admin_url( '/edit.php?tag=featured' ), absint( self::$max_posts ) ),
 			'priority'       => 40,
 			'panel'			 => 'momentous_options_panel'
 		) );
