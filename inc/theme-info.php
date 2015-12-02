@@ -41,7 +41,7 @@ function momentous_display_theme_info_page() {
 		
 		<hr>
 		<div class="important-links clearfix">
-			<p><strong><?php esc_html_e( 'Important Links:', 'momentous-lite' ); ?></strong>
+			<p><strong><?php esc_html_e( 'Theme Links:', 'momentous-lite' ); ?></strong>
 				<a href="http://themezee.com/themes/momentous/" target="_blank"><?php esc_html_e( 'Theme Page', 'momentous-lite' ); ?></a>
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'momentous-lite' ); ?></a>
 				<a href="http://preview.themezee.com/momentous/" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>

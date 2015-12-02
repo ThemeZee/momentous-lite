@@ -5,6 +5,7 @@ Momentous Lite Changelog
 Version 1.1.7
 -----------------------------------
 [added] custom header image settings
+[added] theme links in theme options panel
 
 Version 1.1.6
 -----------------------------------
