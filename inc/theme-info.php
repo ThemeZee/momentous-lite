@@ -41,12 +41,12 @@ function momentous_display_theme_info_page() {
 		
 		<hr>
 		<div class="important-links clearfix">
-			<p><strong><?php esc_html_e( 'Theme Links:', 'momentous-lite' ); ?></strong>
-				<a href="http://themezee.com/themes/momentous/" target="_blank"><?php esc_html_e( 'Theme Page', 'momentous-lite' ); ?></a>
+			<p><strong><?php esc_html_e( 'Theme Links', 'momentous-lite' ); ?>:</strong>
+				<a href="<?php echo esc_url( 'http://themezee.com/themes/momentous/?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'momentous-lite' ); ?></a>
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'momentous-lite' ); ?></a>
-				<a href="http://preview.themezee.com/momentous/" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>
-				<a href="http://themezee.com/docs/momentous-documentation/" target="_blank"><?php esc_html_e( 'Theme Documentation', 'momentous-lite' ); ?></a>
-				<a href="http://wordpress.org/support/view/theme-reviews/momentous-lite?filter=5" target="_blank"><?php esc_html_e( 'Rate this theme', 'momentous-lite' ); ?></a>
+				<a href="<?php echo esc_url( 'http://preview.themezee.com/momentous/?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>
+				<a href="<?php echo esc_url( 'http://themezee.com/docs/momentous-documentation/?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'momentous-lite' ); ?></a>
+				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/momentous-lite?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'momentous-lite' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -66,7 +66,7 @@ function momentous_display_theme_info_page() {
 							<?php esc_html_e( 'You need help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'momentous-lite' ); ?>
 						</p>
 						<p>
-							<a href="http://themezee.com/docs/momentous-documentation/" target="_blank" class="button button-secondary">
+							<a href="<?php echo esc_url( 'http://themezee.com/docs/momentous-documentation/?utm_source=theme-info&utm_medium=button&utm_campaign=momentous&utm_content=documentation' ); ?>" target="_blank" class="button button-secondary">
 								<?php printf( esc_html__( 'View %s Documentation', 'momentous-lite' ), 'Momentous' ); ?>
 							</a>
 						</p>
@@ -79,7 +79,9 @@ function momentous_display_theme_info_page() {
 							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'momentous-lite' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'momentous-lite' ); ?></a>
+							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary">
+								<?php esc_html_e( 'Customize Theme', 'momentous-lite' ); ?>
+							</a>
 						</p>
 					</div>
 					
@@ -87,10 +89,10 @@ function momentous_display_theme_info_page() {
 						<h4><?php esc_html_e( 'Pro Version', 'momentous-lite' ); ?></h4>
 						
 						<p class="about">
-							<?php esc_html_e( 'You need more features? Purchase the Pro Version to get additional features and advanced customization options.', 'momentous-lite' ); ?>
+							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'momentous-lite' ), 'Momentous'); ?>
 						</p>
 						<p>
-							<a href="http://themezee.com/themes/momentous/#PROVersion-1" target="_blank" class="button button-secondary">
+							<a href="<?php echo esc_url( 'http://themezee.com/themes/momentous/?utm_source=theme-info&utm_medium=button&utm_campaign=momentous&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
 								<?php printf( esc_html__( 'Learn more about %s Pro', 'momentous-lite' ), 'Momentous'); ?>
 							</a>
 						</p>
@@ -114,7 +116,7 @@ function momentous_display_theme_info_page() {
 			
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'momentous-lite' ), 
 				$theme->get( 'Name' ),
-				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>',
+				'<a target="_blank" href="http://themezee.com/?utm_source=theme-info&utm_medium=footer&utm_campaign=momentous" title="ThemeZee">ThemeZee</a>',
 				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/momentous-lite?filter=5" title="Momentous Lite Review">' . esc_html__( 'rate it', 'momentous-lite' ) . '</a>'); ?>
 			</p>
 		
@@ -128,7 +130,7 @@ function momentous_display_theme_info_page() {
 
 // Add CSS for Theme Info Panel
 add_action('admin_enqueue_scripts', 'momentous_theme_info_page_css');
-function momentous_theme_info_page_css($hook) { 
+function momentous_theme_info_page_css( $hook ) { 
 
 	// Load styles and scripts only on theme info page
 	if ( 'appearance_page_momentous' != $hook ) {
@@ -139,5 +141,3 @@ function momentous_theme_info_page_css($hook) {
 	wp_enqueue_style('momentous-lite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css');
 
 }
-
-?>
