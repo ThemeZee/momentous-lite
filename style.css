@@ -484,7 +484,7 @@ input, textarea, select {
 }
 
 /* Postmeta */
-.postmeta {
+.entry-meta {
 	color: #aaa;
 	font-size: 0.95em;
 	margin: 0.2em 0 0;

@@ -5,7 +5,7 @@
 		
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 		
-		<div class="postmeta"><?php momentous_display_postmeta(); ?></div>
+		<div class="entry-meta postmeta"><?php momentous_display_postmeta(); ?></div>
 
 		<div class="entry clearfix">
 			<?php the_content(); ?>
