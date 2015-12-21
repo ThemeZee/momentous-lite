@@ -4,8 +4,10 @@ Momentous Lite Changelog
 
 Version 1.1.7
 -----------------------------------
+[added] support for ThemeZee Related Posts plugin
 [added] custom header image settings
 [added] theme links in theme options panel
+[added] category and tag descriptions on archive template
 
 Version 1.1.6
 -----------------------------------

@@ -20,9 +20,11 @@
 				</header>
 			
 			<?php
-			endif; ?>
+			endif;
 			
-			<?php if (have_posts()) : ?>
+			the_archive_description( '<div class="archive-description">', '</div>' );
+			
+			if (have_posts()) : ?>
 						
 			<div id="post-wrapper" class="clearfix">
 

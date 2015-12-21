@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-11-12 09:46+0100\n"
-"PO-Revision-Date: 2015-11-12 09:46+0100\n"
+"POT-Creation-Date: 2015-12-21 20:31+0100\n"
+"PO-Revision-Date: 2015-12-21 20:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:9
+#: 404.php:11
 msgid "404: Page not found"
 msgstr ""
 
-#: 404.php:12
+#: 404.php:14
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
@@ -72,16 +72,16 @@ msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: search.php:12
+#: search.php:19
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:34
+#: search.php:44
 msgid "No matches"
 msgstr ""
 
-#: search.php:38
+#: search.php:48
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
@@ -125,49 +125,49 @@ msgstr ""
 msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
-#: inc/template-tags.php:87
+#: inc/template-tags.php:109
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:99
+#: inc/template-tags.php:121
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:103
+#: inc/template-tags.php:125
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:276
+#: inc/template-tags.php:317
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:307
+#: inc/template-tags.php:348
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:324
+#: inc/template-tags.php:365
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:325 inc/template-tags.php:343
+#: inc/template-tags.php:366 inc/template-tags.php:384
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:342
+#: inc/template-tags.php:383
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:353
+#: inc/template-tags.php:394
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -180,11 +180,11 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:44
-msgid "Important Links:"
+#: inc/theme-info.php:44 inc/customizer/customizer.php:110
+msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:45
+#: inc/theme-info.php:45 inc/customizer/customizer.php:112
 msgid "Theme Page"
 msgstr ""
 
@@ -197,10 +197,11 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
+#: inc/customizer/customizer.php:114
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:49
+#: inc/theme-info.php:49 inc/customizer/customizer.php:116
 msgid "Rate this theme"
 msgstr ""
 
@@ -231,31 +232,32 @@ msgid ""
 "Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:82
+#: inc/theme-info.php:83
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:14
+#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:42
 msgid "Pro Version"
 msgstr ""
 
-#: inc/theme-info.php:90
+#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:45
+#, php-format
 msgid ""
-"You need more features? Purchase the Pro Version to get additional features "
-"and advanced customization options."
+"Purchase the Pro Version of %s to get additional features and advanced "
+"customization options."
 msgstr ""
 
-#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:62
+#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:115
+#: inc/theme-info.php:117
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:118
+#: inc/theme-info.php:120
 msgid "rate it"
 msgstr ""
 
@@ -267,9 +269,49 @@ msgstr ""
 msgid "Display Tagline below site title."
 msgstr ""
 
-#: inc/customizer/default-options.php:34
+#: inc/customizer/customizer.php:65
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:82
+msgid "Hide header image on front page"
+msgstr ""
+
+#: inc/customizer/default-options.php:37
 #: inc/customizer/sections/customizer-general.php:43
 msgid "Latest Posts"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:58
+msgid "ThemeZee Toolkit"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:61
+msgid ""
+"The ThemeZee Toolkit add-on is a collection of useful small modules and "
+"features, neatly bundled into a single plugin."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:66
+msgid "View Details"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:69
+msgid "Install now"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:77
+msgid "Add-on plugins"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:80
+msgid ""
+"Extend the functionality of your WordPress website with our customized add-"
+"ons."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:85
+msgid "Browse our add-ons"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -373,12 +415,6 @@ msgstr ""
 msgid "Display post tags"
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:30
-msgid "You need more features?"
-msgstr ""
-
-#: inc/customizer/sections/customizer-upgrade.php:46
-msgid ""
-"Purchase the Pro Version to get additional features and advanced "
-"customization options."
+#: inc/customizer/sections/customizer-upgrade.php:14
+msgid "More Features"
 msgstr ""
