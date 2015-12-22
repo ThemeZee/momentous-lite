@@ -197,7 +197,38 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 		'priority' => 11
 		)
 	);
+	
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'momentous_theme_options[post_footer_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Momentous_Customize_Header_Control(
+        $wp_customize, 'momentous_control_post_footer_headline', array(
+            'label' => esc_html__( 'Post Footer', 'momentous-lite' ),
+            'section' => 'momentous_section_post',
+            'settings' => 'momentous_theme_options[post_footer_headline]',
+            'priority' => 12
+            )
+        )
+    );
+	$wp_customize->add_setting( 'momentous_theme_options[post_navigation]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'momentous_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'momentous_control_post_navigation', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'momentous-lite' ),
+        'section'  => 'momentous_section_post',
+        'settings' => 'momentous_theme_options[post_navigation]',
+        'type'     => 'checkbox',
+		'priority' => 13
+		)
+	);
 
 }
-
-?>

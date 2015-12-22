@@ -14,6 +14,8 @@
 		
 		endif; ?>
 			
+		<?php momentous_display_post_navigation(); ?>
+			
 		<?php momentous_display_related_posts(); ?>
 		
 		<?php comments_template(); ?>

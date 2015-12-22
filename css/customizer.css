@@ -3,20 +3,27 @@
  *
  */
 
+.customize-control-checkbox {
+    margin-bottom: 4px;
+}
+
 #customize-control-momentous_control_footer_text, 
 #customize-control-momentous_control_installed_fonts {
 	margin-top: 18px;
 }
+
 #customize-control-momentous_control_excerpt_text_headline,
-#customize-control-momentous_control_postmeta_headline   {
-	margin-top: 12px;
+#customize-control-momentous_control_postmeta_headline,
+#customize-control-momentous_control_post_footer_headline   {
+	margin-top: 16px;
 }
 
 #customize-control-momentous_control_default_fonts,
 #customize-control-momentous_control_header_content,
 #customize-control-momentous_control_post_images,
 #customize-control-momentous_control_excerpt_text_headline,
-#customize-control-momentous_control_postmeta_headline {
+#customize-control-momentous_control_postmeta_headline,
+#customize-control-momentous_control_post_footer_headline {
 	margin-bottom: 0;
 }
 

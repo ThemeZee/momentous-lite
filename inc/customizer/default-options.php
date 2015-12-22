@@ -46,11 +46,10 @@ function momentous_default_options() {
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_category'						=> true,
-		'meta_tags'							=> true
+		'meta_tags'							=> true,
+		'post_navigation' 					=> false,
 	);
 	
 	return $default_options;
+	
 }
-
-
-?>
