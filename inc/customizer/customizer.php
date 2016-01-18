@@ -108,9 +108,9 @@ function momentous_customize_controls_js() {
 	// Localize the script
 	wp_localize_script( 'momentous-lite-customizer-controls', 'momentous_theme_links', array(
 		'title'	=> esc_html__( 'Theme Links', 'momentous-lite' ),
-		'themeURL'	=> esc_url( 'http://themezee.com/themes/momentous/?utm_source=customizer&utm_medium=textlink&utm_campaign=momentous&utm_content=theme-page' ),
+		'themeURL'	=> esc_url( 'https://themezee.com/themes/momentous/?utm_source=customizer&utm_medium=textlink&utm_campaign=momentous&utm_content=theme-page' ),
 		'themeLabel'	=> esc_html__( 'Theme Page', 'momentous-lite' ),
-		'docuURL'	=> esc_url( 'http://themezee.com/docs/momentous-documentation/?utm_source=customizer&utm_medium=textlink&utm_campaign=momentous&utm_content=documentation' ),
+		'docuURL'	=> esc_url( 'https://themezee.com/docs/momentous-documentation/?utm_source=customizer&utm_medium=textlink&utm_campaign=momentous&utm_content=documentation' ),
 		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'momentous-lite' ),
 		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/momentous-lite?filter=5' ),
 		'rateLabel'	=> esc_html__( 'Rate this theme', 'momentous-lite' ),

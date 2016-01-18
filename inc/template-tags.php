@@ -334,7 +334,7 @@ function momentous_display_credit_link() {
 		
 	printf( esc_html__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
 		'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-		'<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>'
+		'<a href="https://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>'
 	); 
 }
 

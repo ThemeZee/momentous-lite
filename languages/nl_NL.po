@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Momentous\n"
-"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2015-08-29 14:30+0100\n"
 "PO-Revision-Date: 2015-08-29 14:56+0100\n"
 "Last-Translator: \n"
