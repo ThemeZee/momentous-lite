@@ -26,7 +26,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
-        $wp_customize, 'momentous_control_header_content', array(
+        $wp_customize, 'momentous_theme_options[header_content]', array(
             'label' => esc_html__( 'Header Content', 'momentous-lite' ),
             'section' => 'momentous_section_header',
             'settings' => 'momentous_theme_options[header_content]',
@@ -43,7 +43,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_header_search', array(
+    $wp_customize->add_control( 'momentous_theme_options[header_search]', array(
         'label'    => esc_html__( 'Activate dropdown search field on header area', 'momentous-lite' ),
         'section'  => 'momentous_section_header',
         'settings' => 'momentous_theme_options[header_search]',
@@ -59,7 +59,7 @@ function momentous_customize_register_header_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_header_icons', array(
+    $wp_customize->add_control( 'momentous_theme_options[header_icons]', array(
         'label'    => esc_html__( 'Display Social Icons on main navigation', 'momentous-lite' ),
         'section'  => 'momentous_section_header',
         'settings' => 'momentous_theme_options[header_icons]',

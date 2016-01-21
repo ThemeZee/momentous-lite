@@ -22,10 +22,10 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'default'           => 'index',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'momentous_sanitize_post_layout'
+        'sanitize_callback' => 'momentous_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_post_layout', array(
+    $wp_customize->add_control( 'momentous_theme_options[post_layout]', array(
         'label'    => esc_html__( 'Post Layout', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_layout]',
@@ -47,7 +47,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
-        $wp_customize, 'momentous_control_post_images', array(
+        $wp_customize, 'momentous_theme_options[post_images]', array(
             'label' => esc_html__( 'Post Images', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_images]',
@@ -62,7 +62,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_posts_thumbnails_index', array(
+    $wp_customize->add_control( 'momentous_theme_options[post_thumbnails_index]', array(
         'label'    => esc_html__( 'Display featured images on archive pages', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_index]',
@@ -78,7 +78,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_posts_thumbnails_single', array(
+    $wp_customize->add_control( 'momentous_theme_options[post_thumbnails_single]', array(
         'label'    => esc_html__( 'Display featured images on single posts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_single]',
@@ -96,7 +96,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
-        $wp_customize, 'momentous_control_excerpt_text_headline', array(
+        $wp_customize, 'momentous_theme_options[excerpt_text_headline]', array(
             'label' => esc_html__( 'Text after Excerpts', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[excerpt_text_headline]',
@@ -111,7 +111,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_excerpt_text', array(
+    $wp_customize->add_control( 'momentous_theme_options[excerpt_text]', array(
         'label'    => esc_html__( 'Display [...] after excerpts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[excerpt_text]',
@@ -129,7 +129,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
-        $wp_customize, 'momentous_control_postmeta_headline', array(
+        $wp_customize, 'momentous_theme_options[postmeta_headline]', array(
             'label' => esc_html__( 'Post Meta', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[postmeta_headline]',
@@ -144,7 +144,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_meta_date', array(
+    $wp_customize->add_control( 'momentous_theme_options[meta_date]', array(
         'label'    => esc_html__( 'Display post date', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_date]',
@@ -159,7 +159,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_meta_author', array(
+    $wp_customize->add_control( 'momentous_theme_options[meta_author]', array(
         'label'    => esc_html__( 'Display post author', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_author]',
@@ -174,7 +174,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_meta_category', array(
+    $wp_customize->add_control( 'momentous_theme_options[meta_category]', array(
         'label'    => esc_html__( 'Display post categories', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_category]',
@@ -189,7 +189,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_meta_tags', array(
+    $wp_customize->add_control( 'momentous_theme_options[meta_tags]', array(
         'label'    => esc_html__( 'Display post tags', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_tags]',
@@ -207,7 +207,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Momentous_Customize_Header_Control(
-        $wp_customize, 'momentous_control_post_footer_headline', array(
+        $wp_customize, 'momentous_theme_options[post_footer_headline]', array(
             'label' => esc_html__( 'Post Footer', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_footer_headline]',
@@ -222,7 +222,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'momentous_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'momentous_control_post_navigation', array(
+    $wp_customize->add_control( 'momentous_theme_options[post_navigation]', array(
         'label'    => esc_html__( 'Display post navigation on single posts', 'momentous-lite' ),
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_navigation]',

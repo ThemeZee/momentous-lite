@@ -5,6 +5,8 @@ Momentous Lite Changelog
 Version 1.1.8
 -----------------------------------
 [added] previous/next post navigation on single post view
+[changed] all themezee.com links to https and made them translatable
+[improved] sanitize functions in Customizer
 
 Version 1.1.7
 -----------------------------------

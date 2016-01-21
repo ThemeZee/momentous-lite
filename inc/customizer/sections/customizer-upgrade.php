@@ -26,7 +26,7 @@ function momentous_customize_register_upgrade_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Momentous_Customize_Upgrade_Control(
-        $wp_customize, 'momentous_control_upgrade', array(
+        $wp_customize, 'momentous_theme_options[upgrade]', array(
             'section' => 'momentous_section_upgrade',
             'settings' => 'momentous_theme_options[upgrade]',
             'priority' => 1
