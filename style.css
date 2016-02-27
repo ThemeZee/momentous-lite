@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: https://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.1.8
+Version: 1.1.9
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -462,10 +462,10 @@ input, textarea, select {
 
 /* Posts and Pages
 -------------------------------------------------------------- */
-#post-wrapper {
+.post-wrapper {
 	margin-right: -1.5em;
 }
-#post-wrapper .post-wrap {
+.post-wrapper .post-wrap {
 	float: left;
 	margin-left: -0.001%;
 	padding-right: 1.5em;
@@ -474,7 +474,7 @@ input, textarea, select {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-#post-wrapper .post-wrap:nth-child(2n + 1) {
+.post-wrapper .post-wrap:nth-child(2n + 1) {
 	clear: left;
 }
 .type-post, .type-page, .type-attachment  {
@@ -482,7 +482,7 @@ input, textarea, select {
 	padding: 1.2em;
 	background: #fff;
 }
-#post-wrapper .one-column-post {
+.post-wrapper .one-column-post {
 	margin-right: 1.5em;
 }
 .page-title, .entry-title {
@@ -593,6 +593,27 @@ input, textarea, select {
 	text-decoration: none;
 }
 
+/* Post Navigation */
+.post-navigation {
+	margin-bottom: 1.5em;
+	padding: 1em;
+	background: #fff;
+}
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after {
+	content: "";
+	display: table;
+}
+.post-navigation .nav-links:after {
+	clear: both;
+}
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
+
 /* Archives and Search Heading */
 .archive-title {
 	font-size: 0.9em;
@@ -636,25 +657,25 @@ input, textarea, select {
 	text-decoration :underline;
 }
 
-/* Post Navigation */
-.post-navigation {
+/* Infinite Scroll Pagination */
+.infinite-scroll .post-pagination {
+	display: none;
+}
+.infinite-scroll #infinite-handle span {
+	clear: left;
+	display: block;
 	margin-bottom: 1.5em;
-	padding: 1em;
-	background: #fff;
+	padding: 0.5em 1em;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
+	color: #222;
+	background-color: #fff;
 }
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after {
-	content: "";
-	display: table;
-}
-.post-navigation .nav-links:after {
-	clear: both;
-}
-.post-navigation .nav-links .nav-previous {
-	float: left;
-}
-.post-navigation .nav-links .nav-next {
-	float: right;
+.infinite-scroll #infinite-handle span:hover {
+	color: #22a8d8;
 }
 
 /* Breadcrumbs */
@@ -778,8 +799,6 @@ big, .big_tag {
 	font-size: 1.3em;
 }
 ins {
-	padding: 1px 2px;
-	background: #ffa;
 	text-decoration: none;
 }
 code, pre {
@@ -1319,7 +1338,7 @@ embed, iframe, object, video {
 	.container {
 		width: 94%;
 	}
-	#post-wrapper .post-wrap {
+	.post-wrapper .post-wrap {
 		float: none;
 		width: 100%;
 	}
@@ -1358,7 +1377,7 @@ embed, iframe, object, video {
 		margin: 2em 0 0;
 		width: 100%;
 	}
-	#post-wrapper .post-wrap {
+	.post-wrapper .post-wrap {
 		float: left;
 		width: 50%;
 	}
@@ -1668,15 +1687,15 @@ embed, iframe, object, video {
 
 }
 @media only screen and (max-width: 45em) {
-	#post-wrapper {
+	.post-wrapper {
 		margin: 0;
 	}
-	#post-wrapper .post-wrap {
+	.post-wrapper .post-wrap {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	#post-wrapper .one-column-post {
+	.post-wrapper .one-column-post {
 		margin-right: 0;
 	}
 }

@@ -24,7 +24,7 @@
 			
 			<?php if (have_posts()) : ?>
 			
-			<div id="post-wrapper" class="clearfix">
+			<div id="post-wrapper" class="post-wrapper clearfix">
 		 
 			<?php while (have_posts()) : the_post();
 		

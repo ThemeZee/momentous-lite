@@ -18,6 +18,14 @@ function momentous_theme_addons_setup() {
 	add_theme_support( 'themezee-widget-bundle' );
 	add_theme_support( 'themezee-breadcrumbs' );
 	add_theme_support( 'themezee-related-posts' );
+	
+	// Add Support for Infinite Scroll
+	add_theme_support( 'infinite-scroll', array(
+		'type' 		=> 'click',
+		'container' => 'content',
+		'wrapper' => 'post-wrapper',
+		'render'    => 'momentous_infinite_scroll_render',
+	) );
 
 }
 
@@ -63,3 +71,18 @@ function momentous_theme_addons_image_sizes() {
 	add_image_size( 'themezee-related-posts', 480, 160, true );
 
 }
+
+/**
+ * Custom render function for Infinite Scroll.
+ */
+function momentous_infinite_scroll_render() {
+
+	// Get Theme Options from Database
+	$theme_options = momentous_theme_options();
+	
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', $theme_options['post_layout'] );
+	}
+	
+} // momentous_infinite_scroll_render()

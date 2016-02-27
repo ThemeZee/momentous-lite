@@ -2,6 +2,10 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.9
+-----------------------------------
+[added] support for Jetpack Infinite Scroll feature
+
 Version 1.1.8
 -----------------------------------
 [added] previous/next post navigation on single post view
