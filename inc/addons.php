@@ -82,7 +82,7 @@ function momentous_infinite_scroll_render() {
 	
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', $theme_options['post_layout'] );
+		get_template_part( 'content', $theme_options['post_layout'] );
 	}
 	
 } // momentous_infinite_scroll_render()
