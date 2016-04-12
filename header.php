@@ -37,7 +37,8 @@
 
 			<div id="logo">
 			
-				<?php do_action('momentous_site_title'); ?>
+				<?php momentous_site_logo(); ?>
+				<?php momentous_site_title(); ?>
 				
 				<?php // Display Tagline on header if activated
 				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			

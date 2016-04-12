@@ -7,18 +7,49 @@
  *
  */
 
+ 
+if ( ! function_exists( 'momentous_site_logo' ) ): 
+/**
+ * Displays the site logo in the header area
+ */
+function momentous_site_logo() {
 
-// Display Site Title
-add_action( 'momentous_site_title', 'momentous_display_site_title' );
-
-function momentous_display_site_title() { ?>
-
-	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-	</a>
-
-<?php
+	if ( function_exists( 'the_custom_logo' ) ) {
+		
+		the_custom_logo();
+	
+	} 
+	
 }
+endif;
+
+
+if ( ! function_exists( 'momentous_site_title' ) ): 
+/**
+ * Displays the site title in the header area
+ */
+function momentous_site_title() {
+	
+	// Get theme options from database
+	$theme_options = momentous_theme_options();	
+	
+	// Return early if site title is deactivated
+	if( false == $theme_options['site_title'] ) {
+		return;
+	}
+	
+	if ( is_home() ) : ?>
+		
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	
+	<?php else : ?>
+		
+		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+	
+	<?php endif; 
+	
+}
+endif;
 
 
 // Display Custom Header

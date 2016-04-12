@@ -103,6 +103,14 @@ function momentous_setup() {
 	// Add Custom Background
 	add_theme_support('custom-background', array('default-color' => 'cccccc'));
 
+	// Set up the WordPress core custom logo feature
+	add_theme_support( 'custom-logo', apply_filters( 'momentous_custom_logo_args', array(
+		'height' => 50,
+		'width' => 350,
+		'flex-height' => true,
+		'flex-width' => true,
+	) ) );
+	
 	// Add Custom Header
 	add_theme_support('custom-header', array(
 		'header-text' => false,

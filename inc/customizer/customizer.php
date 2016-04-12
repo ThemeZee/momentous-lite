@@ -36,6 +36,23 @@ function momentous_customize_register_options( $wp_customize ) {
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'momentous-lite' );
 	
+	// Add Display Site Title Setting
+	$wp_customize->add_setting( 'momentous_theme_options[site_title]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'momentous_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'momentous_theme_options[site_title]', array(
+        'label'    => esc_html__( 'Display Site Title', 'momentous-lite' ),
+        'section'  => 'title_tagline',
+        'settings' => 'momentous_theme_options[site_title]',
+        'type'     => 'checkbox',
+		'priority' => 10
+		)
+	);
+	
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'momentous_theme_options[header_tagline]', array(
         'default'           => false,
@@ -49,7 +66,7 @@ function momentous_customize_register_options( $wp_customize ) {
         'section'  => 'title_tagline',
         'settings' => 'momentous_theme_options[header_tagline]',
         'type'     => 'checkbox',
-		'priority' => 10
+		'priority' => 11
 		)
 	);
 	
