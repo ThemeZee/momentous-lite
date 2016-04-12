@@ -3,7 +3,7 @@
 		
 		<?php momentous_display_thumbnail_index(); ?>
 
-		<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h2 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		
 		<div class="entry-meta postmeta clearfix"><?php momentous_display_postmeta(); ?></div>
 		

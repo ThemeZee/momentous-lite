@@ -21,9 +21,9 @@
 		<?php // Display Latest Posts Title
 		if ( isset( $theme_options['latest_posts_title'] ) and $theme_options['latest_posts_title'] <> '' ) : ?>
 					
-			<h2 id="home-title" class="archive-title">
+			<h1 id="home-title" class="archive-title">
 				<?php echo wp_kses_post($theme_options['latest_posts_title']); ?>
-			</h2>
+			</h1>
 	
 		<?php endif; ?>
 			
