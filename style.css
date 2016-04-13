@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: https://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.1.9
+Version: 1.2.0
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -187,19 +187,30 @@ input, textarea, select {
 	float: left;
 }
 #logo .site-title {
+	display: inline-block;
 	font-size: 2.5em;
 	color: #fff;
 	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
 }
-#logo a, #logo a:hover {
-	text-decoration: none;
+#logo .site-title a:link, 
+#logo .site-title a:visited {
+	color: #fff;
 }
-#logo a:hover .site-title {
+#logo .site-title a:hover,
+#logo .site-title a:active {
 	text-decoration: underline;
 }
 #logo .site-description {
 	margin-top: 0.4em;
 	color: #ddd;
+}
+#logo .custom-logo {
+	margin: 0 1.5em 0 0;
+	padding: 0;
+	border: none;
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
 }
 
 /* Custom Header Image */

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-19 18:07+0100\n"
-"PO-Revision-Date: 2016-01-19 18:07+0100\n"
+"POT-Creation-Date: 2016-04-13 14:44+0100\n"
+"PO-Revision-Date: 2016-04-13 14:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -51,25 +51,24 @@ msgstr ""
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:126
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:127
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:128
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:148 sidebar.php:14
+#: functions.php:156 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:150
-msgid ""
-"Appears on posts and pages except Magazine Homepage and Fullwidth template."
+#: functions.php:158
+msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
 #: search.php:19
@@ -125,49 +124,49 @@ msgstr ""
 msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
-#: inc/template-tags.php:109
+#: inc/template-tags.php:140
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:121
+#: inc/template-tags.php:152
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:125
+#: inc/template-tags.php:156
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:335
+#: inc/template-tags.php:366
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:366
+#: inc/template-tags.php:397
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:383
+#: inc/template-tags.php:414
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:384 inc/template-tags.php:402
+#: inc/template-tags.php:415 inc/template-tags.php:433
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:401
+#: inc/template-tags.php:432
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:412
+#: inc/template-tags.php:443
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -180,15 +179,15 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:44 inc/customizer/customizer.php:110
+#: inc/theme-info.php:44 inc/customizer/customizer.php:127
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:111
+#: inc/theme-info.php:45 inc/customizer/customizer.php:128
 msgid "https://themezee.com/themes/momentous/"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:112
+#: inc/theme-info.php:45 inc/customizer/customizer.php:129
 msgid "Theme Page"
 msgstr ""
 
@@ -201,16 +200,16 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:48 inc/theme-info.php:69
-#: inc/customizer/customizer.php:113
+#: inc/customizer/customizer.php:130
 msgid "https://themezee.com/docs/momentous-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
-#: inc/customizer/customizer.php:114
+#: inc/customizer/customizer.php:131
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:116
+#: inc/theme-info.php:49 inc/customizer/customizer.php:133
 msgid "Rate this theme"
 msgstr ""
 
@@ -283,18 +282,22 @@ msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:48
-msgid "Display Tagline below site title."
+msgid "Display Site Title"
 msgstr ""
 
 #: inc/customizer/customizer.php:65
-msgid "Header Image Link"
+msgid "Display Tagline below site title."
 msgstr ""
 
 #: inc/customizer/customizer.php:82
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:99
 msgid "Hide header image on front page"
 msgstr ""
 
-#: inc/customizer/default-options.php:37
+#: inc/customizer/default-options.php:38
 #: inc/customizer/sections/customizer-general.php:43
 msgid "Latest Posts"
 msgstr ""
