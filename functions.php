@@ -6,15 +6,22 @@
 add_action('wp_enqueue_scripts', 'momentous_enqueue_scripts');
 
 function momentous_enqueue_scripts() { 
+
+	// Get Theme Version
+	$theme_version = wp_get_theme()->get( 'Version' );
 	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style('momentous-lite-stylesheet', get_stylesheet_uri());
+	wp_enqueue_style( 'momentous-lite-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 	
 	// Register Genericons
-	wp_enqueue_style('momentous-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
+	wp_enqueue_style( 'momentous-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	
+	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
+	wp_enqueue_script( 'momentous-lite-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_script_add_data( 'momentous-lite-html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('momentous-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	wp_enqueue_script( 'momentous-lite-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160421' );
 	
 	// Get Theme Options from Database
 	$theme_options = momentous_theme_options();
@@ -23,8 +30,8 @@ function momentous_enqueue_scripts() {
 	if ( isset($theme_options['post_layout']) and $theme_options['post_layout'] == 'index' ) :
 	
 		// Register and enqueue masonry script
-		wp_enqueue_script('masonry');
-		wp_enqueue_script('momentous-lite-masonry', get_template_directory_uri() .'/js/masonry-init.js', array('jquery', 'masonry'));
+		wp_enqueue_script( 'masonry' );
+		wp_enqueue_script( 'momentous-lite-masonry', get_template_directory_uri() .'/js/masonry-init.js', array( 'jquery', 'masonry' ), '20160421' );
 		
 	endif;
 	
@@ -34,20 +41,10 @@ function momentous_enqueue_scripts() {
 	}
 
 	// Register and Enqueue Font
-	wp_enqueue_style('momentous-lite-default-fonts', momentous_fonts_url(), array(), null );
+	wp_enqueue_style( 'momentous-lite-default-fonts', momentous_fonts_url(), array(), null );
 	
 }
 
-
-// Embed HTML5shiv to support HTML5 elements in older IE versions plus CSS Backgrounds
-add_action('wp_head', 'momentous_enqueue_html5shiv');
-
-function momentous_enqueue_html5shiv(){  ?>
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js" type="text/javascript"></script>
-	<![endif]-->
-<?php
-}
 
 /*
 * Retrieve Font URL to register default Google Fonts
