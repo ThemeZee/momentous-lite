@@ -1835,13 +1835,13 @@ embed, iframe, object, video {
 }
 
 /* Big Screens Navi Fix | >720px */
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60.001em) {
 	/* ensure #nav is visible on desktop version */
 	#mainnav-menu, #topnav-menu {
 		display: block !important;
 	}
 }
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 30.001em) {
 	/* ensure social icons are visible on desktop version */
 	#navi-social-icons #social-icons-menu {
 		display: block !important;
