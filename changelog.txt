@@ -2,6 +2,12 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.2.1
+-----------------------------------
+[added] selective refresh support in customizer for sidebars
+[added] version numbers to wp_enqueue_style and wp_enqueue_script functions
+[updated] flexlider, html5shiv and Genericons
+
 Version 1.2.0
 -----------------------------------
 [added] support for new custom logo feature from WordPress 4.5
