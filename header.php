@@ -19,34 +19,34 @@
 <div id="wrapper" class="hfeed">
 
 	<div id="header-wrap">
-	
+
 		<?php // Display Search Form
 		if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
-			
+
 			<div id="header-search-wrap">
-			
+
 				<div id="header-search" class="container clearfix">
 					<?php get_search_form(true); ?>
 				</div>
-				
+
 			</div>
 
 		<?php endif; ?>
-			
+
 		<header id="header" class="container clearfix" role="banner">
 
 			<div id="logo">
-			
+
 				<?php momentous_site_logo(); ?>
 				<?php momentous_site_title(); ?>
-				
+
 				<?php // Display Tagline on header if activated
-				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
+				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>
 					<h2 class="site-description"><?php echo bloginfo('description'); ?></h2>
 				<?php endif; ?>
-			
+
 			</div>
-			
+
 			<div id="header-content" class="clearfix">
 
 				<?php // Display Header Search Icon
@@ -55,31 +55,32 @@
 						<span class="genericon-search"></span>
 					</div>
 				<?php endif; ?>
-				
+
 				<?php // Display Top Navigation
 				if ( has_nav_menu( 'secondary' ) ) : ?>
-			
+
 					<nav id="topnav" class="clearfix" role="navigation">
 						<?php wp_nav_menu(	array(
-							'theme_location' => 'secondary', 
-							'container' => false, 
-							'menu_id' => 'topnav-menu', 
-							'fallback_cb' => '', 
+							'theme_location' => 'secondary',
+							'container' => false,
+							'menu_id' => 'topnav-menu',
+							'menu_class' => 'top-navigation-menu',
+							'fallback_cb' => '',
 							'depth' => 1)
 						);
 						?>
 					</nav>
-			
+
 				<?php endif; ?>
-			
+
 			</div>
 
 		</header>
-		
+
 		<div id="navigation-wrap">
-			
+
 			<div id="navigation" class="container clearfix">
-				
+
 				<?php // Display Social Icons in Navigation
 					if ( isset($theme_options['header_icons']) and $theme_options['header_icons'] == true ) : ?>
 
@@ -88,25 +89,26 @@
 						</div>
 
 				<?php endif; ?>
-				
-				
+
+
 				<nav id="mainnav" class="clearfix" role="navigation">
 					<?php // Display Main Navigation
 						wp_nav_menu( array(
-							'theme_location' => 'primary', 
-							'container' => false, 
-							'menu_id' => 'mainnav-menu', 
-							'echo' => true, 
+							'theme_location' => 'primary',
+							'container' => false,
+							'menu_id' => 'mainnav-menu',
+							'menu_class' => 'main-navigation-menu',
+							'echo' => true,
 							'fallback_cb' => 'momentous_default_menu')
 						);
 					?>
 				</nav>
-				
+
 			</div>
-			
+
 		</div>
-	
+
 	</div>
 
 	<?php // Display Custom Header Image
-		momentous_display_custom_header(); ?>	
+		momentous_display_custom_header(); ?>
