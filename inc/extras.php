@@ -8,7 +8,7 @@
 
 // Add Default Menu Fallback Function
 function momentous_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
+	echo '<ul id="mainnav-menu" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
 }
 
 
@@ -39,7 +39,7 @@ function  momentous_featured_content_excerpt_length($length) {
 // Change Excerpt More
 add_filter('excerpt_more', 'momentous_excerpt_more');
 function momentous_excerpt_more($more) {
-    
+
 	// Get Theme Options from Database
 	$theme_options = momentous_theme_options();
 

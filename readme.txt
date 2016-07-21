@@ -26,6 +26,9 @@ For more information about Momentous please go to https://themezee.com/themes/mo
 
 == Changelog ==
 
+= 1.2.4 =
+* fixed styling of main navigation menu with default pages
+
 = 1.2.3 =
 * added readme.txt file
 * improved styling of navigation menus
