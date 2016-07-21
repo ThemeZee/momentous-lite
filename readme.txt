@@ -1,111 +1,183 @@
-Momentous Lite WordPress Theme, Copyright 2014 ThemeZee.com
-Momentous Lite is distributed under the terms of the GNU GPL
+=== Momentous ===
+Author URI: https://themezee.com
+Theme URI: https://themezee.com/themes/momentous/
+Contributors: themezee
+Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
+Requires at least: 4.4
+Tested up to: 4.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-===================================
-Thanks for Downloading Momentous Lite
-===================================
+Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout.
 
-Thank you for downloading my theme. 
-If you have any questions that are beyond the scope of this help file, 
-please visit themezee.com. Thanks so much!
+== Description ==
 
-It is completely optional, but if you like the Theme we would appreciate it if 
-you keep the credit link at the bottom.
+Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
 
------------------------------------
-Table of Contents
+For more information about Momentous please go to https://themezee.com/themes/momentous/
 
-    * A) Requirements
-    * B) Installation
-    * C) Theme Options
-    * D) Theme Documentation
-    * E) Page Templates
-    * F) Theme License
-	* G) Licenses of bundled resources
------------------------------------
+== Installation ==
 
-===================================
-A) Requirements
-===================================
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Momentous in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Go to https://themezee.com/docs/momentous-documentation/ for a guide on how to customize this theme.
+5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
-The theme has been tested on all major browsers including Firefox, Opera, Chrome,  
-Internet Explorer and Safari. Your browser should have JavaScript enabled to make this theme work!
+== Changelog ==
 
-The theme works on the latest Wordpress version without any problems. Previous versions have not been tested
-and are not supported. I suggest to update your wordpress installation, especially due to security flaws.
+= 1.2.3 =
+* added readme.txt file
+* improved styling of navigation menus
+* added styling for mega menu plugin
+* updated tags in style.css
+* fixed responsive image srcset attribute for custom header image
 
-===================================
-B) Installation
-===================================
+= 1.2.2 =
+* added added alt and srcset attributes to custom header image
+* removed theme prefixes for loading common third-party scripts
+* updated theme tags in style.css
 
-   1. Automatic Installation
-      Go to WP-Admin > Appearance > Themes > Install Themes > Upload and choose the theme zip folder.
+= 1.2.1 =
+* added selective refresh support in customizer for sidebars
+* added version numbers to wp_enqueue_style and wp_enqueue_script functions
+* updated flexlider, html5shiv and Genericons
 
-   2. Manual Installation
-      Upload the theme files to your wordpress theme folder wp-content/themes and activate the theme in
-      your wordpress admin panel. That's it!
+= 1.2.0 =
+* added support for new custom logo feature from WordPress 4.5
 
-To find out more about installing WordPress themes please also see https://themezee.com/docs/install-wordpress-themes/
+You can upload your logo image on Appearance -> Customize -> Site Identity now.
 
-===================================
-C) Theme Options
-===================================
+= 1.1.9 =
+* added support for Jetpack Infinite Scroll feature
 
-Momentous Lite supports the awesome Theme Customizer for all theme settings. 
-Go to WP-Admin > Appearance > Customize to open the Customizer.
+= 1.1.8 =
+* added previous/next post navigation on single post view
+* changed all themezee.com links to https and made them translatable
+* improved sanitize functions in Customizer
 
-===================================
-D) Theme Documentation
-===================================
+= 1.1.7 =
+* added support for ThemeZee Related Posts plugin
+* added custom header image settings
+* added theme links in theme options panel
+* added category and tag descriptions on archive template
 
-Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-https://themezee.com/docs/momentous-documentation/
+= 1.1.6 =
+* added support for ThemeZee Breadcrumbs plugin
+* added email icon to social menu
+* removed empty spaces at the end of template files
+* fixed styling of 404 template
 
-===================================
-E) Page Templates
-===================================
+= 1.1.5 =
+* changed all h2 post and page titles to h1 for better SEO
+* fixed postmeta styling for widget bundle
 
-We have included a few, nice page templates for advanced content presentation.
+= 1.1.4 =
+* added escaping for translation strings for improved security
 
-	1. Fullwidth Template 
-	This template shows a static page without the blog sidebar.
-	
-	2. Magazine Frontpage Template
-	coming soon with the next updates
+= 1.1.3 =
+* improved structure of post meta functions for better re-usability
 
-===================================
-F) Theme License
-===================================
+= 1.1.2 =
+* added basic support for wooCommerce
+* moved additional functions from functions.php to extras.php and template-tags.php
+* added theme support for Widget Bundle Addon Plugin
+* removed fallback solution for new title tag feature of WordPress
+* removed function_exists wrappers for action hook functions
+* changed implementation of threaded comments javascript
 
-Momentous Lite is released under the GNU general public license. 
-That means you can use this theme on all of your websites - for personal or commercial purposes!
+= 1.1.1 =
+* improved code of 404.php and search.php templates
+* improved phrasing of all translatable text strings
+* updated translation files
 
-===================================
-G) Licenses of bundled resources
-===================================
+= 1.1.0 =
+* changed archive titles to use the new the_archive_title() function
+* removed unnecessary template files tag.php, category.php and author.php
 
-	1. Genericons, Copyright 2014 Automattic, Inc.
-	The theme uses the Genericons icon font for postmeta, menu and social icons licensed under GNU GPL.
-	Source URL: http://genericons.com
-	License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
+= 1.0.9 =
+* added setting to display or hide post date
+* added setting to display or hide post author
+* added setting to display or hide post categories
+* added setting to display or hide post tags
 
-	2. Default Fonts (Average Sans, Fjalla One)
-	Default Fonts used in the theme are from the Google Font API and are GPL-compatible licensed (SIL Open Font License (OFL))
-	https://www.google.com/fonts/specimen/Average+Sans
-	http://www.google.com/fonts/specimen/Fjalla+One
-	
-	3. Screenshot Photography (used on screenshot.png)
-	We only use verified images from Pixabay for the screenshot.png, which are licensed under CC0 (GPL compatible).
-	Source URL: http://pixabay.com
-	Image 1: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338502/
-	Image 2: http://pixabay.com/en/headphones-keyboard-apple-input-338492/
-	Image 3: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338507/
-	Image 4: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338505/
-	Image 5: http://pixabay.com/en/iphone-smartphone-desk-mobile-518101/
-	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
+= 1.0.8 =
+* changed navigation.js to use our new developed responsiveMenu function
+* improved styling of navigation menu
+* added dropdown icons and animations for nested submenus on mobile navigation
 
-===================================
-Enjoy!
-===================================
+= 1.0.7 =
+* added new classes entry-title, updated and author for google microformats structure
+* added comments section to fullwidth page template (of course you can still deactivate comments if you want)
+* removed unnecessary HTML markup and Genericons in theme-info.php
 
-Once again, thank you so much for downloading this theme. 
+= 1.0.6 =
+* updated Featured Content class to new version with many code improvements
+* added new setting to display featured posts in latest blog post listing
+
+= 1.0.5 =
+* added language files for German, Dutch, Italian and Spanish translation
+* changed implementation of title tag to add_theme_support method
+* removed old unnecessary wp_title filter function
+
+= 1.0.4 =
+* added setting for deactivating google fonts in case they are not compatible with user language
+* changed implementation of credit link
+* removed unnecessary CSS markup
+
+= 1.0.3 =
+* added Masonry JS layout for two column post layout
+* added unminified version of html5shiv.min.js
+* added action hooks before footer and for site title
+* moved credit link and footer text functions to /inc/template-tags.php
+
+= 1.0.2 =
+* improved styling of blockquotes
+* fixed wrong translation textdomain in some files
+* fixed ampersand escape bug in pagination links (https://core.trac.wordpress.org/ticket/30831)
+
+= 1.0.1 =
+* added setting to choose between one and two column post layout
+* updated to the latest Genericon Font 3.3 and added new social icons
+
+= 1.0 =
+Initial Release
+
+== Copyright ==
+
+Momentous WordPress Theme, Copyright 2016 ThemeZee.com
+Momentous is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+== Ressources ==
+
+Momentous bundles the following third-party resources:
+
+1. Genericons, Copyright 2014 Automattic, Inc.
+The theme uses the Genericons icon font for postmeta, menu and social icons licensed under GNU GPL.
+Source URL: http://genericons.com
+License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
+
+2. Default Fonts (Average Sans, Fjalla One)
+Default Fonts used in the theme are from the Google Font API and are GPL-compatible licensed (SIL Open Font License (OFL))
+https://www.google.com/fonts/specimen/Average+Sans
+http://www.google.com/fonts/specimen/Fjalla+One
+
+3. Screenshot Photography (used on screenshot.png)
+We only use verified images from Pixabay for the screenshot.png, which are licensed under CC0 (GPL compatible).
+Source URL: http://pixabay.com
+Image 1: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338502/
+Image 2: http://pixabay.com/en/headphones-keyboard-apple-input-338492/
+Image 3: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338507/
+Image 4: http://pixabay.com/en/keyboard-apple-input-keys-hardware-338505/
+Image 5: http://pixabay.com/en/iphone-smartphone-desk-mobile-518101/
+License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
