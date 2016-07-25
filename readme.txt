@@ -26,6 +26,9 @@ For more information about Momentous please go to https://themezee.com/themes/mo
 
 == Changelog ==
 
+= 1.2.5 =
+* fixed dropdown menus on mobile navigation menus
+
 = 1.2.4 =
 * fixed styling of main navigation menu with default pages
 
