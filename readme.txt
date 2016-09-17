@@ -26,6 +26,10 @@ For more information about Momentous please go to https://themezee.com/themes/mo
 
 == Changelog ==
 
+= 1.2.7 =
+* fixed mobile menus on RTL language sites
+* moved Theme Links to Theme Options panel dropdown
+
 = 1.2.6 =
 * added Right-to-Left language support
 
