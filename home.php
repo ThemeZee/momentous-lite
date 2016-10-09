@@ -2,42 +2,42 @@
 
 	<div id="wrap" class="container clearfix">
 	
-<?php 
+<?php
 	// Get Theme Options from Database
 	$theme_options = momentous_theme_options();
 
 	// Display Featured Posts on homepage
-	if ( is_front_page() && momentous_has_featured_content() ) :
-		
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
-		
+if ( is_front_page() && momentous_has_featured_content() ) :
+
+	// Include the featured content template.
+	get_template_part( 'featured-content' );
+
 	endif;
 ?>
 		<section id="content" class="primary" role="main">
 			
-		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) { themezee_breadcrumbs();} ?>
 			
 		<?php // Display Latest Posts Title
 		if ( isset( $theme_options['latest_posts_title'] ) and $theme_options['latest_posts_title'] <> '' ) : ?>
 					
 			<h1 id="home-title" class="archive-title">
-				<?php echo wp_kses_post($theme_options['latest_posts_title']); ?>
+				<?php echo wp_kses_post( $theme_options['latest_posts_title'] ); ?>
 			</h1>
 	
 		<?php endif; ?>
 			
 			<div id="post-wrapper" class="post-wrapper clearfix">
 		 
-			<?php if (have_posts()) : while (have_posts()) : the_post();
-		
-				get_template_part( 'content', $theme_options['post_layout'] );
-		
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+					get_template_part( 'content', $theme_options['post_layout'] );
+
 				endwhile; ?>
 			
 			</div>
 			
-			<?php // Display Pagination	
+			<?php // Display Pagination
 				momentous_display_pagination();
 
 			endif; ?>

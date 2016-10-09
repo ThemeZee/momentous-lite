@@ -1,5 +1,5 @@
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class('one-column-post'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'one-column-post' ); ?>>
 
 		<?php momentous_display_thumbnail_index(); ?>
 

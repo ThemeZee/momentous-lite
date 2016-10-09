@@ -14,12 +14,12 @@
  *
  * Original Code: Twenty Fourteen http://wordpress.org/themes/twentyfourteen
  * Original Copyright: the WordPress team and contributors.
- * 
- * The following code is a derivative work of the code from the Twenty Fourteen theme, 
- * which is licensed GPLv2. This code therefore is also licensed under the terms 
+ *
+ * The following code is a derivative work of the code from the Twenty Fourteen theme,
+ * which is licensed GPLv2. This code therefore is also licensed under the terms
  * of the GNU Public License, version 2.
  */
- 
+
 class Momentous_Featured_Content {
 
 	/**
@@ -45,15 +45,15 @@ class Momentous_Featured_Content {
 	 */
 	public static function init() {
 
-		add_filter( 'momentous_get_featured_content',     array( __CLASS__, 'get_featured_posts' )    );
+		add_filter( 'momentous_get_featured_content',     array( __CLASS__, 'get_featured_posts' ) );
 		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
-		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
-		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
-		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
-		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
-		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
-		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient'   )    );
-		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded'          )    );
+		add_action( 'admin_init',                         array( __CLASS__, 'register_setting' ) );
+		add_action( 'save_post',                          array( __CLASS__, 'delete_transient' ) );
+		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts' ) );
+		add_action( 'switch_theme',                       array( __CLASS__, 'delete_transient' ) );
+		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded' ) );
 
 	}
 
@@ -65,7 +65,7 @@ class Momentous_Featured_Content {
 	 */
 	public static function wp_loaded() {
 		if ( self::get_setting( 'hide-tag' ) ) {
-			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term'     ), 10, 3 );
+			add_filter( 'get_terms',     array( __CLASS__, 'hide_featured_term' ), 10, 3 );
 			add_filter( 'get_the_terms', array( __CLASS__, 'hide_the_featured_term' ), 10, 3 );
 		}
 	}
@@ -87,7 +87,7 @@ class Momentous_Featured_Content {
 
 		$featured_posts = get_posts( array(
 			'include'        => $post_ids,
-			'posts_per_page' => count( $post_ids )
+			'posts_per_page' => count( $post_ids ),
 		) );
 
 		return $featured_posts;
@@ -136,8 +136,9 @@ class Momentous_Featured_Content {
 		) );
 
 		// Return empty array if no featured content exists.
-		if ( ! $featured )
+		if ( ! $featured ) {
 			return apply_filters( 'momentous_featured_content_post_ids', array() );
+		}
 
 		// Ensure correct format before save/return.
 		$featured_ids = wp_list_pluck( (array) $featured, 'ID' );
@@ -348,7 +349,7 @@ class Momentous_Featured_Content {
 			'title'          => esc_html__( 'Featured Content', 'momentous-lite' ),
 			'description'    => sprintf( __( 'Easily feature all posts with the <a href="%1$s">"featured" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area.', 'momentous-lite' ), admin_url( '/edit.php?tag=featured' ), absint( self::$max_posts ) ),
 			'priority'       => 40,
-			'panel'			 => 'momentous_options_panel'
+			'panel'			 => 'momentous_options_panel',
 		) );
 
 		/* Add Featured Content settings.
@@ -477,4 +478,4 @@ class Momentous_Featured_Content {
 Momentous_Featured_Content::setup();
 
 
-?>
+

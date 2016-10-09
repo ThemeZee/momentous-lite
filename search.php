@@ -11,8 +11,8 @@
 			<?php // Display breadcrumbs or archive title
 			if ( function_exists( 'themezee_breadcrumbs' ) ) :
 
-				themezee_breadcrumbs(); 
-				
+				themezee_breadcrumbs();
+
 			else : ?>
 			
 				<h1 id="search-title" class="archive-title">
@@ -22,19 +22,19 @@
 			<?php
 			endif; ?>
 			
-			<?php if (have_posts()) : ?>
+			<?php if ( have_posts() ) : ?>
 			
 			<div id="post-wrapper" class="post-wrapper clearfix">
 		 
-			<?php while (have_posts()) : the_post();
-		
+			<?php while ( have_posts() ) : the_post();
+
 				get_template_part( 'content', $theme_options['post_layout'] );
-		
+
 			endwhile; ?>
 			
 			</div>
 			
-			<?php // Display Pagination	
+			<?php // Display Pagination
 			momentous_display_pagination();
 
 		else : ?>

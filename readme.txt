@@ -28,6 +28,7 @@ For more information about Momentous please go to https://themezee.com/themes/mo
 
 = 1.2.8 =
 * added new setting to choose between full posts and post excerpts
+* improved code formatting of all PHP files
 
 = 1.2.7 =
 * fixed mobile menus on RTL language sites

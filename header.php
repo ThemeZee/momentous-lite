@@ -21,12 +21,12 @@
 	<div id="header-wrap">
 
 		<?php // Display Search Form
-		if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
+		if ( isset( $theme_options['header_search'] ) and $theme_options['header_search'] == true ) : ?>
 
 			<div id="header-search-wrap">
 
 				<div id="header-search" class="container clearfix">
-					<?php get_search_form(true); ?>
+					<?php get_search_form( true ); ?>
 				</div>
 
 			</div>
@@ -41,8 +41,8 @@
 				<?php momentous_site_title(); ?>
 
 				<?php // Display Tagline on header if activated
-				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>
-					<h2 class="site-description"><?php echo bloginfo('description'); ?></h2>
+				if ( isset( $theme_options['header_tagline'] ) and $theme_options['header_tagline'] == true ) : ?>
+					<h2 class="site-description"><?php echo bloginfo( 'description' ); ?></h2>
 				<?php endif; ?>
 
 			</div>
@@ -50,7 +50,7 @@
 			<div id="header-content" class="clearfix">
 
 				<?php // Display Header Search Icon
-				if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
+				if ( isset( $theme_options['header_search'] ) and $theme_options['header_search'] == true ) : ?>
 					<div class="header-search-icon">
 						<span class="genericon-search"></span>
 					</div>
@@ -66,7 +66,8 @@
 							'menu_id' => 'topnav-menu',
 							'menu_class' => 'top-navigation-menu',
 							'fallback_cb' => '',
-							'depth' => 1)
+							'depth' => 1,
+							)
 						);
 						?>
 					</nav>
@@ -82,7 +83,7 @@
 			<div id="navigation" class="container clearfix">
 
 				<?php // Display Social Icons in Navigation
-					if ( isset($theme_options['header_icons']) and $theme_options['header_icons'] == true ) : ?>
+				if ( isset( $theme_options['header_icons'] ) and $theme_options['header_icons'] == true ) : ?>
 
 						<div id="navi-social-icons" class="social-icons-wrap clearfix">
 							<?php momentous_display_social_icons(); ?>
@@ -99,7 +100,8 @@
 							'menu_id' => 'mainnav-menu',
 							'menu_class' => 'main-navigation-menu',
 							'echo' => true,
-							'fallback_cb' => 'momentous_default_menu')
+							'fallback_cb' => 'momentous_default_menu',
+							)
 						);
 					?>
 				</nav>

@@ -4,7 +4,7 @@
 		
 		<section id="content" class="primary" role="main">
 
-			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) { themezee_breadcrumbs();} ?>
 			
 			<div class="type-page">
 			

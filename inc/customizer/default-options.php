@@ -14,10 +14,8 @@ function momentous_theme_options() {
 
 		// Get saved theme options from WP database
 		get_option( 'momentous_theme_options', array() ),
-
 		// Merge with Default Options if setting was not saved yet
 		momentous_default_options()
-
 	);
 
 	// Return theme options
@@ -41,7 +39,7 @@ function momentous_default_options() {
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
 		'post_layout'						=> 'index',
-    'post_content'          => 'excerpt',
+	'post_content'          => 'excerpt',
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
 		'excerpt_text' 						=> true,

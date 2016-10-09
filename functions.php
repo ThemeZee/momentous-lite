@@ -3,7 +3,7 @@
 /*==================================== THEME SETUP ====================================*/
 
 // Load default style.css and Javascripts
-add_action('wp_enqueue_scripts', 'momentous_enqueue_scripts');
+add_action( 'wp_enqueue_scripts', 'momentous_enqueue_scripts' );
 
 function momentous_enqueue_scripts() {
 
@@ -27,11 +27,11 @@ function momentous_enqueue_scripts() {
 	$theme_options = momentous_theme_options();
 
 	// Register and Enqueue Masonry JS for two column post layout
-	if ( isset($theme_options['post_layout']) and $theme_options['post_layout'] == 'index' ) :
+	if ( isset( $theme_options['post_layout'] ) and $theme_options['post_layout'] == 'index' ) :
 
 		// Register and enqueue masonry script
 		wp_enqueue_script( 'masonry' );
-		wp_enqueue_script( 'momentous-lite-masonry', get_template_directory_uri() .'/js/masonry-init.js', array( 'jquery', 'masonry' ), '20160719' );
+		wp_enqueue_script( 'momentous-lite-masonry', get_template_directory_uri() . '/js/masonry-init.js', array( 'jquery', 'masonry' ), '20160719' );
 
 	endif;
 
@@ -51,16 +51,16 @@ function momentous_enqueue_scripts() {
 * Source: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
 */
 function momentous_fonts_url() {
-    $fonts_url = '';
+	$fonts_url = '';
 
 	// Get Theme Options from Database
 	$theme_options = momentous_theme_options();
 
 	// Only embed Google Fonts if not deactivated
-	if ( ! ( isset($theme_options['deactivate_google_fonts']) and $theme_options['deactivate_google_fonts'] == true ) ) :
+	if ( ! ( isset( $theme_options['deactivate_google_fonts'] ) and $theme_options['deactivate_google_fonts'] == true ) ) :
 
 		// Set Default Fonts
-		$font_families = array('Average Sans:400,700', 'Fjalla One');
+		$font_families = array( 'Average Sans:400,700', 'Fjalla One' );
 
 		// Set Google Font Query Args
 		$query_args = array(
@@ -85,20 +85,21 @@ function momentous_setup() {
 
 	// Set Content Width
 	global $content_width;
-	if ( ! isset( $content_width ) )
+	if ( ! isset( $content_width ) ) {
 		$content_width = 860;
+	}
 
 	// init Localization
-	load_theme_textdomain('momentous-lite', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'momentous-lite', get_template_directory() . '/languages' );
 
 	// Add Theme Support
-	add_theme_support('post-thumbnails');
-	add_theme_support('automatic-feed-links');
-	add_theme_support('title-tag');
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
 	add_editor_style();
 
 	// Add Custom Background
-	add_theme_support('custom-background', array('default-color' => 'cccccc'));
+	add_theme_support( 'custom-background', array( 'default-color' => 'cccccc' ) );
 
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'momentous_custom_logo_args', array(
@@ -113,7 +114,8 @@ function momentous_setup() {
 		'header-text' => false,
 		'width'	=> 1310,
 		'height' => 240,
-		'flex-height' => true));
+		'flex-height' => true,
+	));
 
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
@@ -138,10 +140,10 @@ add_action( 'after_setup_theme', 'momentous_add_image_sizes' );
 function momentous_add_image_sizes() {
 
 	// Add Custom Header Image Size
-	add_image_size( 'custom_header_image', 1300, 240, true);
+	add_image_size( 'custom_header_image', 1300, 240, true );
 
 	// Add Featured Image Size
-	add_image_size( 'post-thumbnail', 900, 300, true);
+	add_image_size( 'post-thumbnail', 900, 300, true );
 
 }
 

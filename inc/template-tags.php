@@ -8,52 +8,52 @@
  */
 
 
-if ( ! function_exists( 'momentous_site_logo' ) ):
-/**
+if ( ! function_exists( 'momentous_site_logo' ) ) :
+	/**
  * Displays the site logo in the header area
  */
-function momentous_site_logo() {
+	function momentous_site_logo() {
 
-	if ( function_exists( 'the_custom_logo' ) ) {
+		if ( function_exists( 'the_custom_logo' ) ) {
 
-		the_custom_logo();
+			the_custom_logo();
+
+		}
 
 	}
-
-}
 endif;
 
 
-if ( ! function_exists( 'momentous_site_title' ) ):
-/**
+if ( ! function_exists( 'momentous_site_title' ) ) :
+	/**
  * Displays the site title in the header area
  */
-function momentous_site_title() {
+	function momentous_site_title() {
 
-	// Get theme options from database
-	$theme_options = momentous_theme_options();
+		// Get theme options from database
+		$theme_options = momentous_theme_options();
 
-	// Return early if site title is deactivated
-	if( false == $theme_options['site_title'] ) {
-		return;
-	}
+		// Return early if site title is deactivated
+		if ( false == $theme_options['site_title'] ) {
+			return;
+		}
 
-	if ( is_home() ) : ?>
+		if ( is_home() ) : ?>
 
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-	<?php else : ?>
+		<?php else : ?>
 
 		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
 	<?php endif;
 
-}
+	}
 endif;
 
 
 // Display Custom Header
-if ( ! function_exists( 'momentous_display_custom_header' ) ):
+if ( ! function_exists( 'momentous_display_custom_header' ) ) :
 
 	function momentous_display_custom_header() {
 
@@ -66,20 +66,20 @@ if ( ! function_exists( 'momentous_display_custom_header' ) ):
 		}
 
 		// Check if page is displayed and featured header image is used
-		if( is_page() && has_post_thumbnail() ) : ?>
+		if ( is_page() && has_post_thumbnail() ) : ?>
 
 			<div id="custom-page-header" class="header-image container">
-				<?php the_post_thumbnail('custom_header_image'); ?>
+				<?php the_post_thumbnail( 'custom_header_image' ); ?>
 			</div>
 
 		<?php
 		// Check if there is a custom header image
-		elseif( get_header_image() ) : ?>
+		elseif ( get_header_image() ) : ?>
 
 			<div id="custom-header" class="header-image container">
 
 				<?php // Check if custom header image is linked
-				if( $theme_options['custom_header_link'] <> '' ) : ?>
+				if ( $theme_options['custom_header_link'] <> '' ) : ?>
 
 					<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
 						<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
@@ -101,27 +101,27 @@ endif;
 
 
 if ( ! function_exists( 'momentous_post_content' ) ) :
-  /**
-   * Displays the post content on archive pages
-   */
-  function momentous_post_content() {
+	/**
+	* Displays the post content on archive pages
+	*/
+	function momentous_post_content() {
 
-  	// Get theme options from database.
-  	$theme_options = momentous_theme_options();
+		// Get theme options from database.
+		$theme_options = momentous_theme_options();
 
-  	// Display Excerpt or Full Content?
-  	if ( 'excerpt' === $theme_options['post_content'] ) {
+		// Display Excerpt or Full Content?
+		if ( 'excerpt' === $theme_options['post_content'] ) {
 
-  		the_excerpt();
-  		echo '<a href="'. esc_url( get_permalink() ) . '" class="more-link">' . esc_html__( 'Continue reading &raquo;', 'momentous-lite' ) . '</a>';
+			the_excerpt();
+			echo '<a href="' . esc_url( get_permalink() ) . '" class="more-link">' . esc_html__( 'Continue reading &raquo;', 'momentous-lite' ) . '</a>';
 
-  	} else {
+		} else {
 
-  		the_content( esc_html__( 'Continue reading &raquo;', 'momentous-lite' ) );
+			the_content( esc_html__( 'Continue reading &raquo;', 'momentous-lite' ) );
 
-  	}
+		}
 
-  }
+	}
 endif;
 
 // Display Postmeta Data
@@ -191,10 +191,10 @@ function momentous_display_thumbnail_index() {
 	$theme_options = momentous_theme_options();
 
 	// Display Post Thumbnail if activated
-	if ( isset($theme_options['post_thumbnails_index']) and $theme_options['post_thumbnails_index'] == true ) : ?>
+	if ( isset( $theme_options['post_thumbnails_index'] ) and $theme_options['post_thumbnails_index'] == true ) : ?>
 
-		<a href="<?php esc_url(the_permalink()) ?>" rel="bookmark">
-			<?php the_post_thumbnail('post-thumbnail'); ?>
+		<a href="<?php esc_url( the_permalink() ) ?>" rel="bookmark">
+			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 		</a>
 
 <?php
@@ -210,9 +210,9 @@ function momentous_display_thumbnail_single() {
 	$theme_options = momentous_theme_options();
 
 	// Display Post Thumbnail if activated
-	if ( isset($theme_options['post_thumbnails_single']) and $theme_options['post_thumbnails_single'] == true ) :
+	if ( isset( $theme_options['post_thumbnails_single'] ) and $theme_options['post_thumbnails_single'] == true ) :
 
-		the_post_thumbnail('post-thumbnail');
+		the_post_thumbnail( 'post-thumbnail' );
 
 	endif;
 
@@ -236,10 +236,10 @@ if ( ! function_exists( 'momentous_display_postinfo_index' ) ) :
 		$theme_options = momentous_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( isset($theme_options['meta_category']) and $theme_options['meta_category'] == true ) : ?>
+		if ( isset( $theme_options['meta_category'] ) and $theme_options['meta_category'] == true ) : ?>
 
 			<span class="meta-category">
-				<?php printf('%1$s', get_the_category_list(', ')); ?>
+				<?php printf( '%1$s', get_the_category_list( ', ' ) ); ?>
 			</span>
 
 		<?php endif;
@@ -266,22 +266,22 @@ if ( ! function_exists( 'momentous_display_postinfo_single' ) ) :
 		$theme_options = momentous_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( isset($theme_options['meta_category']) and $theme_options['meta_category'] == true ) : ?>
+		if ( isset( $theme_options['meta_category'] ) and $theme_options['meta_category'] == true ) : ?>
 
 			<span class="meta-category">
-				<?php printf('%1$s', get_the_category_list(', ')); ?>
+				<?php printf( '%1$s', get_the_category_list( ', ' ) ); ?>
 			</span>
 
 		<?php endif;
 
 		// Display Date unless user has deactivated it via settings
-		if ( isset($theme_options['meta_tags']) and $theme_options['meta_tags'] == true ) :
+		if ( isset( $theme_options['meta_tags'] ) and $theme_options['meta_tags'] == true ) :
 
-			$tag_list = get_the_tag_list('', ', ');
+			$tag_list = get_the_tag_list( '', ', ' );
 			if ( $tag_list ) : ?>
 
 				<span class="meta-tags">
-					<?php printf('%1$s', $tag_list); ?>
+					<?php printf( '%1$s', $tag_list ); ?>
 				</span>
 
 			<?php endif;
@@ -294,7 +294,7 @@ endif;
 
 
 // Display Single Post Navigation
-if ( ! function_exists( 'momentous_display_post_navigation' ) ):
+if ( ! function_exists( 'momentous_display_post_navigation' ) ) :
 
 	function momentous_display_post_navigation() {
 
@@ -312,7 +312,7 @@ endif;
 
 
 // Display ThemeZee Related Posts plugin
-if ( ! function_exists( 'momentous_display_related_posts' ) ):
+if ( ! function_exists( 'momentous_display_related_posts' ) ) :
 
 	function momentous_display_related_posts() {
 
@@ -321,7 +321,7 @@ if ( ! function_exists( 'momentous_display_related_posts' ) ):
 			themezee_related_posts( array(
 				'class' => 'related-posts widget clearfix',
 				'before_title' => '<h2 class="widgettitle related-posts-title"><span>',
-				'after_title' => '</span></h2>'
+				'after_title' => '</span></h2>',
 			) );
 
 		}
@@ -331,7 +331,7 @@ endif;
 
 
 // Display Content Pagination
-if ( ! function_exists( 'momentous_display_pagination' ) ):
+if ( ! function_exists( 'momentous_display_pagination' ) ) :
 
 	function momentous_display_pagination() {
 
@@ -346,17 +346,17 @@ if ( ! function_exists( 'momentous_display_pagination' ) ):
 				'total' => $wp_query->max_num_pages,
 				'next_text' => '&raquo;',
 				'prev_text' => '&laquo',
-				'add_args' => false
-			) );
+				'add_args' => false,
+		 ) );
 
-		// Display the pagination if more than one page is found
-		if ( $paginate_links ) : ?>
+		 // Display the pagination if more than one page is found
+		 if ( $paginate_links ) : ?>
 
-			<div class="post-pagination clearfix">
-				<?php echo $paginate_links; ?>
-			</div>
+			  <div class="post-pagination clearfix">
+					<?php echo $paginate_links; ?>
+			  </div>
 
-		<?php
+			<?php
 		endif;
 
 	}
@@ -365,7 +365,7 @@ endif;
 
 
 // Display Footer Text
-if ( ! function_exists( 'momentous_display_footer_text' ) ):
+if ( ! function_exists( 'momentous_display_footer_text' ) ) :
 
 	function momentous_display_footer_text() {
 
@@ -374,7 +374,7 @@ if ( ! function_exists( 'momentous_display_footer_text' ) ):
 
 		if ( isset( $theme_options['footer_text'] ) and $theme_options['footer_text'] <> '' ) :
 
-			echo do_shortcode(wp_kses_post($theme_options['footer_text']));
+			echo do_shortcode( wp_kses_post( $theme_options['footer_text'] ) );
 
 		endif;
 	}
@@ -398,7 +398,7 @@ function momentous_display_credit_link() {
 function momentous_display_social_icons() {
 
 	// Check if there is a social_icons menu
-	if( has_nav_menu( 'social' ) ) :
+	if ( has_nav_menu( 'social' ) ) :
 
 		// Display Social Icons Menu
 		wp_nav_menu( array(
@@ -411,11 +411,11 @@ function momentous_display_social_icons() {
 			'after' => '',
 			'link_before' => '<span class="screen-reader-text">',
 			'link_after' => '</span>',
-			'depth' => 1
+			'depth' => 1,
 			)
 		);
 
-	else: // Display Hint how to configure Social Icons ?>
+	else : // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
 			<?php esc_html_e( 'Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'momentous-lite' ); ?>
@@ -427,19 +427,19 @@ function momentous_display_social_icons() {
 
 
 // Custom Template for comments and pingbacks.
-if ( ! function_exists( 'momentous_list_comments' ) ):
-function momentous_list_comments($comment, $args, $depth) {
+if ( ! function_exists( 'momentous_list_comments' ) ) :
+	function momentous_list_comments( $comment, $args, $depth ) {
 
-	$GLOBALS['comment'] = $comment;
+		$GLOBALS['comment'] = $comment;
 
-	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
+		if ( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php esc_html_e( 'Pingback:', 'momentous-lite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( esc_html__( '(Edit)', 'momentous-lite' ), '<span class="edit-link">', '</span>' ); ?>
-			</p>
+			<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+				<p><?php esc_html_e( 'Pingback:', 'momentous-lite' ); ?> <?php comment_author_link(); ?>
+				<?php edit_comment_link( esc_html__( '(Edit)', 'momentous-lite' ), '<span class="edit-link">', '</span>' ); ?>
+				</p>
 
-	<?php else : ?>
+		<?php else : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 
@@ -453,8 +453,8 @@ function momentous_list_comments($comment, $args, $depth) {
 					</div>
 
 					<div class="commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( esc_html__( '%1$s at %2$s', 'momentous-lite' ), get_comment_date(),  get_comment_time()) ?></a>
-						<?php edit_comment_link( esc_html__( '(Edit)', 'momentous-lite' ),'  ','') ?>
+						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( esc_html__( '%1$s at %2$s', 'momentous-lite' ), get_comment_date(),  get_comment_time() ) ?></a>
+						<?php edit_comment_link( esc_html__( '(Edit)', 'momentous-lite' ),'  ','' ) ?>
 					</div>
 
 				</div>
@@ -463,12 +463,12 @@ function momentous_list_comments($comment, $args, $depth) {
 
 					<?php comment_text(); ?>
 
-					<?php if ($comment->comment_approved == '0') : ?>
+					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'momentous-lite' ); ?></p>
 					<?php endif; ?>
 
 					<div class="reply">
-						<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+						<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ) ?>
 					</div>
 
 				</div>
@@ -478,5 +478,5 @@ function momentous_list_comments($comment, $args, $depth) {
 <?php
 	endif;
 
-}
+	}
 endif;

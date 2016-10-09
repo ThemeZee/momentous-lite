@@ -1,4 +1,4 @@
-<?php 
+<?php
 /***
  * Comments Template
  *
@@ -6,10 +6,11 @@
  *
  */
 
-if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-	die ('Please do not load this page directly. Thanks!');
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+	die( 'Please do not load this page directly. Thanks!' );
+}
 
-if ( post_password_required()) : ?>
+if ( post_password_required() ) : ?>
 	<p><?php esc_html_e( 'Enter password to view comments.', 'momentous-lite' ); ?></p>
 <?php return; endif; ?>
 
@@ -23,7 +24,7 @@ if ( post_password_required()) : ?>
 			<h3 class="comments-title"><span><?php comments_number( '', esc_html__( 'One comment', 'momentous-lite' ), esc_html__( '% comments', 'momentous-lite' ) );?></span></h3>
 			
 			<ul class="commentlist">
-				<?php wp_list_comments( array('callback' => 'momentous_list_comments')); ?>
+				<?php wp_list_comments( array( 'callback' => 'momentous_list_comments' ) ); ?>
 			</ul>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -36,9 +37,9 @@ if ( post_password_required()) : ?>
 		<?php endif; ?>
 
 		<?php if ( comments_open() ) : ?>
-			<?php comment_form( array( 
+			<?php comment_form( array(
 				'title_reply' => '<span>' . esc_html__( 'Leave a Reply', 'momentous-lite' ) . '</span>',
-				'comment_notes_after' => ''
+				'comment_notes_after' => '',
 				)
 			); ?>
 		<?php endif; ?>

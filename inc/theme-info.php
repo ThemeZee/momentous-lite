@@ -149,7 +149,7 @@ function momentous_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'momentous-lite' ),
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'momentous-lite' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=momentous" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/momentous-lite/reviews/?filter=5', 'momentous-lite' ) . '" title="' . esc_attr__( 'Review Momentous Lite', 'momentous-lite' ) . '">' . esc_html__( 'rate it', 'momentous-lite' ) . '</a>'); ?>
+			'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/momentous-lite/reviews/?filter=5', 'momentous-lite' ) . '" title="' . esc_attr__( 'Review Momentous Lite', 'momentous-lite' ) . '">' . esc_html__( 'rate it', 'momentous-lite' ) . '</a>'); ?>
 			</p>
 
 		</div>
@@ -172,7 +172,7 @@ function momentous_theme_info_page_css( $hook ) {
 	}
 
 	// Embed theme info css style.
-	wp_enqueue_style( 'momentous-theme-info-css', get_template_directory_uri() .'/css/theme-info.css' );
+	wp_enqueue_style( 'momentous-theme-info-css', get_template_directory_uri() . '/css/theme-info.css' );
 
 }
 add_action( 'admin_enqueue_scripts', 'momentous_theme_info_page_css' );
