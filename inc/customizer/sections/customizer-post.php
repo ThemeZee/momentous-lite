@@ -13,10 +13,10 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_section( 'momentous_section_post', array(
         'title'    => esc_html__( 'Post Settings', 'momentous-lite' ),
         'priority' => 30,
-		'panel' => 'momentous_options_panel' 
+		'panel' => 'momentous_options_panel'
 		)
 	);
-	
+
 	// Add Settings and Controls for Post Layout
 	$wp_customize->add_setting( 'momentous_theme_options[post_layout]', array(
         'default'           => 'index',
@@ -37,7 +37,28 @@ function momentous_customize_register_post_settings( $wp_customize ) {
 			)
 		)
 	);
-	
+
+	// Add Settings and Controls for post content.
+	$wp_customize->add_setting( 'momentous_theme_options[post_content]', array(
+		'default'           => 'excerpt',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'momentous_sanitize_select',
+		)
+	);
+	$wp_customize->add_control( 'momentous_theme_options[post_content]', array(
+		'label'    => esc_html__( 'Post Length', 'momentous-lite' ),
+		'section'  => 'momentous_section_post',
+		'settings' => 'momentous_theme_options[post_content]',
+		'type'     => 'radio',
+		'priority' => 2,
+		'choices'  => array(
+			'full' => esc_html__( 'Show full posts', 'momentous-lite' ),
+			'excerpt' => esc_html__( 'Show post excerpts', 'momentous-lite' ),
+			),
+		)
+	);
+
 	// Add Post Images Headline
 	$wp_customize->add_setting( 'momentous_theme_options[post_images]', array(
         'default'           => '',
@@ -51,7 +72,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Post Images', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_images]',
-            'priority' => 2
+            'priority' => 3
             )
         )
     );
@@ -67,7 +88,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 4
 		)
 	);
 
@@ -83,10 +104,10 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
-		'priority' => 4
+		'priority' => 5
 		)
 	);
-	
+
 	// Add Excerpt Text setting
 	$wp_customize->add_setting( 'momentous_theme_options[excerpt_text_headline]', array(
         'default'           => '',
@@ -100,7 +121,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Text after Excerpts', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[excerpt_text_headline]',
-            'priority' => 5
+            'priority' => 6
             )
         )
     );
@@ -116,10 +137,10 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[excerpt_text]',
         'type'     => 'checkbox',
-		'priority' => 6
+		'priority' => 7
 		)
 	);
-	
+
 	// Add Post Meta Settings
 	$wp_customize->add_setting( 'momentous_theme_options[postmeta_headline]', array(
         'default'           => '',
@@ -133,7 +154,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Post Meta', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[postmeta_headline]',
-            'priority' => 7
+            'priority' => 8
             )
         )
     );
@@ -149,7 +170,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_date]',
         'type'     => 'checkbox',
-		'priority' => 8
+		'priority' => 9
 		)
 	);
 	$wp_customize->add_setting( 'momentous_theme_options[meta_author]', array(
@@ -164,7 +185,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_author]',
         'type'     => 'checkbox',
-		'priority' => 9
+		'priority' => 10
 		)
 	);
 	$wp_customize->add_setting( 'momentous_theme_options[meta_category]', array(
@@ -179,7 +200,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_category]',
         'type'     => 'checkbox',
-		'priority' => 10
+		'priority' => 11
 		)
 	);
 	$wp_customize->add_setting( 'momentous_theme_options[meta_tags]', array(
@@ -194,10 +215,10 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[meta_tags]',
         'type'     => 'checkbox',
-		'priority' => 11
+		'priority' => 12
 		)
 	);
-	
+
 	// Add Post Footer Settings
 	$wp_customize->add_setting( 'momentous_theme_options[post_footer_headline]', array(
         'default'           => '',
@@ -211,7 +232,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
             'label' => esc_html__( 'Post Footer', 'momentous-lite' ),
             'section' => 'momentous_section_post',
             'settings' => 'momentous_theme_options[post_footer_headline]',
-            'priority' => 12
+            'priority' => 13
             )
         )
     );
@@ -227,7 +248,7 @@ function momentous_customize_register_post_settings( $wp_customize ) {
         'section'  => 'momentous_section_post',
         'settings' => 'momentous_theme_options[post_navigation]',
         'type'     => 'checkbox',
-		'priority' => 13
+		'priority' => 14
 		)
 	);
 

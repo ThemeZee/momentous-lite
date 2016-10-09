@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-09-17 11:47+0100\n"
-"PO-Revision-Date: 2016-09-17 11:47+0100\n"
+"POT-Creation-Date: 2016-10-09 10:20+0100\n"
+"PO-Revision-Date: 2016-10-09 10:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Leave a Reply"
 msgstr ""
 
-#: content-one-column.php:12 content.php:14 featured-content.php:44
+#: featured-content.php:44 inc/template-tags.php:116 inc/template-tags.php:120
 msgid "Continue reading &raquo;"
 msgstr ""
 
@@ -124,49 +124,49 @@ msgstr ""
 msgid "Display featured posts in latest blog post listing."
 msgstr ""
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:164
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:152
+#: inc/template-tags.php:176
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:180
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:366
+#: inc/template-tags.php:390
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:397
+#: inc/template-tags.php:421
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:414
+#: inc/template-tags.php:438
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:415 inc/template-tags.php:433
+#: inc/template-tags.php:439 inc/template-tags.php:457
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:432
+#: inc/template-tags.php:456
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:443
+#: inc/template-tags.php:467
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -207,7 +207,7 @@ msgstr ""
 
 #: inc/theme-info.php:50 inc/theme-info.php:152
 #: inc/customizer/customizer.php:157
-msgid "https://wordpress.org/support/theme/momentous/reviews/?filter=5"
+msgid "https://wordpress.org/support/theme/momentous-lite/reviews/?filter=5"
 msgstr ""
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:158
@@ -386,51 +386,63 @@ msgstr ""
 msgid "Two Columns"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:51
+#: inc/customizer/sections/customizer-post.php:50
+msgid "Post Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:56
+msgid "Show full posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:57
+msgid "Show post excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:72
 msgid "Post Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:66
+#: inc/customizer/sections/customizer-post.php:87
 msgid "Display featured images on archive pages"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:82
+#: inc/customizer/sections/customizer-post.php:103
 msgid "Display featured images on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:100
+#: inc/customizer/sections/customizer-post.php:121
 msgid "Text after Excerpts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:115
+#: inc/customizer/sections/customizer-post.php:136
 msgid "Display [...] after excerpts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:133
+#: inc/customizer/sections/customizer-post.php:154
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:148
+#: inc/customizer/sections/customizer-post.php:169
 msgid "Display post date"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:163
+#: inc/customizer/sections/customizer-post.php:184
 msgid "Display post author"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:178
+#: inc/customizer/sections/customizer-post.php:199
 msgid "Display post categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:193
+#: inc/customizer/sections/customizer-post.php:214
 msgid "Display post tags"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:211
+#: inc/customizer/sections/customizer-post.php:232
 msgid "Post Footer"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:226
+#: inc/customizer/sections/customizer-post.php:247
 msgid "Display post navigation on single posts"
 msgstr ""
 
