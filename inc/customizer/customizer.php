@@ -118,7 +118,7 @@ function momentous_customize_preview_js() {
 add_action( 'customize_controls_print_styles', 'momentous_customize_preview_css' );
 
 function momentous_customize_preview_css() {
-	wp_enqueue_style( 'momentous-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'momentous-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 }
 
 
@@ -141,7 +141,7 @@ function momentous_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/momentous/?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=momentous&utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?>
 				</a>
 			</p>

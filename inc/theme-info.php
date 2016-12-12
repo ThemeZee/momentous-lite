@@ -45,7 +45,7 @@ function momentous_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'momentous-lite' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/momentous/', 'momentous-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'momentous-lite' ); ?></a>
-				<a href="http://preview.themezee.com/momentous/?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=momentous&utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/momentous-documentation/', 'momentous-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'momentous-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/momentous-lite/reviews/?filter=5', 'momentous-lite' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'momentous-lite' ); ?></a>
 			</p>
@@ -80,7 +80,7 @@ function momentous_theme_info_page() {
 							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'momentous-lite' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'momentous-lite' ); ?></a>
+							<a href="<?php echo wp_customize_url(); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'momentous-lite' ); ?></a>
 						</p>
 					</div>
 
@@ -130,7 +130,7 @@ function momentous_theme_info_page() {
 							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'momentous-lite' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+							<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
 								<?php esc_html_e( 'Install Plugins', 'momentous-lite' ); ?>
 							</a>
 						</p>
