@@ -39,11 +39,7 @@
 
 				<?php momentous_site_logo(); ?>
 				<?php momentous_site_title(); ?>
-
-				<?php // Display Tagline on header if activated
-				if ( isset( $theme_options['header_tagline'] ) and $theme_options['header_tagline'] == true ) : ?>
-					<h2 class="site-description"><?php echo bloginfo( 'description' ); ?></h2>
-				<?php endif; ?>
+				<?php momentous_site_description(); ?>
 
 			</div>
 

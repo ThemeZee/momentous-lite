@@ -7,6 +7,10 @@
     margin-bottom: 4px;
 }
 
+#customize-control-momentous_theme_options-header_tagline {
+	margin-bottom: 16px;
+}
+
 #customize-control-momentous_theme_options-footer_text,
 #customize-control-momentous_theme_options-installed_fonts {
 	margin-top: 18px;
