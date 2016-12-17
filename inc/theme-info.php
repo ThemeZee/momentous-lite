@@ -45,7 +45,7 @@ function momentous_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'momentous-lite' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/momentous/', 'momentous-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'momentous-lite' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=momentous&utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=momentous&utm_source=theme-info&utm_campaign=momentous" target="_blank"><?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/momentous-documentation/', 'momentous-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'momentous-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/momentous-lite/reviews/?filter=5', 'momentous-lite' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'momentous-lite' ); ?></a>
 			</p>

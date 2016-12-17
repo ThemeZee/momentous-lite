@@ -168,7 +168,7 @@ function momentous_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=momentous&utm_source=theme-info&utm_medium=textlink&utm_campaign=momentous&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=momentous&utm_source=customizer&utm_campaign=momentous" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'momentous-lite' ); ?>
 				</a>
 			</p>
