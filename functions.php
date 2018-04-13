@@ -39,43 +39,19 @@ function momentous_enqueue_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-	// Register and Enqueue Font
-	wp_enqueue_style( 'momentous-lite-default-fonts', momentous_fonts_url(), array(), null );
-
 }
 
 
-/*
-* Retrieve Font URL to register default Google Fonts
-* Source: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
-*/
-function momentous_fonts_url() {
-	$fonts_url = '';
+/**
+ * Enqueue custom fonts.
+ */
+function momentous_custom_fonts() {
 
-	// Get Theme Options from Database
-	$theme_options = momentous_theme_options();
-
-	// Only embed Google Fonts if not deactivated
-	if ( ! ( isset( $theme_options['deactivate_google_fonts'] ) and $theme_options['deactivate_google_fonts'] == true ) ) :
-
-		// Set Default Fonts
-		$font_families = array( 'Average Sans:400,700', 'Fjalla One' );
-
-		// Set Google Font Query Args
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		// Create Fonts URL
-		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-
-	endif;
-
-	return apply_filters( 'momentous_google_fonts_url', $fonts_url );
+	// Register and Enqueue Theme Fonts.
+	wp_enqueue_style( 'momentous-custom-fonts', get_template_directory_uri() . '/css/custom-fonts.css', array(), '20180413' );
 
 }
+add_action( 'wp_enqueue_scripts', 'momentous_custom_fonts', 1 );
 
 
 // Setup Function: Registers support for various WordPress features
