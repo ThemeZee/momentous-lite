@@ -3,8 +3,8 @@ Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/momentous/
 Contributors: themezee
 Tags: three-columns, custom-background, custom-colors, custom-header, grid-layout, blog, entertainment, news, custom-menu, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, two-columns
-Requires at least: 4.4
-Tested up to: 4.7
+Requires at least: 4.7
+Tested up to: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,10 @@ For more information about Momentous please go to https://themezee.com/themes/mo
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.3 =
+* added default theme fonts as local fonts
+* use local fonts instead of Google fonts for GDPR compliance
 
 = 1.2.9 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
