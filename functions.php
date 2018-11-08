@@ -27,7 +27,7 @@ function momentous_enqueue_scripts() {
 	$theme_options = momentous_theme_options();
 
 	// Register and Enqueue Masonry JS for two column post layout
-	if ( isset( $theme_options['post_layout'] ) and $theme_options['post_layout'] == 'index' ) :
+	if ( isset( $theme_options['post_layout'] ) and 'index' === $theme_options['post_layout'] ) :
 
 		// Register and enqueue masonry script
 		wp_enqueue_script( 'masonry' );
@@ -46,12 +46,19 @@ function momentous_enqueue_scripts() {
  * Enqueue custom fonts.
  */
 function momentous_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'momentous-custom-fonts', get_template_directory_uri() . '/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'momentous_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'momentous_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function momentous_block_editor_assets() {
+	wp_enqueue_style( 'momentous-editor-styles', get_template_directory_uri() . '/css/gutenberg-styles.css', array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'momentous_block_editor_assets' );
 
 
 // Setup Function: Registers support for various WordPress features
@@ -79,19 +86,19 @@ function momentous_setup() {
 
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'momentous_custom_logo_args', array(
-		'height' => 40,
-		'width' => 250,
+		'height'      => 40,
+		'width'       => 250,
 		'flex-height' => true,
-		'flex-width' => true,
+		'flex-width'  => true,
 	) ) );
 
 	// Add Custom Header
-	add_theme_support('custom-header', array(
+	add_theme_support( 'custom-header', array(
 		'header-text' => false,
-		'width'	=> 1310,
-		'height' => 240,
+		'width'       => 1310,
+		'height'      => 240,
 		'flex-height' => true,
-	));
+	) );
 
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
@@ -100,13 +107,40 @@ function momentous_setup() {
 	register_nav_menus( array(
 		'primary'   => esc_html__( 'Main Navigation', 'momentous-lite' ),
 		'secondary' => esc_html__( 'Top Navigation', 'momentous-lite' ),
-		'social' => esc_html__( 'Social Icons', 'momentous-lite' ),
-		)
-	);
+		'social'    => esc_html__( 'Social Icons', 'momentous-lite' ),
+	) );
 
 	// Add Theme Support for Selective Refresh in Customizer
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	// Add custom color palette for Gutenberg.
+	add_theme_support( 'editor-color-palette', array(
+		array(
+			'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'momentous-lite' ),
+			'slug'  => 'primary',
+			'color' => apply_filters( 'momentous_primary_color', '#22a8d8' ),
+		),
+		array(
+			'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'momentous-lite' ),
+			'slug'  => 'white',
+			'color' => '#ffffff',
+		),
+		array(
+			'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'momentous-lite' ),
+			'slug'  => 'light-gray',
+			'color' => '#f0f0f0',
+		),
+		array(
+			'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'momentous-lite' ),
+			'slug'  => 'dark-gray',
+			'color' => '#777777',
+		),
+		array(
+			'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'momentous-lite' ),
+			'slug'  => 'black',
+			'color' => '#353535',
+		),
+	) );
 }
 
 
@@ -120,7 +154,6 @@ function momentous_add_image_sizes() {
 
 	// Add Featured Image Size
 	add_image_size( 'post-thumbnail', 900, 300, true );
-
 }
 
 
@@ -139,7 +172,6 @@ function momentous_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
-
 }
 
 
