@@ -26,6 +26,9 @@ For more information about Momentous please go to https://themezee.com/themes/mo
 
 == Changelog ==
 
+= 1.4.2 =
+* fixed missing featured content tag bug in WordPress Block Editor
+
 = 1.4.1 =
 * added font display swap to default theme fonts
 
