@@ -12,6 +12,8 @@
 
 <body <?php body_class(); ?>>
 
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'momentous-lite' ); ?></a>
+
 <?php // Get Theme Options from Database
 	$theme_options = momentous_theme_options();
 ?>
